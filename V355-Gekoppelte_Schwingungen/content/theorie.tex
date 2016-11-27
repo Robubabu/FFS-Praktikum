@@ -112,3 +112,43 @@ Nun können drei Fälle betrachtet werden.
 
 
   \subsection{Berechnung des Stromes in einem Schwingkreis in Abhänigkeit von der Frequenz}
+  Im Folgendem werden Schwingkreise betrachtet, die durch eine Sinusspannung zum schwingen angeregt werden. Alle Berechnungen werden am Beispiel der Schaltung \ref{fig:Abb4} gezeigt.
+  Sämtliche Verluste werden durch ohmische Wiederstände R dargestellt.
+  \begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]{./logos/Abb4.png}
+    \caption{Gekoppelte Schwinkreise mit eingebautem Sinusgenerator}
+    \label{fig:Abb4}
+  \end{figure}
+  Dann folgt nach Kirchhofscher Maschenregel  für den Kreis
+  \begin{enumerate}
+    \item
+    \begin{equation}
+        (z_C + z_L + z_{C_R} + z_R)I_1 - z_{C_K} I_2 = U
+        \label{eqn:U1}
+    \end{equation}
+    \text{und}
+      \item
+      \begin{equation}
+          (z_C + z_L + z_{C_R} + z_R)I_2 - z_{C_K} I_1 = 0
+          \label{eqn:U2}
+      \end{equation}
+
+  \end{enumerate}
+  mit
+  \begin{align*}
+    z_C & =  -i \frac{1}{\omega C} & z_L & =  i\omega L \\
+    z_{C_K} & = -i \frac{1}{\omega C_K} &  z_C & =  R
+  \end{align*}
+Aus diesen Beziehungen erhält man dann für den Betrag von $I_2$:
+\begin{equation}
+  \lvert I_2 \rvert = \lvert U \rvert \frac{1}{\left( 4\omega^2 C_{K}^2 R^2 Z(\omega)^2 + \left( \frac{1}{\omega C_K}-\omega C_K Z(\omega)^2 + \omega R^2 C_K\right)^2 \right)^{\frac{1}{2}}}
+  \eqcolon \lvert U \rvert \cdot \lvert \symfrak{L} \rvert
+  \label{eqn:UL}
+\end{equation}
+\text{mit}
+\begin{equation*}
+Z(\omega) \coloneq  \omega L - \frac{1}{\omega}\left(\frac{1}{C} + \frac{1}{C_K} \right)
+\end{equation*}
+Duch Gleichung \eqref{eqn:UL} ist ersichtlich, dass für $\omega$ gegen Null, sowie gegen Unendlich gegen Null geht. Dazwischen liegen die Fundermentalfrequenzen \omega_{\pm} für
+die $\lvert \symfrak{l} \rvert $ ein Maximum durchläuft.

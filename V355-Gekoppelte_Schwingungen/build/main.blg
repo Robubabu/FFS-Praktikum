@@ -1,9 +1,0 @@
-[0] Config.pm:354> INFO - This is Biber 2.6
-[0] Config.pm:357> INFO - Logfile is 'build/main.blg'
-[31] biber:302> INFO - === Sa Nov 26, 2016, 15:22:09
-[50] Biber.pm:359> INFO - Reading 'build/main.bcf'
-[131] Biber.pm:823> INFO - Found 0 citekeys in bib section 0
-[136] Utils.pm:164> WARN - The file 'build/main.bcf' does not contain any citations!
-[144] bbl.pm:597> INFO - Writing 'build/main.bbl' with encoding 'UTF-8'
-[144] bbl.pm:701> INFO - Output to build/main.bbl
-[144] Biber.pm:109> INFO - WARNINGS: 1
