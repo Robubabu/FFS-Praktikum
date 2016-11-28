@@ -1,11 +1,16 @@
 \section{Theorie}
 \label{sec:Theorie}
 
-%\cite{sample}
 
 \subsection{Schwingungsgleichung für kapazitiv gekoppelte Schwingkreise}
-Betrachtet werden hier zwei gleiche elektrische Schwingkreise, die die Induktivität L und Kapazität C enthalten,
+Betrachtet werden hier zwei gleiche elektrische Schwingkreise (s.Abb. \ref{fig:Abb2}), die die Induktivität L und Kapazität C enthalten,
 sie sind durch einen Kopplungswiderstand $ C_k$ gekoppelt.
+\begin{figure}
+  \centering
+  \includegraphics[width=\textwidth]{./logos/Abb2.png}
+  \caption{Schaltung zweier gekoppelter Schwingkreise}
+  \label{fig:Abb2}
+\end{figure}
 Die Anwendung der Kirchhoffschen Knotenregel auf Punkt A liefer die Beziehung:
 \begin{equation}
  I_k = I_1 - I_2
@@ -103,20 +108,25 @@ Nun können drei Fälle betrachtet werden.
      \omega_- - \omega_+  << \omega_+
   \end{align}
   Aus den Gleichungen \eqref{eqn:dsin} und \eqref{eqn:dcos} ist ersichtlich, dass die Schwingkreise mit der Frequenz $\frac{(\nu_+ + \nu_-)}{2}$ schwingen. Die Amplitude ändert sich
-  dabei periodisch mit der Frequenz $ \nu_- - \nu_+$ und nimmt dabei Werte von Null bis $ I_{1_0}$ an. Diese Schwingung wird Schwebung genannt. Hier schwingt die Energie periodisch zwischen
+  dabei periodisch mit der Frequenz $ \nu_- - \nu_+$ und nimmt dabei Werte von Null bis $ I_{1_0}$ an. Diese Schwingung wird Schwebung genannt (s. Abb.\ref{fig:Abb3}). Hier schwingt die Energie periodisch zwischen
   den jeweiligen Schwingkreisen. Die Periode $T^*$ ist dabei duch folgendne Zusammenhang gegeben.
   \begin{equation}
       \frac{(\omega_- - \omega_+)T^*}{2} = \frac{\pi}{2}
   \end{equation}
 
-
-
+\begin{figure}
+    \centering
+    \includegraphics[width = \textwidth]{./logos/Abb3.png}
+    \caption{Die Zeitabhängigen Ströme in den Schingkreisen im Fall der Schwebung}
+    \label{fig:Abb3}
+\end{figure}
+\FloatBarrier
   \subsection{Berechnung des Stromes in einem Schwingkreis in Abhänigkeit von der Frequenz}
   Im Folgendem werden Schwingkreise betrachtet, die durch eine Sinusspannung zum schwingen angeregt werden. Alle Berechnungen werden am Beispiel der Schaltung \ref{fig:Abb4} gezeigt.
   Sämtliche Verluste werden durch ohmische Wiederstände R dargestellt.
   \begin{figure}
     \centering
-    \includegraphics[width=\textwidth]{./logos/Abb4.png}
+    \includegraphics[height= 7cm]{./logos/Abb4.png}
     \caption{Gekoppelte Schwinkreise mit eingebautem Sinusgenerator}
     \label{fig:Abb4}
   \end{figure}
@@ -150,5 +160,23 @@ Aus diesen Beziehungen erhält man dann für den Betrag von $I_2$:
 \begin{equation*}
 Z(\omega) \coloneq  \omega L - \frac{1}{\omega}\left(\frac{1}{C} + \frac{1}{C_K} \right)
 \end{equation*}
-Duch Gleichung \eqref{eqn:UL} ist ersichtlich, dass für $\omega$ gegen Null, sowie gegen Unendlich gegen Null geht. Dazwischen liegen die Fundermentalfrequenzen \omega_{\pm} für
-die $\lvert \symfrak{l} \rvert $ ein Maximum durchläuft.
+Duch Gleichung \eqref{eqn:UL} ist ersichtlich, dass für $\omega$ gegen Null, sowie gegen Unendlich gegen Null geht. Dazwischen liegen die Fundermentalfrequenzen $\omega_{\pm}$ für
+die $\lvert \symfrak{I} \rvert $ ein Maximum durchläuft. Durch einsetzen der der Gleichungen \eqref{eqn:nu+} und \eqref{eqn:nu-} in die Gleichung \eqref{eqn:UL} folgt für
+$\lvert \symfrak{I} \rvert $:
+\begin{equation}
+  \lvert \symfrak{I}(\omega_+) \rvert = \frac{1}{R \sqrt(4 + \frac{R^2 C_{K}^2}{LC})}
+  \label{eqn:Io+}
+\end{equation}
+und
+\begin{equation}
+  \lvert \symfrak{I}(\omega_-) \rvert = \frac{1}{R \sqrt(4 + \frac{R^2 C_{K}^2}{LC}\left(1+ \frac {C}{C_K}\right))}
+  \label{eqn:Io-}
+\end{equation}
+Nährungsweise gilt dann:
+\begin{equation*}
+  \lvert \symfrak{I}(\omega_+) \rvert \approx \lvert \symfrak{I}(\omega_-) \rvert \approx \frac{1}{2R}
+\end{equation*}
+Durch die Unabhängigkeit der Frequenz $ \nu_+ $ fließt dabei praktisch kein Strom durch die Kopplung,somit können beide Schwingkreise als einer angenommen werden.
+Dieser Schwingkreis hat dann die Induktivität $L_{ges} = 2L $ und die Kapazität $ C_{ges} = \frac{1}{2} C $ . Bei der Frequenz $\nu_-$ fließt ein maximaler Strom
+durch die Kopplung. Somit findet bei beiden Frequenzen kein periodischer Energieaustausch statt. \\
+Die theoretische Grundlage dieses Versuches wurde größtenteils aus der Quelle \cite{sample} entnommen.
