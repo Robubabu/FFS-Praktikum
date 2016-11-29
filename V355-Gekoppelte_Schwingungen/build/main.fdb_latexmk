@@ -1,10 +1,11 @@
 # Fdb version 3
-["biber build/main"] 1480410941 "build/main.bcf" "build/main.bbl" "build/main" 1480410963
-  "build/main.bcf" 1480410962 95698 1ff593d8c9674782a09301c095a367e0 ""
+["biber build/main"] 1480410941 "build/main.bcf" "build/main.bbl" "build/main" 1480411799
+  "build/main.bcf" 1480411798 95698 1ff593d8c9674782a09301c095a367e0 ""
   "lit.bib" 1480346449 111 f35acf501656ea7b9a3b7c6bc7cfba7e ""
   (generated)
   "build/main.bbl"
-["pdflatex"] 1480410956 "main.tex" "build/main.pdf" "main" 1480410963
+  "build/main.blg"
+["pdflatex"] 1480411792 "main.tex" "build/main.pdf" "main" 1480411799
   "/home/robert/.local/texlive/2016/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1246382020 916 f87d7c45f9c908e672703b83b72241a3 ""
   "/home/robert/.local/texlive/2016/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam5.tfm" 1246382020 924 9904cf1d39e9767e7a3622f2a125a565 ""
   "/home/robert/.local/texlive/2016/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam7.tfm" 1246382020 928 2dc8d444221b7a635bb58038579b861a ""
@@ -196,11 +197,11 @@
   "/home/robert/.local/texlive/2016/texmf-var/luatex-cache/generic/names/luaotfload-names.luc" 1476105159 809734 0b7496826908ce5fa0b07e407ded45b4 ""
   "/home/robert/.local/texlive/2016/texmf-var/tex/generic/config/language.dat.lua" 1476104811 17042 15fd108b8f12bab01983f96938681337 ""
   "/home/robert/.local/texlive/2016/texmf-var/web2c/luatex/lualatex.fmt" 1476104847 1246144 e50f0bd1f17ca717076931956630f562 ""
-  "build/main.aux" 1480410962 19713 947518e95ba4ef27b92d31b0f1324507 ""
+  "build/main.aux" 1480411798 20418 622ba5b532cd42ea696a6bed9da75216 ""
   "build/main.bbl" 1480410944 1292 45d0c194538ec0c2945babb9daf9c86e "biber build/main"
-  "build/main.run.xml" 1480410962 2330 4233a9836802043afc4fd6b527c0f360 ""
-  "build/main.toc" 1480410962 2018 563cd68fa7ee1ac010db625545f620e3 ""
-  "content/auswertung.tex" 1480410740 5286 5c704aa39f9e55de92900ab07b520a2a ""
+  "build/main.run.xml" 1480411798 2330 4233a9836802043afc4fd6b527c0f360 ""
+  "build/main.toc" 1480411798 2173 ae625158d759b8922712a974da65e025 ""
+  "content/auswertung.tex" 1480411762 5957 9d83d11519a30116472d69cb40464751 ""
   "content/diskussion.tex" 1480410775 2140 a774ec778b750c94cd7f3771bafc99ea ""
   "content/durchfuehrung.tex" 1480346085 2470 0c73079fd46b170863a2c6429570a8f3 ""
   "content/theorie.tex" 1480338081 8532 ab3baa8d274879fdb373cab7c8f76426 ""
@@ -217,12 +218,12 @@
   "plots/resonance.pdf" 1480410038 28719 6c48bc015fc4410f2bdfe46b50a32813 ""
   "plots/sweap.pdf" 1480410048 26793 93b03619d20d4034f420e6915825f9c3 ""
   (generated)
-  "build/main.pdf"
-  "build/main.run.xml"
-  "build/main.aux"
-  "build/main.bcf"
-  "/home/robert/.local/texlive/2016/texmf-var/luatex-cache/generic/names/luaotfload-lookup-cache.luc"
-  "/home/robert/.local/texlive/2016/texmf-var/m_t_x_t_e_s_t.tmp"
-  "/home/robert/.local/texlive/2016/texmf-var/luatex-cache/generic/names/luaotfload-lookup-cache.lua"
   "build/main.log"
+  "/home/robert/.local/texlive/2016/texmf-var/luatex-cache/generic/names/luaotfload-lookup-cache.lua"
+  "build/main.bcf"
+  "build/main.aux"
   "build/main.toc"
+  "build/main.run.xml"
+  "/home/robert/.local/texlive/2016/texmf-var/m_t_x_t_e_s_t.tmp"
+  "/home/robert/.local/texlive/2016/texmf-var/luatex-cache/generic/names/luaotfload-lookup-cache.luc"
+  "build/main.pdf"

@@ -1,7 +1,30 @@
 \section{Auswertung}
 \label{sec:Auswertung}
+
+\subsection{Geräte-Daten}
+Schaltung 1:
+\begin{equation*}
+  C_1 = 0,8015nF
+  C_{sp,1} = 0,037nF
+  L_1 = 32,351mH
+\end{equation*}
+
+Schaltung 2:
+
+\begin{equation*}
+  C_2 = 0,7932nF
+  C_{sp,2} = 0,028nF
+  L_2 = 23,954mH
+\end{equation*}
+
+Wobei $C_sp$ die Kazatität der Spule darstellt.
+
+\subsection{Justierung}
+Als grobe Näherung der Frequenz $v_+$ wurden $35,21Hz$ gemessen.
+
 \subsection{Frequenzverhältnisse bei einer Schwebung}
 \label{sec:Frequenzverhältnisse}
+Diese Messreihe wurde bei einer Generatorfrequenz von ca. $600Hz$ durchgeführt.
 Die gezählten Verhältnisse der Frequenzen lassen sich Tabelle \ref{tab:verhaeltnisse} entnehmen. Da die Grenzen der Schwebung nicht immer eindeutig ab zu lesen sind, wird eine Abweichung von $\pm1$ veranschlagt. Graphisch ergibt sich so Abb. \ref{fig:verhaeltnisse}, wobei $\omega_\pm=v_+ \pm v_-$ gilt und $C_k$ mit $3\%$ Abweichung behaftet ist.
 
 \begin{table}
@@ -73,7 +96,13 @@ Die in diesem Schritt aufgenommenen Werte werden in Abb.\ref{fig:frequenzen} mit
 \subsection{Ermittlung von $v_+$ und $v_-$ mittels Sweap-Verfahren}
 \label{sec:sweap}
 
-Da beim Sweap-Verfahren die Frequenzen nicht direkt gemessen werden, sondern nur zeitliche Abstände (zu entnehmen aus Tabelle \ref{tab:sweap}) müssen diese zunächst umgerechnet werden.
+Da beim Sweap-Verfahren die Frequenzen nicht direkt gemessen werden, sondern nur zeitliche Abstände (zu entnehmen aus Tabelle \ref{tab:sweap}) müssen diese zunächst umgerechnet werden. Hierzu wird folgende Formel verwendet:
+
+\begin{equation}
+  f(t) = ( f_{Ende} - f_{Anfang} ) \frac{t}{1s} + f_{Anfang}
+\end{equation}
+
+Bei der Messung sind $f_{Anfang} = 3,165kHz$ und $f_{Ende} = 83,33kHz$ gewählt.
 
 \begin{table}
   \centering
@@ -128,4 +157,3 @@ Da beim Sweap-Verfahren die Frequenzen nicht direkt gemessen werden, sondern nur
   \label{fig:sweap}
 \end{figure}
 \FloatBarrier
-
