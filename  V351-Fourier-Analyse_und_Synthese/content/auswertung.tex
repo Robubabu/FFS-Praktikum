@@ -1,9 +1,160 @@
 \section{Auswertung}
 \label{sec:Auswertung}
+\subsection{Brechnung der Fourier-Koeffizenten}
+\subsubsection{Rechteckspannung}
+  Für die Rechteckspannung ergibt sich dann die Fourier-Amplituden mit der Fuktion:
+  \begin{equation}
+    b_n = \frac{A}{n\pi}(1-cos(n\pi))
+  \end{equation}
+  Die Werte sind in Tabelle \ref{fig:kr} dargestellt für $A =1$.
+  \begin{table}
+    \centering
+    \caption{Fourier-Koeffizenten einer Rechteckspannung}
+    \label{fig:kr}
+    \sisetup{round-mode = places , round-precision = 2}
+    \begin{tabular}{S[round-precision = 0] S}
+      \toprule
+       \text{Nr.} & \text{Fourier-Amplitude} \\
+      \midrule
+      1.000000000000000000e+00 & 6.366197723675813824e-01\\
+      2.000000000000000000e+00 & 0.000000000000000000e+00\\
+      3.000000000000000000e+00 & 2.122065907891937941e-01\\
+      4.000000000000000000e+00 & 0.000000000000000000e+00\\
+      5.000000000000000000e+00 & 1.273239544735162709e-01\\
+      6.000000000000000000e+00 & 0.000000000000000000e+00\\
+      7.000000000000000000e+00 & 9.094568176679733440e-02\\
+      8.000000000000000000e+00 & 0.000000000000000000e+00\\
+      9.000000000000000000e+00 & 7.073553026306460267e-02\\
+      \bottomrule
+      \end{tabular}
+  \end{table}
 
+\subsubsection{Dreickspannung}
+Die Fourie-Koeffizenten der Dreieckspannung lassen sich dann durch folgende Gleichung leicht brechnen:
+\begin{equation}
+  b_n = -\frac{A}{n\pi}
+\end{equation}
+Die Werte der Fourier-Koeffizenten finden sie in Tabelle \ref{fig:kd} dargestellt für $A = 1$.
+\begin{table}
+  \centering
+  \caption{Fourier-Koeffizenten einer Dreieckspannung}
+  \label{fig:kd}
+  \sisetup{round-mode = places , round-precision = 2}
+  \begin{tabular}{S[round-precision = 0] S}
+    \toprule
+     \text{Nr.} & \text{Fourier-Amplitude} \\
+    \midrule
+    1.000000000000000000e+00 & -3.183098861837906912e-01\\
+    2.000000000000000000e+00 & -1.591549430918953456e-01\\
+    3.000000000000000000e+00 & -1.061032953945968971e-01\\
+    4.000000000000000000e+00 & -7.957747154594767280e-02\\
+    5.000000000000000000e+00 & -6.366197723675813547e-02\\
+    6.000000000000000000e+00 & -5.305164769729844854e-02\\
+    7.000000000000000000e+00 & -4.547284088339866720e-02\\
+    8.000000000000000000e+00 & -3.978873577297383640e-02\\
+    9.000000000000000000e+00 & -3.536776513153230134e-02\\
+    \bottomrule
+  \end{tabular}
+\end{table}
+\FloatBarrier
+\subsubsection{Nadelimpuls}
+  Die Fourier-Koeffizenten des Nadelimpuls werden durch die folgende Gleichung berechnet:
+  \begin{equation}
+    b_n = \frac{A}{n\pi} sin\left(\frac{n2\pi}{k}\right)
+  \end{equation}
+  Die Werte finden sie in Tabelle \ref{fig:kn} für verschiedene Werte von k dargestellt mit $A=1$.
+\begin{table}
+  \centering
+  \caption{Fourier-Koeffizenten eines Nadelimpulses}
+  \label{fig:kn}
+  \begin{subfigure}{0.48\textwidth}
+    \centering
+  \label{fig:kn10}
+  \sisetup{round-mode = places , round-precision = 2}
+  \begin{tabular}{S[round-precision = 0] S}
+    \toprule
+     \text{Nr.} & \text{Fourier-Amplitude} \\
+    \midrule
+    1.000000000000000000e+00 & 1.870978567577278318e-01\\
+    2.000000000000000000e+00 & 1.513653457281314008e-01\\
+    3.000000000000000000e+00 & 1.009102304854209431e-01\\
+    4.000000000000000000e+00 & 4.677446418943196488e-02\\
+    5.000000000000000000e+00 & 7.796343665038751913e-18\\
+    6.000000000000000000e+00 & -3.118297612628796386e-02\\
+    7.000000000000000000e+00 & -4.324724163660896570e-02\\
+    8.000000000000000000e+00 & -3.784133643203285713e-02\\
+    9.000000000000000000e+00 & -2.078865075085865530e-02\\
+    \bottomrule
+  \end{tabular}
+  \caption{mit $k = 10$}
+\end{subfigure}
+  \begin{subfigure}{0.48\textwidth}
+    \centering
+  \label{fig:kn100}
+  \sisetup{round-mode = places , round-precision = 2}
+  \begin{tabular}{S[round-precision = 0] S}
+    \toprule
+     \text{Nr.} & \text{Fourier-Amplitude} \\
+    \midrule
+    1.000000000000000000e+00 & 1.998684312479682632e-02\\
+    2.000000000000000000e+00 & 1.994740365545007166e-02\\
+    3.000000000000000000e+00 & 1.988177497291702608e-02\\
+    4.000000000000000000e+00 & 1.979011241962616921e-02\\
+    5.000000000000000000e+00 & 1.967263286166931816e-02\\
+    6.000000000000000000e+00 & 1.952961407775311367e-02\\
+    7.000000000000000000e+00 & 1.936139397678475829e-02\\
+    8.000000000000000000e+00 & 1.916836964649249950e-02\\
+    9.000000000000000000e+00 & 1.895099623599886401e-02\\
+    \bottomrule
+  \end{tabular}
+  \caption{mit $k = 100$}
+\end{subfigure}
+\end{table}
+\FloatBarrier
+Aus Tabelle \ref{fig:kn}\subref{fig:kn100} ist ersichtlich, dass sich für hohe Werte von k ein sog. Dirac-Kamm ergibt.
+\subsection{Vergleich mit den experimentel erfassten Fourier-Koeffizenten}
+\subsubsection{Rechteckspannung}
+In Abbildung \ref{fig:pr} sind die rechnerisch und experimentel ermittelten Fourier-Koeffizenten aufgetragen. Die experimentellen Größen wurden alle mit einem Fehler
+von 3\% versehen, da sie von einem Oszilloskop abgelesen wurden. Die Amplitude A der brechnetnen Werte wurde hier mit 10 Volt angenährt.
+Dennoch ist zu beobachten, dass die Erwartungswerte nicht innerhalb der Fehlertoleranz liegen.
 \begin{figure}
   \centering
-  \includegraphics{plot.pdf}
-  \caption{Plot.}
-  \label{fig:plot}
+  \includegraphics{Rechteckplot.pdf}
+  \caption{Rechnerische und experimentelle Fourier-Amplituden der Rechteckspannung}
+  \label{fig:pr}
 \end{figure}
+\FloatBarrier
+\subsubsection{Dreiecksspannung}
+Auch hier wurden die rechnerisch und experimentel ermittelten Fourier-Koeffizenten in
+ein Diagramm eingetragen (s.Abb.\ref{fig:dp}), wieder wurden
+die experimentellen Größen mit einem Fehler von 3\% versehen und die Amplitude A mit 10 Volt
+angenommen.
+Zudem wurden die Erwartungswerte mit anderem Vorzeichen eingezeichnet, damit sich die
+ Kurve den experimentellen Werten angleicht.
+Werden nur die Erwatungswerte mit anderem Vorzeichen und die experimentellen Werte verglichen
+ ist zu sehen, dass hier die Werte nur am Anfang der Messreihe außerhalb der Fehlertoleranz liegen.
+\begin{figure}
+  \centering
+  \includegraphics{Dreieckplot.pdf}
+  \caption{Rechnerische und experimentelle Fourier-Amplituden der Dreieckspannung}
+  \label{fig:dp}
+\end{figure}
+\FloatBarrier
+\subsubsection{Nadelimpuls}
+Wie auch in den beiden Messreihen davor sind auch hier rechnerisch und experimentel
+ermittelte Fourier-Koeffizenten in Abbildung \ref{fig:np} eingezeichnet. Die experimentellen
+Größen wurden wieder mit einem Fehler von 3\% versehen. Die Amplitude der rechnerischen Werte
+für $ k = 10$ wurden wieder mit 10 Volt angenommen. Aber wie zu sehen ist passen die errechneten
+Werte für $k = 10$ nicht zu unseren experimentellen Werten. Die Ampltitude A wurde für $k = 100$
+mit 50 Volt angenommen. Hier sieht man sehr gut den sog. Dirac-Kamm der wiederum zu unseren
+experimentellen Werten passt.
+\begin{figure}
+  \centering
+  \includegraphics{Nadelimpulsplot.pdf}
+  \caption{Rechnerische und experimentelle Fourier-Amplituden des Nadelimpulses}
+  \label{fig:np}
+\end{figure}
+\FloatBarrier
+
+
+\subsection{Zusammensetzung der Schwingunsformen aus ihren Komponenten}

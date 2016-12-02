@@ -10,8 +10,8 @@ np.savetxt('bnwerteRechteck.txt',np.column_stack([n , bnrecht]))
 bndrei = (-1/(np.pi*n))
 np.savetxt('bnwerteDreieck.txt', np.column_stack([n , bndrei]))
 
-k=10
-bnnadel = (1/(n*np.pi))*np.sin((n*2*np.pi)/k)
+
+bnnadel = (1/(n*np.pi))*np.sin((n*2*np.pi)/10)
 np.savetxt('bnwerrteNadelk10.txt', np.column_stack([n , bnnadel]))
-k=100
-np.savetxt('bnwerteNadelk100.txt', np.column_stack([n , bnnadel]))
+bnnadel1 = (1/(n*np.pi))*np.sin((n*2*np.pi)/100)
+np.savetxt('bnwerteNadelk100.txt', np.column_stack([n , bnnadel1]))
