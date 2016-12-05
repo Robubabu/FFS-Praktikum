@@ -119,11 +119,17 @@ von 3\% versehen, da sie von einem Oszilloskop abgelesen wurden. Die Amplitude A
 Dennoch ist zu beobachten, dass die Erwartungswerte nicht innerhalb der Fehlertoleranz liegen.
 \begin{figure}
   \centering
-  \includegraphics{Rechteckplot.pdf}
+  \includegraphics[width= \textwidth]{Plots/Rechteckplot.pdf}
   \caption{Rechnerische und experimentelle Fourier-Amplituden der Rechteckspannung}
   \label{fig:pr}
 \end{figure}
 \FloatBarrier
+Der Fit wurde mit der Funktion \eqref{eqn:fit} druchgeführt. Hier liegt a bei $ 8, 3 \pm 0,6$
+und b bei $1,86 \pm 0,27 $
+\begin{equation}
+  f(n , a , b) = a\frac{1}{n^b}
+\label{eqn:fit}
+\end{equation}
 \subsubsection{Dreiecksspannung}
 Auch hier wurden die rechnerisch und experimentel ermittelten Fourier-Koeffizenten in
 ein Diagramm eingetragen (s.Abb.\ref{fig:dp}), wieder wurden
@@ -135,11 +141,13 @@ Werden nur die Erwatungswerte mit anderem Vorzeichen und die experimentellen Wer
  ist zu sehen, dass hier die Werte nur am Anfang der Messreihe außerhalb der Fehlertoleranz liegen.
 \begin{figure}
   \centering
-  \includegraphics{Dreieckplot.pdf}
+  \includegraphics[width= \textwidth]{Plots/Dreieckplot.pdf}
   \caption{Rechnerische und experimentelle Fourier-Amplituden der Dreieckspannung}
   \label{fig:dp}
 \end{figure}
 \FloatBarrier
+Auch hier wurde der Fit mit der Formel \eqref{eqn:fit} durchgeführt mit den Werten
+$a = 4,6 \pm 0,07 $ und $ b = 1,075 \pm 0,023 $.
 \subsubsection{Nadelimpuls}
 Wie auch in den beiden Messreihen davor sind auch hier rechnerisch und experimentel
 ermittelte Fourier-Koeffizenten in Abbildung \ref{fig:np} eingezeichnet. Die experimentellen
@@ -150,11 +158,12 @@ mit 50 Volt angenommen. Hier sieht man sehr gut den sog. Dirac-Kamm der wiederum
 experimentellen Werten passt.
 \begin{figure}
   \centering
-  \includegraphics{Nadelimpulsplot.pdf}
+  \includegraphics[width= \textwidth]{Plots/Nadelimpulsplot.pdf}
   \caption{Rechnerische und experimentelle Fourier-Amplituden des Nadelimpulses}
   \label{fig:np}
 \end{figure}
 \FloatBarrier
-
+Der Fit hat die Werte $ a = 1,146 \pm 0,033 $ und $ b = 0,085 \pm 0,019$ mit Formel
+\eqref{eqn:fit}
 
 \subsection{Zusammensetzung der Schwingunsformen aus ihren Komponenten}
