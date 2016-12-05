@@ -1,4 +1,22 @@
 \section{Theorie}
 \label{sec:Theorie}
 
-\cite{sample}
+\subsection{Fouriersches Theorem}
+\label{sec:Theorem}
+Sei $f(t)$ periodisch in $t$ und steig, so lässt sich $f$ durch die sog. \textit{Fourier-Reihe} darstellen, welche wie folgt festgelegt ist:
+\begin{equation}
+  F(t)= \frac{a_0}{2} + \sum_{n = 1}^\infty \Bigl a_n cos \bigl \frac{2 n \pi t}{T} \bigr + b_n sin \bigl \frac{2 n \pi t}{T} \bigr \Bigr
+  \label{eqn:Fourier-Reihe}
+\end{equation}
+Wobei $T$ die Periodendauer bezeichnet und $a_n$ gegeben ist durch
+\begin{equation}
+  a_n = \frac{2}{T} \int_0^T f(t) cos(\frac{2 n \pi t}{T}) \symup{d}t .
+  \label{eqn:an}
+\end{equation}
+$b_n$ ist analog durch
+\begin{equation}
+  b_n = \frac{2}{T} \int_0^T f(t) sin(\frac{2 n \pi t}{T}) \symup{d}t
+  \label{eqn:bn}
+\end{equation}
+gegeben.
+Die Bestimmung dieser Koeffiezienten wird \textit{Fourier-Analyse} genannt und liefert ein diskretes Spektrum für alle periodischen Funktionen.
