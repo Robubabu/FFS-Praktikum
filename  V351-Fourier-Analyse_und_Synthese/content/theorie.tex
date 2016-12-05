@@ -26,9 +26,11 @@ Die Bestimmung dieser Koeffiezienten wird \textit{Fourier-Analyse} genannt und l
 Mittels Fourier-Transformation $f(t) \to g(v)$ kann man das gesamte Frequenzspektrum $g(v)$ von $f(t)$ auf einmal berechnen, bzw. aus diesem $f(t)$. Sie ist gegeben durch
 \begin{equation}
   g(v) = \int_{-\infty}^{\infty} f(t)*exp(ivt) \symup{d}t
+  \label{eq:trafo}
 \end{equation}
 bzw
 \begin{equation}
   f(t) = \frac{1}{2\pi} \int_{-\infty}^{\infty} g(v)*exp(-ivt) \symup{d}v.
+  \label{eq:backtrafo}
 \end{equation}
 Bei Messungen des Spektrums ist zu beachten, dass selbst ein perfekt periodisches Signal zu einem kontinuierlichen Spektrum führen wird, da nicht von $-\infty$ bis $\infty$ integriert wird, sondern lediglich über einen begrenzten Zeitraum. Dies führt außerdem zu bedeutungslosen Nebenmaxima.
