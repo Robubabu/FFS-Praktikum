@@ -1,1 +1,6 @@
 dies ist 1 test vong die pushung her
+Haste veränderungen gemacht musst du er tun:
+git add .
+git commit 
+
+Schreibste den commit wasse verändert haben tust dann pullst du den kram der in der zwischen Zeit entstanden ist und dann pushte erst 
