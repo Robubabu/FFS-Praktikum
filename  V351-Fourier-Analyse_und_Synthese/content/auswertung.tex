@@ -1,8 +1,9 @@
 \section{Auswertung}
 \label{sec:Auswertung}
 \subsection{Brechnung der Fourier-Koeffizenten}
+\label{sec:3.2}
 \subsubsection{Rechteckspannung}
-  Für die Rechteckspannung ergibt sich dann die Fourier-Amplituden mit der Fuktion:
+  Für die Rechteckspannung ergibt sich die Fourier-Amplituden mit der Fuktion:
   \begin{equation}
     b_n = \frac{A}{n\pi}(1-cos(n\pi))
   \end{equation}
@@ -29,15 +30,15 @@
       \end{tabular}
   \end{table}
 
-\subsubsection{Dreickspannung}
-Die Fourie-Koeffizenten der Dreieckspannung lassen sich dann durch folgende Gleichung leicht brechnen:
+\subsubsection{Sägezahnspannung}
+Die Fourie-Koeffizenten der Sägezahnspannung lassen sich durch folgende Gleichung brechnen:
 \begin{equation}
   b_n = -\frac{A}{n\pi}
 \end{equation}
 Die Werte der Fourier-Koeffizenten finden sie in Tabelle \ref{fig:kd} dargestellt für $A = 1$.
 \begin{table}
   \centering
-  \caption{Fourier-Koeffizenten einer Dreieckspannung}
+  \caption{Fourier-Koeffizenten einer Sägezahnspannung}
   \label{fig:kd}
   \sisetup{round-mode = places , round-precision = 2}
   \begin{tabular}{S[round-precision = 0] S}
@@ -113,6 +114,7 @@ Die Werte der Fourier-Koeffizenten finden sie in Tabelle \ref{fig:kd} dargestell
 \FloatBarrier
 Aus Tabelle \ref{fig:kn}\subref{fig:kn100} ist ersichtlich, dass sich für hohe Werte von k ein sog. Dirac-Kamm ergibt.
 \subsection{Vergleich mit den experimentel erfassten Fourier-Koeffizenten}
+\label{sec:3.3}
 \subsubsection{Rechteckspannung}
 In Abbildung \ref{fig:pr} sind die rechnerisch und experimentel ermittelten Fourier-Koeffizenten aufgetragen. Die experimentellen Größen wurden alle mit einem Fehler
 von 3\% versehen, da sie von einem Oszilloskop abgelesen wurden. Die Amplitude A der brechnetnen Werte wurde hier mit 10 Volt angenährt.
@@ -130,7 +132,7 @@ und b bei $1,86 \pm 0,27 $
   f(n , a , b) = a\frac{1}{n^b}
 \label{eqn:fit}
 \end{equation}
-\subsubsection{Dreiecksspannung}
+\subsubsection{Sägezahnspannung}
 Auch hier wurden die rechnerisch und experimentel ermittelten Fourier-Koeffizenten in
 ein Diagramm eingetragen (s.Abb.\ref{fig:dp}), wieder wurden
 die experimentellen Größen mit einem Fehler von 3\% versehen und die Amplitude A mit 10 Volt
@@ -142,7 +144,7 @@ Werden nur die Erwatungswerte mit anderem Vorzeichen und die experimentellen Wer
 \begin{figure}
   \centering
   \includegraphics[width= \textwidth]{Plots/Dreieckplot.pdf}
-  \caption{Rechnerische und experimentelle Fourier-Amplituden der Dreieckspannung}
+  \caption{Rechnerische und experimentelle Fourier-Amplituden der Sägezahnspannung}
   \label{fig:dp}
 \end{figure}
 \FloatBarrier
@@ -163,7 +165,38 @@ experimentellen Werten passt.
   \label{fig:np}
 \end{figure}
 \FloatBarrier
-Der Fit hat die Werte $ a = 1,146 \pm 0,033 $ und $ b = 0,085 \pm 0,019$ mit Formel
-\eqref{eqn:fit}
+Der Fit hat die Werte $ a = 1,146 \pm 0,033 $ und $ b = 0,085 \pm 0,019$ mit Formel \eqref{eqn:fit}.
 
 \subsection{Zusammensetzung der Schwingunsformen aus ihren Komponenten}
+\subsubsection{Reckteckspannung}
+In der Abbildung \ref{fig:sr} ist eine Rechteckspannung zu sehen, die wir mit
+unseren Fourier-Koeffizienten synthetisiert haben. Dafür das hier nur neun Oberschwingungen
+addiert wurden kann man die approximierte Rechteckspannung gut erkennen.
+\begin{figure}
+  \centering
+  \includegraphics[height=7cm]{Prints/10.jpg}
+  \caption{Sythetisierte Rechteckspannung in der neunten Oberschwingung}
+  \label{fig:sr}
+\end{figure}
+\FloatBarrier
+\subsubsection{Sägezahnspannung}
+In der Abbildung \ref{fig:sd} ist eine synthetisierte Sägezahnspannung zu sehen. Auch hier
+wurden wieder neun Oberschingungen summiert. Die Sägezahnspannung ist gut zu erkennen.
+\begin{figure}
+  \centering
+  \includegraphics[height=7cm]{Prints/12.jpg}
+  \caption{Sythetisierte Sägezahspannung in der neunten Oberschwingung}
+  \label{fig:sd}
+\end{figure}
+\FloatBarrier
+\subsubsection{Nadelimpuls}
+In der folgenden Abbildung \ref{fig:sn} ist ein synthetisierter Nadelimpuls zu sehen. Wie bei
+den vorherigen Synthesen ist auch hier die Summe aller neun Oberschingungen zu sehen. Auffällig
+ ist, dass es hier Nulldurchgänge gibt die es eigentlich nicht geben sollte.
+\begin{figure}
+  \centering
+  \includegraphics[height = 7cm]{Prints/14.jpg}
+  \caption{Sythetisierte Nadelimpuls in der neunten Oberschwingung}
+  \label{fig:sn}
+\end{figure}
+\FloatBarrier
