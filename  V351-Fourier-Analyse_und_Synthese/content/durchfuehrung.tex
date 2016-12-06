@@ -1,9 +1,43 @@
 \section{Durchführung}
 \label{sec:Durchführung}
+
 \subsection{Messung des Frequenzspektrums}
 \label{sec:Messung}
-Im ersten Teil des Versuchs wird das Frequenzspektrum $g(v)$ gemäß \eqref{eq:trafo} bis zur 9. Oberwelle gemessen. Hierzu werden eine Rechteck- und eine Sägezahnspannung, sowie ein Nadelimpuls in ein digitales Oszilloskop eingespeißt, welches über die Einstellung \textit{FFA} selbstständig das Frequenzspektrum des Eingangssignals integriert. Hierbei ist zu beachten, die integrationsbedingten Nebenmaxima nicht mit abzulesen. Sie lassen sich an ihrem irregulären, willkürlichen Auftreten erkennen.
+Im ersten Teil des Versuchs wird das Frequenzspektrum $g(v)$ gemäß \eqref{eq:trafo} bis zur 9. Oberwelle gemessen.
+Hierzu werden eine Rechteck- und eine Sägezahnspannung, sowie ein Nadelimpuls in ein digitales Oszilloskop eingespeißt, welches über die Einstellung \textit{FFA} selbstständig
+das Frequenzspektrum des Eingangssignals integriert. Hierbei ist zu beachten, die integrationsbedingten Nebenmaxima nicht mit abzulesen. Sie lassen sich an ihrem irregulären,
+willkürlichen Auftreten erkennen.
+
 
 \subsection{Fouriersynthese}
 \label{sec:Synthese}
-Zur Fouriersynthese werden zuerst die nötigen Fourierkoeffizienten mit Hilfe der Formeln \eqref{eqn:an} \& \eqref{eqn:bn} berechnet. Nun werden an einem Oberwellengenerator 9 $9$ Oberwellen eingestellt und mitteneinander in Phase gebracht. Hierzu werden sie nacheinander mit der ersten zu Lissajous-Figuren überlagert. Anschließend wird ihre Amplitude möglichst exakt den berechneten Koeffizienten entsprechend eingestellt und alle Schwingungen werden addiert. Dies wird wie bereits in \ref{sec:Messung} für eine Rechteck- und eine Sägezahnspannung, sowie ein Nadelimpuls durchgeführt.
+Zur Fouriersynthese werden zuerst die nötigen Fourierkoeffizienten mit Hilfe der Formeln \eqref{eqn:an} \& \eqref{eqn:bn} berechnet.
+Nun werden an einem Oberwellengenerator $9$ Oberwellen eingestellt und miteinander in Phase gebracht. Hierzu werden sie nacheinander mit der ersten zu Lissajous-Figuren überlagert.
+Anschließend wird ihre Amplitude möglichst exakt den berechneten Koeffizienten entsprechend eingestellt und alle Schwingungen werden addiert. Dies wird wie bereits in \ref{sec:Messung}
+für eine Rechteck- und eine Sägezahnspannung, sowie ein Nadelimpuls durchgeführt.
+\subsection{Untersuchte Funktionen}
+Die Rechteckspannung wurde mit der Funktion
+\begin{equation}
+  R(t)=
+  \begin{cases}
+    A , & 0 \leq t \leq \frac{T}{2} \\
+    -A , & \frac{T}{2} < t \leq T
+  \end{cases}
+\label{eqn:recht}
+\end{equation}
+approximiert.
+Mit der folgenden Funktion wurde die Sägezahnspannung approximiert:
+\begin{equation}
+  S(t)= \frac{A}{T} t.
+  \label{eqn:säge}
+\end{equation}
+Dies Beschreibt den Verlauf innerhalb einer Periodendauer. der Nadelimpuls wurde bei der Brechnung beschrieben durch :
+
+\begin{equation}
+  N(t)=
+  \begin{cases}
+    A ,& 0 \leq t \leq \frac{T}{k} \\
+    0 , & \frac{T}{k} < t \leq T
+  \end{cases}
+\label{eqn:nadel}
+\end{equation}

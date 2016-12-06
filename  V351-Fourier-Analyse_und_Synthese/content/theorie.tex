@@ -5,17 +5,17 @@
 \label{sec:Theorem}
 Sei $f(t)$ periodisch in $t$ und steig, so lässt sich $f$ durch die sog. \textit{Fourier-Reihe} darstellen, welche wie folgt festgelegt ist:
 \begin{equation}
-  %F(t)= \frac{a_0}{2} + \sum_{n = 1}^\infty \Bigl a_n cos \bigl \frac{2 n \pi t}{T} \bigr + b_n sin \bigl \frac{2 n \pi t}{T} \bigr \Bigr
+  F(t)= \frac{a_0}{2} + \sum_{n = 1}^\infty \left( a_n cos \left( \frac{2 n \pi t}{T} \right) + b_n sin \left( \frac{2 n \pi t}{T} \right) \right)
   \label{eqn:Fourier-Reihe}
 \end{equation}
 Wobei $T$ die Periodendauer bezeichnet und $a_n$ gegeben ist durch
 \begin{equation}
-  a_n = \frac{2}{T} \int_0^T f(t) cos(\frac{2 n \pi t}{T}) \symup{d}t .
+  a_n = \frac{2}{T} \int_0^T f(t) cos\left(\frac{2 n \pi t}{T}\right) \symup{d}t .
   \label{eqn:an}
 \end{equation}
 $b_n$ ist analog durch
 \begin{equation}
-  b_n = \frac{2}{T} \int_0^T f(t) sin(\frac{2 n \pi t}{T}) \symup{d}t
+  b_n = \frac{2}{T} \int_0^T f(t) sin\left(\frac{2 n \pi t}{T}\right) \symup{d}t
   \label{eqn:bn}
 \end{equation}
 gegeben \cite{sample}.
@@ -25,12 +25,12 @@ Die Bestimmung dieser Koeffiezienten wird \textit{Fourier-Analyse} genannt und l
 \label{sec:Trafo}
 Mittels Fourier-Transformation $f(t) \to g(v)$ kann man das gesamte Frequenzspektrum $g(v)$ von $f(t)$ auf einmal berechnen, bzw. aus diesem $f(t)$. Sie ist gegeben durch
 \begin{equation}
-  g(v) = \int_{-\infty}^{\infty} f(t)*exp(ivt) \symup{d}t
+  g(v) = \int_{-\infty}^{\infty} f(t)exp(ivt) \symup{d}t
   \label{eq:trafo}
 \end{equation}
 bzw
 \begin{equation}
-  f(t) = \frac{1}{2\pi} \int_{-\infty}^{\infty} g(v)*exp(-ivt) \symup{d}v.
+  f(t) = \frac{1}{2\pi} \int_{-\infty}^{\infty} g(v)exp(-ivt) \symup{d}v.
   \label{eq:backtrafo}
 \end{equation}
 Bei Messungen des Spektrums ist zu beachten, dass selbst ein perfekt periodisches Signal zu einem kontinuierlichen Spektrum führen wird, da nicht von $-\infty$ bis $\infty$ integriert wird, sondern lediglich über einen begrenzten Zeitraum. Dies führt außerdem zu bedeutungslosen Nebenmaxima.

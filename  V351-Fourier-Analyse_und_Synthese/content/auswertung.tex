@@ -1,12 +1,11 @@
 \section{Auswertung}
 \label{sec:Auswertung}
 \subsection{Brechnung der Fourier-Koeffizenten}
-\label{sec:3.2}
 \subsubsection{Rechteckspannung}
-  Für die Rechteckspannung ergibt sich die Fourier-Amplituden mit der Fuktion:
+  Für die Rechteckspannung ergibt sich mit der Gleichung \eqref{eqn:bn} und der Funktion \eqref{eqn:recht} die Fourier-Amplituden mit der Fuktion:
   \begin{equation}
     b_n = \frac{A}{n\pi}(1-cos(n\pi))
-  \end{equation}
+  \end{equation} .
   Die Werte sind in Tabelle \ref{fig:kr} dargestellt für $A =1$.
   \begin{table}
     \centering
@@ -31,7 +30,7 @@
   \end{table}
 
 \subsubsection{Sägezahnspannung}
-Die Fourie-Koeffizenten der Sägezahnspannung lassen sich durch folgende Gleichung brechnen:
+Die Fourie-Koeffizenten der Sägezahnspannung lassen sich mit Zurhilfenahme der Gleichung \eqref{eqn:bn} und der Funktion \eqref{eqn:recht} durch folgende Gleichung brechnen:
 \begin{equation}
   b_n = -\frac{A}{n\pi}
 \end{equation}
@@ -59,9 +58,9 @@ Die Werte der Fourier-Koeffizenten finden sie in Tabelle \ref{fig:kd} dargestell
 \end{table}
 \FloatBarrier
 \subsubsection{Nadelimpuls}
-  Die Fourier-Koeffizenten des Nadelimpuls werden durch die folgende Gleichung berechnet:
+  Die Fourier-Koeffizenten des Nadelimpuls werden mit Zurhilfenahme der Gleichung \eqref{eqn:an} und der Funktion \eqref{eqn:recht} durch die folgende Gleichung berechnet:
   \begin{equation}
-    b_n = \frac{A}{n\pi} sin\left(\frac{n2\pi}{k}\right)
+    a_n = \frac{A}{n\pi} sin\left(\frac{n2\pi}{k}\right)
   \end{equation}
   Die Werte finden sie in Tabelle \ref{fig:kn} für verschiedene Werte von k dargestellt mit $A=1$.
 \begin{table}
@@ -114,7 +113,7 @@ Die Werte der Fourier-Koeffizenten finden sie in Tabelle \ref{fig:kd} dargestell
 \FloatBarrier
 Aus Tabelle \ref{fig:kn}\subref{fig:kn100} ist ersichtlich, dass sich für hohe Werte von k ein sog. Dirac-Kamm ergibt.
 \subsection{Vergleich mit den experimentel erfassten Fourier-Koeffizenten}
-\label{sec:3.3}
+\label{sec:3.2}
 \subsubsection{Rechteckspannung}
 In Abbildung \ref{fig:pr} sind die rechnerisch und experimentel ermittelten Fourier-Koeffizenten aufgetragen. Die experimentellen Größen wurden alle mit einem Fehler
 von 3\% versehen, da sie von einem Oszilloskop abgelesen wurden. Die Amplitude A der brechnetnen Werte wurde hier mit 10 Volt angenährt.
@@ -168,6 +167,7 @@ experimentellen Werten passt.
 Der Fit hat die Werte $ a = 1,146 \pm 0,033 $ und $ b = 0,085 \pm 0,019$ mit Formel \eqref{eqn:fit}.
 
 \subsection{Zusammensetzung der Schwingunsformen aus ihren Komponenten}
+\label{sec:3.3}
 \subsubsection{Reckteckspannung}
 In der Abbildung \ref{fig:sr} ist eine Rechteckspannung zu sehen, die wir mit
 unseren Fourier-Koeffizienten synthetisiert haben. Dafür das hier nur neun Oberschwingungen
