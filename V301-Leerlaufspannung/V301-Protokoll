@@ -1,0 +1,32 @@
+1.Theorie
+
+Nimmt man die Spannung an einer Spannungquelle ab so, dass kein Strom fließt, so bezeichnet man diese Spannung als "Leerlaufspannung" U_0. Schließt man diese Spannungquelle dann an einen Stromkreis an, in dem ein Strom I fließt, ist die abgenommene Spannung kleiner als U_0. Diese Spannung nennt man "Klemmspannung" U_k, dies wird formal dadurch erklärt, dass dieser Stromquelle ein Innenwiederstand R_i zugeordnet wird. 
+Aus dem zweiten Kirchhoffschen Gesetz (Maschenregel):
+Sum U_n = Sum R_m * I_m (1)
+folgt dann
+ U_o = I (R_i + R_a) (2) .
+ Weiter folgt mit dem Aufbau aus Abbildung 1 für die Klemmspannung 
+U_k = I*R_a = U_0 -I*R_i. (3)
+Dabei bezeichnet R_a einen Lastwiederstand im Stromkreis. Durch den Umrandeten Teil wird in Schaltbildern eine sog. reale Spannungsquelle dargestellt. 
+Aus Formel (3) ist dann ersichtlich, dass zur Messung der Klemmspannung ein Voltmeter mit möglichst hohem Innenwiederstand gewählt werden sollte, so dass gilt: U_k~U_0 
+Der Innenwiederstand bewirkt auch, dass man einer Spannungsquelle nicht eine beliebig hohe Leitung entnehmen kann. Betrachtet man dazu die Formel der el. Leistung einer Spannungsquelle als Funktion des Lastwiederstandes R_a:
+N(R_a) = I²R_a (4)
+so kannn man sich überlegen,dass die Leistung N maximal wird wenn R_a gleich dem Innenwiederstand R_i gewählt wird. Wird R_a entsprechend gewählt spricht man von Leitungsanpassung.
+Auch elekretischen Generatoren lässt sich ein Innenwiederstand zuordnen, dieser ist aber nicht unbedingt durch einen Gleichstromwiederstand gegeben. Der Innenwiederstand könnte z.B. durch ein Rückkopplungsmechanismus gegeben sein. Dann ist es notwendig den Innenwiederstand als differentielle Größe einzuführen:
+R_i= dU_k / dI (5)
+
+2.Durchführung
+Im ersten Teil des Versuches ermittelten wir die Leerlaufspannung mit einem hochohmigen Voltmeter
+und notierten den Eigenwiederstandes des Voltmeters.
+
+Im zweiten Teil des Versuches wird ein Schaltkreis mit der Monozelle, wie in Abbildung 2a aufgebaut und die Klemmspannung in Abhänigkeit von der Stromstärke gemessen.Im Stromkreis wird ein variabler Wiederstand eingebracht. Der Wiederstand variiert zwischen 0 und 50 Ohm. Diesen Teil des Versuches führten wir zweimal durch, da eine Messreihe ungültig war weil wir die Monozelle falsch angeschlossen hatten.
+
+Im dritten Teil des Versuches baut man den Versuchsaufbau zu 2b um in dem man eine Gegenspannung anlegt, diese sollte min. 2 V größer sein als die Leerlaufspannung der Monozelle. Auch hier misst man die Klemmspannung in Abhänigkeit von der Stromstärke.
+
+Im letzten Teil des Versuches wiederholt man nun den zweiten Teil mit dem Unterschied, dass dieses mal ein RC-Generator statt einer Monozelle als Spannungsquelle dient. Zudem wird einmal eine 1V starke Rechteckspannung benutzt mit dieser Rechteckspannung wird eine variabler Wiederstand mit Variationsbereich von 20-250 Ohm benutzt. Später wird dann eine 1V starke Sinusspannung anstatt einer Rechteckspannung verwendet. Die Frequenz der beiden Spannungen blieb unverändert bei 60 Herz.
+
+
+
+
+3.Auswertung 
+4.Diskussion

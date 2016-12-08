@@ -1,6 +1,10 @@
 import matplotlib.pyplot as plt
 import numpy as np
-import uncertainties.unumpy as un
+import uncertainties.unumpy as unp
+from scipy.optimize import curve_fit
+from uncertainties import correlated_values, correlation_matrix
+from uncertainties import ufloat
+from uncertainties.unumpy import (nominal_values as noms, std_devs as stds)
 x = np.linspace(0, 10, 1000)
 y = x ** np.sin(x)
 

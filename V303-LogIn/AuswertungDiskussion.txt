@@ -1,0 +1,14 @@
+Auswertung:
+-Im ersten Teil des Versuches stellt man fest , dass am Rerenzausgang die Spannung variabel ist. Während die Spannung am Oszillatorausgang einen festen Wert von 11 Volt hat. 
+
+- Im zweiten Teil beobachten wir den Zusammenhang zwischen der Referenzspannung und der Signalspannung. In der Graphik (1Plot) haben wir den Sachverhalt, wie folgt dargestellt. Laut Versuchsanleitung gilt: U_out = 2/pi * U_0 * cos(phi). Um unsere Werte mit den Erwartungswerten zu vergleichen, stellen wir die Glöeichung zum Kosinus der Phasenunterschiede um. Also folgt somit:
+pi/2 * U_out / U_0 = cos(phi). Daraus ist ersichtlich, dass unsere Messwerte einen Phasenuntersschied zu userem Kosinus aufweisen. Das verrauschte Signal wirkt gedämpft im Gegensatz zum rauschfreien Signal. Trotzdem kann man aus beiden Signalen einen Kosinus erkennen.
+ 
+-Im dritten Teil des Versuches untersuchen wir die Rauschunterdrückung des LockIn Verstärkers anhand einer Photodetektorschaltung. Indem wir die gemessene Intensität I zum Abstand auftragen.
+Die LED wird mit einer Rechteckspannung von 65,6 Volt und 103,5 Herz betrieben. Wir erwarten einen 
+Intensitätsabfall mit Eins durch Abstandsquadrat. Trägt man diese Werte in ein doppeltlogarithmisches Koordinatensystem ein so kann man einen linearen Abfall betrachten, wie man in (logPlot2) sehen kann.
+
+Diskussion:
+Im zweiten Teil des Versuches stellten wir fest, dass es einen Phasenunterschied zwischen den Erwartungswerten und den gemessenen Werten gab. Dieser Fehler liegt innerhalb des Bandpassfilters, wie wir auch festgehalten haben (Screenshot). Wir konnten einen Phasenunterschied zwischen dem Referenzsignal und dem eigentlichen Signal feststellen, Obwohl der Phasenunterschied laut Apperatur Null sein sollte.
+
+
