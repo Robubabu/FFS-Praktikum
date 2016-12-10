@@ -1,4 +1,4 @@
-PWD /home/robert/Dropbox/FFS-Ordner/V354-Gedaempfte_und_erzwungene_Schwingungen/Protokoll-Code
+PWD /home/robert/Git/FFS-Praktikum/V354-Gedaempfte_und_erzwungene_Schwingungen/Protokoll-Code
 INPUT /home/robert/.local/texlive/2016/texmf-var/web2c/luatex/lualatex.fmt
 INPUT ./main.tex
 OUTPUT build/main.log
@@ -381,8 +381,6 @@ INPUT ./logos/schwingkreis.png
 INPUT ./logos/schwingkreis.png
 INPUT ./content/aufbau.tex
 INPUT ./content/aufbau.tex
-INPUT ./content/durchfuehrung.tex
-INPUT ./content/durchfuehrung.tex
 INPUT ./logos/Amplitude_Schaltung.PNG
 INPUT ./logos/Amplitude_Schaltung.PNG
 INPUT /home/robert/.local/texlive/2016/texmf-dist/fonts/tfm/public/cm/cmmi5.tfm
@@ -390,10 +388,12 @@ INPUT /home/robert/.local/texlive/2016/texmf-dist/fonts/tfm/public/cm/cmss8.tfm
 INPUT /home/robert/.local/texlive/2016/texmf-dist/fonts/tfm/public/cm/cmtt8.tfm
 INPUT /home/robert/.local/texlive/2016/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam5.tfm
 INPUT /home/robert/.local/texlive/2016/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm
+INPUT ./content/durchfuehrung.tex
+INPUT ./content/durchfuehrung.tex
 INPUT ./content/auswertung.tex
 INPUT ./content/auswertung.tex
-INPUT ./logos/5aplot.pdf
-INPUT ./logos/5aplot.pdf
+INPUT ./plots/5aplotreload.pdf
+INPUT ./plots/5aplotreload.pdf
 INPUT /home/robert/.local/texlive/2016/texmf-var/luatex-cache/generic/fonts/otl/lmroman8-regular.luc
 INPUT /home/robert/.local/texlive/2016/texmf-var/luatex-cache/generic/fonts/otl/lmroman6-regular.luc
 INPUT ./logos/5Print.JPG
@@ -402,8 +402,8 @@ INPUT ./logos/6Print.JPG
 INPUT ./logos/6Print.JPG
 INPUT ./logos/7Print.JPG
 INPUT ./logos/7Print.JPG
-INPUT ./logos/5cplot.pdf
-INPUT ./logos/5cplot.pdf
+INPUT ./plots/5cplot.pdf
+INPUT ./plots/5cplot.pdf
 INPUT ./logos/5dplot.pdf
 INPUT ./logos/5dplot.pdf
 INPUT ./logos/5eplot.pdf

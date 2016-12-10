@@ -7,7 +7,8 @@ Der Widerstand $R$ stellt eine Dämpfung der Energie des Systems und somit seine
 \begin{figure}
   \centering
   \includegraphics[height= 4cm]{./logos/schwingkreis.png}
-  \caption{Einfacher RCL-Kreis bestehend aus einer Spule, einem Widerstand und einem Kondensator}
+  \caption{Einfacher RCL-Kreis bestehend aus einer Spule, einem Widerstand und einem Kondensator
+  aus Quelle \cite{sample}}
   \label{fig:rcl}
 \end{figure}
 
@@ -63,8 +64,10 @@ In diesem Fall lässt sich \eqref{eqn:I(t)} schreiben als:
   \label{eqn:Schwing(t)}
 \end{equation}
 
-Es ergibt sich somit eine gedämpfte Schwingung der Umlaufdauer $T= \frac{1}{v} = \frac{2\pi}{\sqrt{1/LC-R^2/4L^2}}$
-
+Es ergibt sich somit eine gedämpfte Schwingung der Umlaufdauer
+\begin{equation*}
+T= \frac{1}{v} = \frac{2\pi}{\sqrt{1/LC-R^2/4L^2}}
+\end{equation*}
 \subsubsection{Kriechfall}
 Da $\frac{1}{LC} < \frac{R^2}{4L^2}$ ergibt sich \eqref{eqn:I(t)}  mit $\tilde{\omega} = \sqrt{\frac{R^2}{4L^2} - \frac{1}{LC}}$ zu:
 

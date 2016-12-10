@@ -5,49 +5,100 @@ from scipy.optimize import curve_fit
 from uncertainties import correlated_values, correlation_matrix
 from uncertainties import ufloat
 from uncertainties.unumpy import (nominal_values as noms, std_devs as stds)
-
+#Einlesen
 Uio,tio = np.genfromtxt('5awerteoben.txt', unpack = True)
 Uiu, tiu = np.genfromtxt('5awerteunten.txt', unpack = True )
+#Einheiten
 Uio*=1e-3
 Uiu*=1e-3
 tio*=1e-6
 tiu*=1e-6
+#Zusammenfuegen und log der y Werte
+Uio= np.log(Uio)
+Uiu = Uiu[0:-3]
+Uiu = np.absolute(Uiu)
+Uiu = np.log(Uiu)
+Uiu*=(-1)
+tiu = tiu[0:-3]
 U= np.append(Uio , Uiu)
 t= np.append(tio ,tiu)
 
+#Fit
+
 def fit(x , a , b):
-    return a*x + b
+    return a*2*np.pi*x + b
+oparams, ocav = curve_fit(fit , tio ,Uio )
+uparams, ucav = curve_fit(fit , tiu[4:-1], Uiu[4:-1])
+oparams = correlated_values(oparams , ocav)
+uparams = correlated_values(uparams , ucav)
+oa = oparams[0]
+ob = oparams[1]
+ua = uparams[0]
+ub = uparams[1]
+print('omhy:',oa)
+print('oA0:', unp.exp(ob))
+print('umhy:', ua)
+print('uA0:', unp.exp(ub))
+#Plot
+# x = np.linspace(0,0.001)
+# plt.plot(t, U, 'rx' , label= 'Messwerte')
+# plt.plot(x,fit(x , noms(oa) ,noms(ob)) ,'b--' , label='Fit der oberen Einhüllenden')
+# plt.plot(x, fit(x ,noms(ua), noms(ub)),'g--', label='Fit der unteren Einhüllenden')
+# plt.xlabel(r'$ t / s $')
+# plt.ylabel(r'$ln( U\:/\:V ) $')
+# plt.legend(loc='best')
+# plt.savefig('5aplotreload.pdf')
+# # plt.show()
 
-oparam, ocav = curve_fit(fit , np.log(tio) , np.log(Uio))
-uparam, ucav = curve_fit(fit, np.log(np.absolute(tiu[3:-3])) , np.log(np.absolute(Uiu[3:-3]) ))
-oparam = correlated_values(oparam, ocav)
-uparam = correlated_values(uparam, ucav)
-oa = oparam[0]
-ob = oparam[1]
-ua = -uparam[0]
-ub = -uparam[1]
-
-print('Wert oa und ob:',oa,ob)
-print('Wert ua und ub:', ua ,ub)
 R = ufloat(48.1 , 0.1)
 L = ufloat(10.11 , 0.03)/1000
-x = np.linspace(0, 1e-3)
+To =np.absolute((1/(2*np.pi*oa)))
+Tu =np.absolute((1/(2*np.pi*ua)))
+Ro =np.absolute((4*L*np.pi*oa))
+Ru =np.absolute((4*L*np.pi*ua))
+print('To=',To)
+print('Tu=', Tu)
+print('Ro=', Ro)
+print('Ru=', Ru)
+#InnenWiderstand abziehen
+# Ru=Ru-50
+# Ro=Ro-50
+R= R+50
+print('Delta To , Tu , Ro , Ru')
+dTo=(To-((2*L)/R))/((2*L)/R)
+dTu=(Tu-((2*L)/R))/((2*L)/R)
+dRo=(Ro-R)/R
+dRu=(Ru-R)/R
+print(dTo)
+print(dTu)
+print(dRo)
+print(dRu)
 
-# plt.errorbar(noms(t) , noms(U) , xerr=stds(t),yerr=stds(U), fmt='rx' )
-# plt.plot(x,fit(x , oa ,ob) , label='Kurve')
-# plt.plot(x, fit(x ,ua, ub), label='Kurve')
-# plt.xlabel(r'$\alpha \:/\: \si{\ohm}$')
-# plt.ylabel(r'$y \:/\: \si{\micro\joule}$')
 
-# plt.legend(loc='best')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #
-# plt.subplot(1, 2, 2)
-# plt.plot(x, y, label='Kurve')
-# plt.xlabel(r'$\alpha \:/\: \si{\ohm}$')
-# plt.ylabel(r'$y \:/\: \si{\micro\joule}$')
-# plt.legend(loc='best')
-#
-# # in matplotlibrc leider (noch) nicht möglich
-# plt.tight_layout(pad=0, h_pad=1.08, w_pad=1.08)
-# plt.savefig('build/plot.pdf')
-plt.show()
