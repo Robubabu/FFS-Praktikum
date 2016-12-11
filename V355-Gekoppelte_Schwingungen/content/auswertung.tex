@@ -1,26 +1,5 @@
-\section{Auswertung}
-\label{sec:Auswertung}
-
-\subsection{Geräte-Daten}
-Schaltung 1:
-\begin{equation*}
-  C_1 = 0,8015nF
-  C_{sp,1} = 0,037nF
-  L_1 = 32,351mH
-\end{equation*}
-
-Schaltung 2:
-
-\begin{equation*}
-  C_2 = 0,7932nF
-  C_{sp,2} = 0,028nF
-  L_2 = 23,954mH
-\end{equation*}
-
-Wobei $C_sp$ die Kazatität der Spule darstellt.
-
 \subsection{Justierung}
-Als grobe Näherung der Frequenz $v_+$ wurden $35,21Hz$ gemessen.
+Als grobe Näherung der Resonanzfrequenz des festen Schwingkreises wurden $35,21Hz$ gemessen.
 
 \subsection{Frequenzverhältnisse bei einer Schwebung}
 \label{sec:Frequenzverhältnisse}
@@ -36,10 +15,10 @@ Die gezählten Verhältnisse der Frequenzen lassen sich Tabelle \ref{tab:verhael
   \toprule
   {$C_k/nF$} & {Peaks pro Schwebung}\\
   \midrule
-  1.200000000000000000e+01 & 1.700000000000000000e+01\\
-  9.990000000000000213e+00 & 1.400000000000000000e+01\\
-  8.179999999999999716e+00 & 1.300000000000000000e+01\\
-  6.860000000000000320e+00 & 1.000000000000000000e+01\\
+  12.00000000000000000 & 17.00000000000000000\\
+  9.990000000000000213e+00 & 14.00000000000000000\\
+  8.179999999999999716e+00 & 13.00000000000000000e+00\\
+  6.860000000000000320e+00 & 10.00000000000000000e+00\\
   4.740000000000000213e+00 & 9.000000000000000000e+00\\
   2.859999999999999876e+00 & 5.000000000000000000e+00\\
   2.189999999999999947e+00 & 4.000000000000000000e+00\\
@@ -51,8 +30,8 @@ Die gezählten Verhältnisse der Frequenzen lassen sich Tabelle \ref{tab:verhael
 \begin{figure}
   \centering
   \includegraphics[width=\textwidth]{./plots/freq-ratio.pdf}
-  \caption{gezählte Peaks pro Schwebung aufgetragen gegen $C_K$.}
-  \label{fig:verhältnisse}
+  \caption{gezählte Peaks pro Schwebung aufgetragen gegen $C_K$  und vergleichende Theoriegerade}
+  \label{fig:verhaeltnisse}
 \end{figure}
 \FloatBarrier
 
@@ -68,7 +47,7 @@ Die gezählten Verhältnisse der Frequenzen lassen sich Tabelle \ref{tab:verhael
 \end{figure}
 \FloatBarrier
 
-Die in diesem Schritt aufgenommenen Werte werden in Abb.\ref{fig:frequenzen} mit errechneten Kurven $v_{1-}$ und $v_{2-}$ für Schaltung 1 und 2. Offensichtlich wurde Schaltung 1 für die Messungen verwendet, weshalb fortan ausschließlich diese Schaltung betrachtet wird.
+Die in diesem Schritt aufgenommenen Werte werden in Abb.\ref{fig:frequenzen} mit errechneten Kurven $v_{1-}$ und $v_{2-}$ für Schaltung 1 und 2. Offensichtlich wurde Schaltung 1 für die Messungen verwendet, weshalb fortan ausschließlich diese Schaltung betrachtet wird. Die Theorie-Kurven ergeben sich hierbei aus den Formeln \eqref{eqn:nu+} und \eqref{eqn:nu-}.
 
 \begin{table}
   \centering
@@ -77,26 +56,26 @@ Die in diesem Schritt aufgenommenen Werte werden in Abb.\ref{fig:frequenzen} mit
 \sisetup{round-mode = places , round-precision = 2}
 \begin{tabular}{S S S}
   \toprule
-  {$C_k/nF$} & {$\frac{v_+}{kHz}$} & {$\frac{v_-}{kHz}$}\\
+  {$C_k/nF$} & {$v_+/kHz$} & {$v_-/kHz$}\\
   \midrule
-  9.969999999999999973e-01 & 3.520000000000000284e+01 & 4.629999999999999716e+01\\
-  2.189999999999999947e+00 & 3.570000000000000284e+01 & 5.617999999999999972e+01\\
-  2.859999999999999876e+00 & 3.496999999999999886e+01 & 4.464000000000000057e+01\\
-  4.740000000000000213e+00 & 3.546000000000000085e+01 & 4.097999999999999687e+01\\
-  6.860000000000000320e+00 & 3.596999999999999886e+01 & 3.936999999999999744e+01\\
-  8.179999999999999716e+00 & 3.571000000000000085e+01 & 3.846000000000000085e+01\\
-  9.990000000000000213e+00 & 3.571000000000000085e+01 & 3.906000000000000227e+01\\
-  1.200000000000000000e+01 & 3.571000000000000085e+01 & 3.959000000000000341e+01\\
+  0.9969999999999999973e-00 & 35.20000000000000284e+00 & 46.29999999999999716e+00\\
+  2.189999999999999947e+00 & 35.70000000000000284e+00 & 56.17999999999999972e+00\\
+  2.859999999999999876e+00 & 34.96999999999999886e+00 & 44.64000000000000057e+00\\
+  4.740000000000000213e+00 & 35.46000000000000085e+00 & 40.97999999999999687e+00\\
+  6.860000000000000320e+00 & 35.96999999999999886e+00 & 39.36999999999999744e+00\\
+  8.179999999999999716e+00 & 35.71000000000000085e+00 & 38.46000000000000085e+00\\
+  9.990000000000000213e+00 & 35.71000000000000085e+00 & 39.06000000000000227e+00\\
+  12.00000000000000000e+00 & 35.71000000000000085e+00 & 39.59000000000000341e+00\\
 \bottomrule
 \end{tabular}
 \end{table}
 \FloatBarrier
 
 
-\subsection{Ermittlung von $v_+$ und $v_-$ mittels Sweap-Verfahren}
-\label{sec:sweap}
+\subsection{Ermittlung von $v_+$ und $v_-$ mittels Sweep-Verfahren}
+\label{sec:sweep}
 
-Da beim Sweap-Verfahren die Frequenzen nicht direkt gemessen werden, sondern nur zeitliche Abstände (zu entnehmen aus Tabelle \ref{tab:sweap}) müssen diese zunächst umgerechnet werden. Hierzu wird folgende Formel verwendet:
+Da beim Sweep-Verfahren die Frequenzen nicht direkt gemessen werden, sondern nur zeitliche Abstände (zu entnehmen aus Tabelle \ref{tab:sweep}) müssen diese zunächst umgerechnet werden. Hierzu wird folgende Formel verwendet:
 
 \begin{equation}
   f(t) = ( f_{Ende} - f_{Anfang} ) \frac{t}{1s} + f_{Anfang}
@@ -107,20 +86,20 @@ Bei der Messung sind $f_{Anfang} = 3,165kHz$ und $f_{Ende} = 83,33kHz$ gewählt.
 \begin{table}
   \centering
 \caption{gemessene Frequenzverhältnisse}
-\label{tab:sweap}
+\label{tab:sweep}
 \sisetup{round-mode = places , round-precision = 2}
 \begin{tabular}{S S S}
   \toprule
-  {$C_k/nF$} & {$\frac{\Delta t}{ms}$} & {$\frac{\Delta t}{ms}$}\\
+  {$C_k/nF$} & {$\Delta t/ms$} & {$\Delta t/ms$}\\
   \midrule
-  9.969999999999999973e-01 & 4.000000000000000000e+02 & 6.480000000000000000e+02\\
-  2.189999999999999947e+00 & 4.080000000000000000e+02 & 5.360000000000000000e+02\\
-  2.859999999999999876e+00 & 4.000000000000000000e+02 & 5.040000000000000000e+02\\
-  4.740000000000000213e+00 & 4.080000000000000000e+02 & 4.640000000000000000e+02\\
-  6.860000000000000320e+00 & 4.000000000000000000e+02 & 4.400000000000000000e+02\\
-  8.179999999999999716e+00 & 4.000000000000000000e+02 & 4.400000000000000000e+02\\
-  9.990000000000000213e+00 & 4.080000000000000000e+02 & 4.320000000000000000e+02\\
-  1.200000000000000000e+01 & 3.920000000000000000e+02 & 4.160000000000000000e+02\\
+  0.9969999999999999973e-00 & 400.0000000000000000e+00 & 648.0000000000000000e+00\\
+  2.189999999999999947e+00 & 408.0000000000000000e+00 & 536.0000000000000000e+00\\
+  2.859999999999999876e+00 & 400.0000000000000000e+00 & 504.0000000000000000e+00\\
+  4.40000000000000213e+00 & 408.0000000000000000e+00 & 464.0000000000000000e+00\\
+  6.860000000000000320e+00 & 400.0000000000000000e+00 & 440.0000000000000000e+00\\
+  8.179999999999999716e+00 & 400.0000000000000000e+00 & 440.0000000000000000e+00\\
+  9.990000000000000213e+00 & 408.0000000000000000e+00 & 432.0000000000000000e+00\\
+  12.00000000000000000e+00 & 392.0000000000000000e+00 & 416.0000000000000000e+00\\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -135,14 +114,14 @@ Bei der Messung sind $f_{Anfang} = 3,165kHz$ und $f_{Ende} = 83,33kHz$ gewählt.
   \toprule
   {$C_k/nF$} & {$\frac{v_+}{kHz}$} & {$\frac{v_-}{kHz}$}\\
   \midrule
-  9.969999999999999973e-01 & 3.523100000000000165e+01 & 5.511192000000000490e+01\\
-  2.189999999999999947e+00 & 3.587232000000000198e+01 & 4.613344000000000733e+01\\
-  2.859999999999999876e+00 & 3.523100000000000165e+01 & 4.356816000000000599e+01\\
-  4.740000000000000213e+00 & 3.587232000000000198e+01 & 4.036156000000000432e+01\\
-  6.860000000000000320e+00 & 3.523100000000000165e+01 & 3.843760000000000332e+01\\
-  8.179999999999999716e+00 & 3.523100000000000165e+01 & 3.843760000000000332e+01\\
-  9.990000000000000213e+00 & 3.587232000000000198e+01 & 3.779628000000000299e+01\\
-  1.200000000000000000e+01 & 3.458968000000000131e+01 & 3.651364000000000232e+01\\
+  0.9969999999999999973e-00 & 35.23100000000000165e+00 & 55.11192000000000490e+00\\
+  2.189999999999999947e+00 & 35.87232000000000198e+00 & 46.13344000000000733e+00\\
+  2.859999999999999876e+00 & 35.23100000000000165e+00 & 43.56816000000000599e+00\\
+  4.740000000000000213e+00 & 35.87232000000000198e+00 & 40.36156000000000432e+00\\
+  6.860000000000000320e+00 & 35.23100000000000165e+00 & 38.43760000000000332e+00\\
+  8.179999999999999716e+00 & 35.23100000000000165e+00 & 38.43760000000000332e+00\\
+  9.990000000000000213e+00 & 35.87232000000000198e+00 & 37.79628000000000299e+00\\
+  12.00000000000000000e+00 & 34.58968000000000131e+00 & 36.51364000000000232e+00\\
 
 \bottomrule
 \end{tabular}
