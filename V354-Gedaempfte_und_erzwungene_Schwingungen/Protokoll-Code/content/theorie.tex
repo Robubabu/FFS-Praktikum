@@ -31,7 +31,7 @@ Durch Einsetzen dieser Spannungen in differentieller Form erhält man:
 
 Diese Differentialgleichung ist aus der Mechanik bekannt als Bewegungsgleichung eines gedämpften harmonischen Oszillators.
 In diesem Fall schwingen Ladungen $Q$ und somit auch der Strom $I$, welcher eine einfacher zu messende und verbreitetere Größe als die Ladung darstellt.
-Um eine DGL in $I$ zu erhalten differenziert man \eqref{eqn:kirchhoff2} einfach nach der Zeit und erhält:
+Um eine DGL in $I$ zu erhalten wird \eqref{eqn:kirchhoff2} nach der Zeit differenziert und erhält:
 \begin{equation}
   0= L \cdot \ddot{I} + R \cdot \dot{I} + \frac{1}{C} \cdot I .
   \label{eqn:kirchhoff3}
@@ -78,7 +78,7 @@ Da $\frac{1}{LC} < \frac{R^2}{4L^2}$ ergibt sich \eqref{eqn:I(t)}  mit $\tilde{\
 
 Je nach Verhältnis $A/B$ kann es bei diesem Stromverlauf bis zu einen Nulldurchgang geben, danach strebt er gegen Null ohne zu schwingen.
 
-\subsubsection{aperiodischer Grenzfall}
+\subsubsection{Aperiodischer Grenzfall}
 Für $\frac{1}{LC} = \frac{R^2}{4L^2}$ reduziert sich \eqref{eqn:I(t)} zu:
 \begin{equation}
   I_{ap}(t)= A \cdot \symup{exp}(-\beta t) = A \cdot \symup{exp}\left(- \frac{t}{\sqrt{LC}}\right)
@@ -111,17 +111,17 @@ Die Phase dieser Amplitude ergibt sich zu
 \end{equation*}
 Bestimmt man das Maximum der Amplitude so findet man es bei der sog. Resonanzfrequenz, welche der Eigenfrequenz \omega des Schwingkreises entspricht. Es gilt:
 \begin{equation}
-  U_{C,max} = \frac{1}{\omega RC} U_0
+  U_{C,max} = \frac{1}{\omega RC} U_0.
   \label{eqn:Resonanz}
 \end{equation}
 
-Man definiert hierbei die Güte $q=\frac{\omega}{\omega_+ - \omega_-}$ wobei $\omega_\pm$ die beiden Frequenzen sind,
+Die Güte wird definiert durch $q=\frac{\omega}{\omega_+ - \omega_-}$ wobei $\omega_\pm$ die beiden Frequenzen sind,
 bei denen $U_C = \frac{1}{\sqrt{2}} U_{C,max}$, deren Differenz als Breite der Resonanzkurve bezeichnet wird.
 Für $R^2/L^2 << \omega^2$ lässt sich die Breite zu $R/L$ nähern.
 
 \subsection{Impedanz}
-Bestimmt man den Gesamtwiderstand des RCL-Gliedes, so stellt man fest, dass es sich hierbei um die komplexe Größe
+Wird der Gesamtwiderstand des RCL-Gliedes bestimmt, so ist festzustellen, dass es sich hierbei um die komplexe Größe
 \begin{equation}
   Z = R + i\left(\omega L - \frac{1}{\omega C}\right)
 \end{equation}
-handelt. Man teilt diesen komplexen Widerstand (Impedanz) in seinen reellen Wirkwiderstand (hier: $R$) und den rein imaginären Scheinwiderstand (hier: $i \left(\omega L - \frac{1}{\omega C}\right)$) ein.
+handelt. Dieser komplexen Widerstand (Impedanz) wird in seinen reellen Wirkwiderstand (hier: $R$) und den rein imaginären Scheinwiderstand (hier: $i \left(\omega L - \frac{1}{\omega C}\right)$) eingeteilt.

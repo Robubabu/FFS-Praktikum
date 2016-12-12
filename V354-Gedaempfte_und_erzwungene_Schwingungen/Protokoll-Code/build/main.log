@@ -1,4 +1,4 @@
-This is LuaTeX, Version 0.95.0 (TeX Live 2016)  (format=lualatex 2016.10.10)  10 DEC 2016 17:10
+This is LuaTeX, Version 0.95.0 (TeX Live 2016)  (format=lualatex 2016.10.10)  12 DEC 2016 13:12
  restricted system commands enabled.
 **main.tex
 (./main.tex
@@ -467,7 +467,7 @@ Inserting `luaotfload.aux.patch_cambria_domh' at position 2 in `luaotfload.patch
 Inserting `luaotfload.aux.fixup_fontdata' at position 1 in `luaotfload.patch_font_unsafe'.
 Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font'.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'.
-luaotfload | main : initialization completed in 0.171 seconds)
+luaotfload | main : initialization completed in 0.200 seconds)
 Lua module: fontspec 2016/02/01 2.5a Advanced font selection for LuaLaTeX. (/home/robert/.local/texlive/2016/texmf-dist/tex/latex/fontspec/fontspec-luatex.sty
 Package: fontspec-luatex 2016/02/01 v2.5a Font selection for XeLaTeX and LuaLaTeX
 \l_fontspec_script_int=\count118
@@ -2031,7 +2031,7 @@ Language ngerman already loaded; id is 8 [2
 \tf@toc=\write5
 
 \openout5 = main.toc
- [3] (./content/versuchsziel.tex) (./content/theorie.tex <./logos/schwingkreis.png, id=105, 790.45313pt x 520.94624pt>
+ [3] (./content/versuchsziel.tex) (./content/theorie.tex <./logos/schwingkreis.png, id=107, 790.45313pt x 520.94624pt>
 File: ./logos/schwingkreis.png Graphic file (type png)
  <use ./logos/schwingkreis.png>
 Package luatex.def Info: ./logos/schwingkreis.png used on input line 9.
@@ -2040,7 +2040,7 @@ Package luatex.def Info: ./logos/schwingkreis.png used on input line 9.
 Missing character: There is no 𝜑 (U+1D711) in font file:lmroman10-regular:script=latn;+trep;+tlig;!
 <./logos/schwingkreis.png>] [5]) (./content/aufbau.tex [6
 Missing character: There is no 𝜔 (U+1D714) in font file:lmroman10-regular:script=latn;+trep;+tlig;!
-] <./logos/Amplitude_Schaltung.PNG, id=156, 270.25969pt x 110.66344pt>
+] <./logos/Amplitude_Schaltung.PNG, id=158, 270.25969pt x 110.66344pt>
 File: ./logos/Amplitude_Schaltung.PNG Graphic file (type png)
  <use ./logos/Amplitude_Schaltung.PNG>
 Package luatex.def Info: ./logos/Amplitude_Schaltung.PNG used on input line 17.
@@ -2049,7 +2049,7 @@ LaTeX Font Info:    Font shape `EU2/LatinModernMath(1)/m/n' will be
 (Font)              scaled to size 5.00008pt on input line 19.
 LaTeX Font Info:    Font shape `EU2/LatinModernMath(2)/m/n' will be
 (Font)              scaled to size 4.99992pt on input line 19.
-) (./content/durchfuehrung.tex [7<./logos/Amplitude_Schaltung.PNG>]) (./content/auswertung.tex [8] <./plots/5aplotreload.pdf, id=176, 578.16pt x 433.62pt>
+) (./content/durchfuehrung.tex [7<./logos/Amplitude_Schaltung.PNG>]) (./content/auswertung.tex [8] <./plots/5aplotreload.pdf, id=178, 578.16pt x 433.62pt>
 File: ./plots/5aplotreload.pdf Graphic file (type pdf)
  <use ./plots/5aplotreload.pdf>
 Package luatex.def Info: ./plots/5aplotreload.pdf used on input line 12.
@@ -2058,67 +2058,67 @@ Package luatex.def Info: ./plots/5aplotreload.pdf used on input line 12.
 
 LaTeX Warning: Float too large for page by 20.89072pt on input line 156.
 
-[10] [11] [12] <./logos/5Print.JPG, id=253, 642.4pt x 481.8pt>
+[10] [11] [12] <./logos/5Print.JPG, id=255, 642.4pt x 481.8pt>
 File: ./logos/5Print.JPG Graphic file (type jpg)
  <use ./logos/5Print.JPG>
 Package luatex.def Info: ./logos/5Print.JPG used on input line 197.
 (luatex.def)             Requested size: 189.6828pt x 142.26378pt.
- <./logos/6Print.JPG, id=254, 642.4pt x 481.8pt>
+ <./logos/6Print.JPG, id=256, 642.4pt x 481.8pt>
 File: ./logos/6Print.JPG Graphic file (type jpg)
  <use ./logos/6Print.JPG>
 Package luatex.def Info: ./logos/6Print.JPG used on input line 202.
 (luatex.def)             Requested size: 189.6828pt x 142.26378pt.
- <./logos/7Print.JPG, id=255, 642.4pt x 481.8pt>
+ <./logos/7Print.JPG, id=257, 642.4pt x 481.8pt>
 File: ./logos/7Print.JPG Graphic file (type jpg)
  <use ./logos/7Print.JPG>
 Package luatex.def Info: ./logos/7Print.JPG used on input line 208.
 (luatex.def)             Requested size: 189.6828pt x 142.26378pt.
- <./plots/5cplot.pdf, id=257, 578.16pt x 433.62pt>
+ <./plots/5cplot.pdf, id=259, 578.16pt x 433.62pt>
 File: ./plots/5cplot.pdf Graphic file (type pdf)
  <use ./plots/5cplot.pdf>
 Package luatex.def Info: ./plots/5cplot.pdf used on input line 226.
 (luatex.def)             Requested size: 265.55983pt x 199.16928pt.
- [13<./logos/5Print.JPG><./logos/6Print.JPG><./logos/7Print.JPG>] [14<./plots/5cplot.pdf>] <./logos/5dplot.pdf, id=312, 578.16pt x 433.62pt>
+ [13<./logos/5Print.JPG><./logos/6Print.JPG><./logos/7Print.JPG>] [14<./plots/5cplot.pdf>] <./logos/5dplot.pdf, id=314, 578.16pt x 433.62pt>
 File: ./logos/5dplot.pdf Graphic file (type pdf)
  <use ./logos/5dplot.pdf>
-Package luatex.def Info: ./logos/5dplot.pdf used on input line 297.
+Package luatex.def Info: ./logos/5dplot.pdf used on input line 300.
 (luatex.def)             Requested size: 265.55983pt x 199.16928pt.
- [15] [16<./logos/5dplot.pdf>] <./logos/5eplot.pdf, id=370, 578.16pt x 433.62pt>
+ [15] [16<./logos/5dplot.pdf>] <./logos/5eplot.pdf, id=372, 578.16pt x 433.62pt>
 File: ./logos/5eplot.pdf Graphic file (type pdf)
  <use ./logos/5eplot.pdf>
-Package luatex.def Info: ./logos/5eplot.pdf used on input line 331.
+Package luatex.def Info: ./logos/5eplot.pdf used on input line 334.
 (luatex.def)             Requested size: 265.55983pt x 199.16928pt.
-) (./content/diskussion.tex [17<./logos/5eplot.pdf>])
+) (./content/diskussion.tex [17<./logos/5eplot.pdf>]) [18]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 27.
- [18]
+ [19]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 27.
  (./build/main.aux
 Language ngerman already loaded; id is 8)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 27.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 27.
 Package rerunfilecheck Info: File `main.aux' has not changed.
-(rerunfilecheck)             Checksum: F89A094BD0F0544ACDEA34FCD9A6E6B8;31107.
+(rerunfilecheck)             Checksum: C6B61A783EAE87ABD9D323A758CB003C;31517.
 Package rerunfilecheck Info: File `main.toc' has not changed.
-(rerunfilecheck)             Checksum: 84769323F173695B5B2A37AD9D2C8559;3876.
+(rerunfilecheck)             Checksum: 9DBA1131FB91286381C28F7AF737F79B;3958.
 Package logreq Info: Writing requests to 'main.run.xml'.
 
 \openout1 = main.run.xml
 )
 
 Here is how much of LuaTeX's memory you used:
- 44761 strings out of 495118
+ 44764 strings out of 495118
  100000,1648299 words of node,token memory allocated
- 9410 words of node memory still in use:
-   6 hlist, 2 vlist, 2 rule, 1029 glue, 1 kern, 432 attribute, 59 glue_spec, 432 attribute_list, 1 write, 4 pdf_action nodes
-   avail lists: 1:1,2:5430,3:256,4:26,5:505,6:2569,7:3014,8:395,9:2359,10:10,11:353
- 46916 multiletter control sequences out of 65536+600000
- 103 fonts using 32914975 bytes
- 71i,15n,104p,8833b,2954s stack positions out of 5000i,500n,10000p,200000b,100000s
+ 9499 words of node memory still in use:
+   6 hlist, 2 vlist, 2 rule, 1040 glue, 1 kern, 435 attribute, 59 glue_spec, 435 attribute_list, 1 write, 4 pdf_action nodes
+   avail lists: 1:1,2:5424,3:256,4:28,5:505,6:2570,7:3002,8:395,9:2359,10:10,11:353
+ 46917 multiletter control sequences out of 65536+600000
+ 103 fonts using 32915127 bytes
+ 71i,15n,104p,8833b,2998s stack positions out of 5000i,500n,10000p,200000b,100000s
 </home/robert/.local/texlive/2016/texmf-dist/fonts/opentype/public/lm/lmroman10-italic.otf></home/robert/.local/texlive/2016/texmf-dist/fonts/opentype/public/lm-math/latinmodern-math.otf></home/robert/.local/texlive/2016/texmf-dist/fonts/opentype/public/lm/lmroman10-bold.otf></home/robert/.local/texlive/2016/texmf-dist/fonts/opentype/public/lm-math/latinmodern-math.otf></home/robert/.local/texlive/2016/texmf-dist/fonts/opentype/public/lm-math/latinmodern-math.otf></home/robert/.local/texlive/2016/texmf-dist/fonts/opentype/public/lm/lmroman10-regular.otf></home/robert/.local/texlive/2016/texmf-dist/fonts/opentype/public/lm/lmroman12-regular.otf></home/robert/.local/texlive/2016/texmf-dist/fonts/opentype/public/lm/lmsans10-bold.otf></home/robert/.local/texlive/2016/texmf-dist/fonts/opentype/public/lm/lmroman12-bold.otf>
-Output written on main.pdf (18 pages, 770293 bytes).
+Output written on main.pdf (19 pages, 771540 bytes).
 
-PDF statistics: 616 PDF objects out of 1000 (max. 8388607)
- 427 compressed objects within 5 object streams
- 88 named destinations out of 1000 (max. 131072)
- 289 words of extra memory for PDF output out of 10000 (max. 10000000)
+PDF statistics: 625 PDF objects out of 1000 (max. 8388607)
+ 435 compressed objects within 5 object streams
+ 90 named destinations out of 1000 (max. 131072)
+ 297 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -8,7 +8,7 @@
 \contentsline {subsection}{\numberline {2.3}Lösung der DGL in drei Fällen}{5}{subsection.2.3}
 \contentsline {subsubsection}{\numberline {2.3.1}Schwingfall}{5}{subsubsection.2.3.1}
 \contentsline {subsubsection}{\numberline {2.3.2}Kriechfall}{5}{subsubsection.2.3.2}
-\contentsline {subsubsection}{\numberline {2.3.3}aperiodischer Grenzfall}{6}{subsubsection.2.3.3}
+\contentsline {subsubsection}{\numberline {2.3.3}Aperiodischer Grenzfall}{6}{subsubsection.2.3.3}
 \contentsline {subsection}{\numberline {2.4}DGL der erzwungenen Schwingung}{6}{subsection.2.4}
 \contentsline {subsection}{\numberline {2.5}Impedanz}{6}{subsection.2.5}
 \contentsline {section}{\numberline {3}Aufbau}{7}{section.3}
@@ -31,9 +31,10 @@
 \contentsline {subsection}{\numberline {5.4}Frequenzabhängigikeit der Phase zwischen Erreger-und Kondensatorspannung}{15}{subsection.5.4}
 \contentsline {subsection}{\numberline {5.5}Frequenzabhängigkeit des Scheinwiederstandes eines Serienkreises}{17}{subsection.5.5}
 \contentsline {section}{\numberline {6}Diskussion}{18}{section.6}
-\contentsline {subsection}{\numberline {6.1}Zur Bestimmung des effektiven Dämpfungswiderstandes für den Fall der gedämpften Schingung}{18}{subsection.6.1}
-\contentsline {subsection}{\numberline {6.2}Zur groben Messung der Dämpfungswiderstandes}{18}{subsection.6.2}
-\contentsline {subsection}{\numberline {6.3}Zur Bestimmung der Frequenzabhängigkeit der Kondensatorspannung}{18}{subsection.6.3}
-\contentsline {subsection}{\numberline {6.4}Zur Bestimmug der Frequentabhängigkeit der Phase zwischen Erreger-und Kondensatorspannung}{18}{subsection.6.4}
-\contentsline {subsection}{\numberline {6.5}Zur Bestimmung der Frequenzahängigkeit der Impedanz}{18}{subsection.6.5}
-\contentsline {section}{\nonumberline Literatur}{18}{section*.14}
+\contentsline {subsection}{\numberline {6.1}Relativer Fehler}{18}{subsection.6.1}
+\contentsline {subsection}{\numberline {6.2}Zur Bestimmung des effektiven Dämpfungswiderstandes für den Fall der gedämpften Schingung}{18}{subsection.6.2}
+\contentsline {subsection}{\numberline {6.3}Zur groben Messung der Dämpfungswiderstandes}{18}{subsection.6.3}
+\contentsline {subsection}{\numberline {6.4}Zur Bestimmung der Frequenzabhängigkeit der Kondensatorspannung}{18}{subsection.6.4}
+\contentsline {subsection}{\numberline {6.5}Zur Bestimmug der Frequentabhängigkeit der Phase zwischen Erreger-und Kondensatorspannung}{18}{subsection.6.5}
+\contentsline {subsection}{\numberline {6.6}Zur Bestimmung der Frequenzahängigkeit der Impedanz}{18}{subsection.6.6}
+\contentsline {section}{\nonumberline Literatur}{19}{section*.14}
