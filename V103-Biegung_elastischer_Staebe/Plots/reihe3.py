@@ -9,6 +9,8 @@ plt.plot(x,y0, 'ko', label = 'Unbelastet')
 plt.plot(x,y1, 'ro', label = 'Belastet')
 plt.plot(x,y1-y0, 'go', label = 'Differenz')
 
+plt.grid()
+
 plt.xlabel(r'$X \:/\: cm$')
 plt.ylabel(r'$y \:/\: mm$')
 plt.legend(loc='best')

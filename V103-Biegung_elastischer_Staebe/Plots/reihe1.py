@@ -12,16 +12,16 @@ L =0.575
 
 def f(t, a, b):
     return a * t^2 - b*t^3
-parameters, pcov = curve_fit(f, x, y1-y0)
-print(parameters, np.sqrt(np.diag(pcov)), sep='\n')
+#parameters, pcov = curve_fit(f, x, y1-y0)
+#print(parameters, np.sqrt(np.diag(pcov)), sep='\n')
 
 plt.plot(x,y0, 'ko', label = 'Unbelastet')
 plt.plot(x,y1, 'ro', label = 'Belastet')
 plt.plot(x,y1-y0, 'go', label = 'Differenz')
-plt.plot(x, f(x, *parameters), 'g--', label = 'fit')
+#plt.plot(x, f(x, *parameters), 'g--', label = 'fit')
 #plt.plot(x, d, 'y-', label = 'Theoriewert')
 
-
+plt.grid()
 
 plt.xlabel(r'$X \:/\: cm$')
 plt.ylabel(r'$y \:/\: mm$')

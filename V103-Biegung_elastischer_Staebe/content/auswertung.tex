@@ -1,7 +1,7 @@
 \section{Auswertung}
 \label{sec:Auswertung}
 
-\section{Verwendete Stäbe}
+\subsection{Verwendete Stäbe}
 \label{sec:Stäbe}
 \paragraph{Konvention der Bezeichnungen}
 \label{sec:Konvention}
@@ -17,7 +17,7 @@ Für den eckigen Stab wurden die nötigen Daten wie folgt ermittelt:
   m_{q} = 502.4g \\
 \end{equation*}
 
-Hierbei bezeichnet $a$ die Kantenlänge des Querschnittes. Hieraus ergeben sich die Dichten $\rho_{r} = 8396.7\frac{kg}{m^3}$ und $\rho_{q} = 8373.3\frac{kg}{m^3}$. Dies entspricht etwa der Dichte von  Messing CuZn39Pb3 von $\rho_{Messing} = 8.47\frac{g}{cm^3}$ \cite{DKI}. Es wird dementsprechend davon ausgegangen, dass es sich bei beiden Stäben um Messingstäbe handelt, welche ein Elastizitätsmodul von ca. $E_Messing = 97 \frac{kN}{mm^3}$ \cite{DKI} aufweisen sollten. Folglich wird dies von nun an als Vergleichswert verwendet. 
+Hierbei bezeichnet $a$ die Kantenlänge des Querschnittes. Hieraus ergeben sich die Dichten $\rho_{r} = 8396.7\frac{kg}{m^3}$ und $\rho_{q} = 8373.3\frac{kg}{m^3}$. Dies entspricht etwa der Dichte von  Messing CuZn39Pb3 von $\rho_{Messing} = 8.47\frac{g}{cm^3}$ \cite{DKI}. Es wird dementsprechend davon ausgegangen, dass es sich bei beiden Stäben um Messingstäbe handelt, welche ein Elastizitätsmodul von ca. $E_Messing = 97 \frac{kN}{mm^3}$ \cite{DKI} aufweisen sollten. Folglich wird dies von nun an als Vergleichswert verwendet.
 
 \subsection{Einseitige Einspannung}
 \label{sec:Einseitig}
@@ -29,9 +29,9 @@ Hierbei bezeichnet $a$ die Kantenlänge des Querschnittes. Hieraus ergeben sich 
 \sisetup{round-mode = places , round-precision = 2}
 \begin{tabular}{S S S S}
   \toprule
-  {$\symup{x}/cm$} & {$\symup{D}_0/mm$} & {$\symup{D}_m/mm$} {$\delta \symup{D}/mm$}\\
+  {$\symup{x}/cm$} & {$\symup{D}_0/mm$} & {$\symup{D}_m/mm$} {$\Delta \symup{D}/mm$}\\
   \midrule
-  \include('../Werte/V103-Reihe1-tab.txt')
+  %\include('../Werte/V103-Reihe1-tab.txt')
 \bottomrule
 \end{tabular}
 \end{table}
@@ -44,9 +44,9 @@ Hierbei bezeichnet $a$ die Kantenlänge des Querschnittes. Hieraus ergeben sich 
 \sisetup{round-mode = places , round-precision = 2}
 \begin{tabular}{S S S S}
   \toprule
-  {$\symup{x}/cm$} & {$\symup{D}_0/mm$} & {$\symup{D}_m/mm$} {$\delta \symup{D}/mm$}\\
+  {$\symup{x}/cm$} & {$\symup{D}_0/mm$} & {$\symup{D}_m/mm$} {$\Delta \symup{D}/mm$}\\
   \midrule
-  \include('../Werte/V103-Reihe3-tab.txt')
+  %\input('./Werte/V103-Reihe3-tab.txt')
 \bottomrule
 \end{tabular}
 \end{table}
@@ -58,11 +58,11 @@ Für den eckigen Stab (Tabelle \ref{tab:eckig}) ist $m_2 = 767.5g$. Seine Auslen
 Mittels Formel \eqref{eqn:I} ergeben sich sich die Flächenträgheitsmomente zu
 
 \begin{equation}
-    \symup{I}_{r} = \int_{0}^{\pi (d/2)^2} r^2 \dif{\pi r^2} = \pi^2 \left( d/2 \right)^4 = 6.17e-9 m^4
+    \symup{I}_{r} = \int_{0}^{\pi (d/2)^2} r^2 \symup{d}\pi r^2 = \pi^2 \left( d/2 \right)^4 = 6.17e-9 m^4
 \end{equation}
  und
 \begin{equation}
-  \symup{I}_{q} = \int_{0}^{a^2} y^2 \dif{(2y)^2} =
+  \symup{I}_{q} = \int_{0}^{a^2} y^2 \symup{d}(2y)^2 =
 \end{equation}
 
 Aus \ref{eqn:D1} ergibt sich somit
@@ -73,14 +73,14 @@ Aus \ref{eqn:D1} ergibt sich somit
 
 \begin{figure}
   \centering
-  \includegraphics{/Plots/Reihe1.pdf}
+  \includegraphics[width=\textwidth]{./Plots/Reihe1.pdf}
   \caption{Reihe1}
   \label{fig:Reihe1}
 \end{figure}
 
 \begin{figure}
   \centering
-  \includegraphics{/Plots/Reihe2.pdf}
+  \includegraphics[width=\textwidth]{./Plots/Reihe2.pdf}
   \caption{Reihe2}
   \label{fig:Reihe2}
 \end{figure}
@@ -96,9 +96,9 @@ Aus \ref{eqn:D1} ergibt sich somit
 \sisetup{round-mode = places , round-precision = 2}
 \begin{tabular}{S S S S}
   \toprule
-  {$x/cm$} & {$D_0/mm$} & {$D_m'/mm$} {$\delta D/mm$}\\
+  {$x/cm$} & {$D_0/mm$} & {$D_m'/mm$} {$\Delta D/mm$}\\
   \midrule
-  \include('../Werte/V103-Reihe2-tab.txt')
+  %\include('./Werte/V103-Reihe2-tab.txt')
 \bottomrule
 \end{tabular}
 \end{table}
@@ -108,7 +108,7 @@ In diesem letzten Verfahren wird der runde Stab mit $m_{3}=4722.5g$ mittig belas
 
 \begin{figure}
   \centering
-  \includegraphics{/Plots/Reihe3.pdf}
+  \includegraphics[width=\textwidth]{./Plots/Reihe3.pdf}
   \caption{Reihe3}
   \label{fig:Reihe3}
 \end{figure}
