@@ -20,20 +20,36 @@ Hierbei bezeichnet $a$ die Kantenlänge des Querschnittes. Hieraus ergeben sich 
 
 \begin{table}
   \centering
-\caption{Auslenkung des runden Stabes}
+\caption{Auslenkung des runden Stabes bei einseitiger Einspannung}
 \label{tab:rund}
 \sisetup{round-mode = places , round-precision = 2}
 \begin{tabular}{S S S S}
   \toprule
   {$x/cm$} & {$y/mm$} & {$y'/mm$} {$\delta y/mm$}\\
   \midrule
-  include('../Werte/V103-Reihe1-tab.txt')
+  \include('../Werte/V103-Reihe1-tab.txt')
 \bottomrule
 \end{tabular}
 \end{table}
 \FloatBarrier
 
-Die bei einseitiger Einspannung des runden Stabes ermittelten Werte lassen sich der Tabelle \ref{tab:rund} entnehmen, wobei $y$ die Auslenkungen im unbelasteten Fall darstellt, $y'$ die im belasteten und $x$ die Position entlang des Stabes (Einspannung bei $x=0$). Hierbei wurde eine Belastung von $m_1 = 379.2g$ gewählt.
+\begin{table}
+  \centering
+\caption{Auslenkung des eckigen Stabes bei einseitiger Einspannung}
+\label{tab:eckig}
+\sisetup{round-mode = places , round-precision = 2}
+\begin{tabular}{S S S S}
+  \toprule
+  {$x/cm$} & {$y/mm$} & {$y'/mm$} {$\delta y/mm$}\\
+  \midrule
+  \include('../Werte/V103-Reihe3-tab.txt')
+\bottomrule
+\end{tabular}
+\end{table}
+\FloatBarrier
+
+Die bei einseitiger Einspannung des runden Stabes ermittelten Werte lassen sich der Tabelle \ref{tab:rund} entnehmen, wobei $y$ die Auslenkungen im unbelasteten Fall darstellt, $y'$ die im belasteten und $x$ die Position entlang des Stabes (Einspannung bei $x=0$). Hierbei wird eine Belastung von $m_1 = 379.2g$ gewählt. Ihre graphische Darstellung lässt sich Abb. \ref{fig:Reihe1} entnehmen.
+Für den eckigen Stab (Tabelle \ref{tab:eckig}) ist $m_2 = 767.5g$. Seine Auslenkung wird in Abb. \ref{fig:Reihe2} veranschaulicht. 
 
 \begin{figure}
   \centering
@@ -48,6 +64,24 @@ Die bei einseitiger Einspannung des runden Stabes ermittelten Werte lassen sich 
   \caption{Reihe2}
   \label{fig:Reihe2}
 \end{figure}
+
+\subsection{Beidseitige Auflage}
+\label{sec:Beidseitig}
+
+\begin{table}
+  \centering
+\caption{Auslenkung des runden Stabes bei beidseitiger Auflage}
+\label{tab:rundBeidseitig}
+\sisetup{round-mode = places , round-precision = 2}
+\begin{tabular}{S S S S}
+  \toprule
+  {$x/cm$} & {$y/mm$} & {$y'/mm$} {$\delta y/mm$}\\
+  \midrule
+  \include('../Werte/V103-Reihe2-tab.txt')
+\bottomrule
+\end{tabular}
+\end{table}
+\FloatBarrier
 
 \begin{figure}
   \centering
