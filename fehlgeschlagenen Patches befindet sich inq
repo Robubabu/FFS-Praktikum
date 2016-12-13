@@ -1,0 +1,266 @@
+[33mcommit b60f70656df4167c58d99e122ce0cbd9fe5f5b49[m
+Author: Robubabu <robert.appel@udo.edu>
+Date:   Mon Dec 12 13:50:34 2016 +0100
+
+    build gelöscht
+
+[33mcommit da5ddb2af8b69a6f91ad7a50d6ef89e1bd135cf0[m
+Author: Robubabu <robert.appel@udo.edu>
+Date:   Mon Dec 12 13:33:42 2016 +0100
+
+    Letzter schliff hab die auswertung gelöscht weil sonst merge konflikt
+
+[33mcommit 1352ce52dd5e0baa08b07819716e7eb6e7e11037[m
+Author: Robubabu <robert.appel@udo.edu>
+Date:   Mon Dec 12 13:14:26 2016 +0100
+
+    Letzterfeinschliff.
+    Ja das wird zusammengeschrieben !
+    Druckfassung !
+
+[33mcommit 0aa7366a01212e1715a3cee9e24594dc13a0f952[m
+Author: Pelle Ofenbach <pelle.ofenbach@tu-dortmund.de>
+Date:   Mon Dec 12 11:27:20 2016 +0100
+
+    vong dem aktualisirong wech
+    modified:   V103-Biegung_elastischer_Staebe/Plots/Reihe1.pdf
+    modified:   V103-Biegung_elastischer_Staebe/Plots/Reihe2.pdf
+    modified:   V103-Biegung_elastischer_Staebe/Plots/Reihe3.pdf
+    modified:   V103-Biegung_elastischer_Staebe/Plots/reihe1.py
+    modified:   V103-Biegung_elastischer_Staebe/Plots/reihe2.py
+    modified:   V103-Biegung_elastischer_Staebe/Plots/reihe3.py
+    modified:   V103-Biegung_elastischer_Staebe/content/auswertung.tex
+    modified:   V355-Gekoppelte_Schwingungen/content/auswertung.tex
+    modified:   V355-Gekoppelte_Schwingungen/content/diskussion.tex
+
+[33mcommit 23336fb29ff64295f833ba16bfa76408cab7972b[m
+Author: Pelle Ofenbach <pelle.ofenbach@tu-dortmund.de>
+Date:   Mon Dec 12 09:43:43 2016 +0100
+
+    Sample im Template/V103 Theorie/Durchführung geändert
+    
+    Grundsätzliche Aktualisierungen
+    modified:   FFSPraktikums-Vorlage/lit.bib
+    modified:   V103-Biegung_elastischer_Staebe/Plots/reihe1.py
+    modified:   V103-Biegung_elastischer_Staebe/content/auswertung.tex
+    modified:   V103-Biegung_elastischer_Staebe/content/durchfuehrung.tex
+    modified:   V103-Biegung_elastischer_Staebe/content/theorie.tex
+    modified:   V355-Gekoppelte_Schwingungen/content/diskussion.tex
+
+[33mcommit 048dbdb4290e86bedbd79ed12d23411fdf2cb8c5[m
+Author: Pelle Ofenbach <pelle.ofenbach@tu-dortmund.de>
+Date:   Mon Dec 12 08:31:17 2016 +0100
+
+    geringere Aktualisierungen
+    new file:   V103-Biegung_elastischer_Staebe/Werte/V103-Reihe2_tab.txt
+    new file:   V103-Biegung_elastischer_Staebe/Werte/V103-Reihe3-tab.txt
+    modified:   V103-Biegung_elastischer_Staebe/content/auswertung.tex
+    modified:   V355-Gekoppelte_Schwingungen/content/durchfuehrung.tex
+
+[33mcommit 08c3b7cdf1da35125965394298bf39e614d95ac7[m
+Author: Pelle Ofenbach <pelle.ofenbach@tu-dortmund.de>
+Date:   Sun Dec 11 18:10:19 2016 +0100
+
+    Auswertung: Stabdaten, sample => Anleitung
+    new file:   V103-Biegung_elastischer_Staebe/Werte/V103-Reihe1-tab.txt
+    modified:   V103-Biegung_elastischer_Staebe/content/auswertung.tex
+    modified:   V103-Biegung_elastischer_Staebe/lit.bib
+
+[33mcommit aa77c1cbfb23ffffa906e248511fb95dd45d8469[m
+Author: Pelle Ofenbach <pelle.ofenbach@tu-dortmund.de>
+Date:   Sun Dec 11 16:39:46 2016 +0100
+
+    Plots 103 sowie korrigierter 355 bis auf Diskussion
+    
+    new file:   V103-Biegung_elastischer_Staebe/Plots/Reihe1.pdf
+    new file:   V103-Biegung_elastischer_Staebe/Plots/Reihe2.pdf
+    new file:   V103-Biegung_elastischer_Staebe/Plots/Reihe3.pdf
+    new file:   V103-Biegung_elastischer_Staebe/Plots/reihe1.py
+    new file:   V103-Biegung_elastischer_Staebe/Plots/reihe2.py
+    new file:   V103-Biegung_elastischer_Staebe/Plots/reihe3.py
+    new file:   V103-Biegung_elastischer_Staebe/Werte/V103-Reihe1.txt
+    new file:   V103-Biegung_elastischer_Staebe/Werte/V103-Reihe2.txt
+    new file:   V103-Biegung_elastischer_Staebe/Werte/V103-Reihe3.txt
+    modified:   V103-Biegung_elastischer_Staebe/content/auswertung.tex
+    modified:   V355-Gekoppelte_Schwingungen/content/auswertung.tex
+    modified:   V355-Gekoppelte_Schwingungen/content/durchfuehrung.tex
+    modified:   V355-Gekoppelte_Schwingungen/content/theorie.tex
+
+[33mcommit c1d290c8ee68abd4ce599f3b41402bd65a4555bc[m
+Author: Robubabu <robert.appel@udo.edu>
+Date:   Sat Dec 10 17:12:32 2016 +0100
+
+    Korrektur !
+
+[33mcommit c7bb16cad7ece6db751f8edd4f0b186ee4e9cf31[m
+Author: Robubabu <robert.appel@udo.edu>
+Date:   Thu Dec 8 18:05:32 2016 +0100
+
+    build entfernt !
+
+[33mcommit 005115f8cbe9298b05bd72448aef96591d0258e5[m
+Author: Robubabu <robert.appel@udo.edu>
+Date:   Thu Dec 8 18:03:44 2016 +0100
+
+    wubwub
+    und neuer Praktikums Versuch
+
+[33mcommit 64ce5f576f85d5a9ea7f61b25b42d21215bfe4e9[m
+Author: Robubabu <robert.appel@udo.edu>
+Date:   Tue Dec 6 11:02:18 2016 +0100
+
+    Druckfassung!
+
+[33mcommit f99bef04008d35d6bdba4872b6e31945529c3a0c[m
+Author: Pelle Ofenbach <pelle.ofenbach@tu-dortmund.de>
+Date:   Mon Dec 5 20:39:07 2016 +0100
+
+    Durchführung STONKH!
+    
+    EEEEENDLITSCH IST ES FERTIG
+    modified:   content/durchfuehrung.tex
+    modified:   content/theorie.tex
+
+[33mcommit 5d9ca3d9b38c292ab829ed9a22bff41395d41698[m
+Author: Pelle Ofenbach <pelle.ofenbach@tu-dortmund.de>
+Date:   Mon Dec 5 19:56:36 2016 +0100
+
+    Theorie.
+    
+    So. Github desch dein Chance.
+    modified:   content/theorie.tex
+
+[33mcommit 14834dc1058c7bc9f76f2b079aaa6fcce9cf0a38[m
+Author: Pelle Ofenbach <pelle.ofenbach@tu-dortmund.de>
+Date:   Mon Dec 5 13:57:08 2016 +0100
+
+    Dies sind die Anfänge der Thorie
+
+[33mcommit a70763b8490336ebd5cf6e2de383eb5cf76d13ec[m
+Author: Robubabu <robert.appel@udo.edu>
+Date:   Mon Dec 5 17:51:19 2016 +0100
+
+    Auswertung und Diskussion vollständig.
+
+[33mcommit 148b32a878ed65c4ff3efe5c6c4bfe40fdebac4a[m
+Author: Robubabu <robert.appel@udo.edu>
+Date:   Mon Dec 5 13:55:32 2016 +0100
+
+    test verändert
+
+[33mcommit a8f0d9db300774d47461702d50f650f60ada1e67[m
+Author: Robubabu <robert.appel@udo.edu>
+Date:   Mon Dec 5 13:52:22 2016 +0100
+
+    änderungen an plots.
+    plot.py funktioniert im ordner nicht mehr
+    auswertung weiter geschrieben.
+    prints umbenannt es fehlt einer
+
+[33mcommit 3b51abe2ea82e2d0d66fa54557c2cfcd58304a2c[m
+Author: Pelle Ofenbach <pelle.ofenbach@tu-dortmund.de>
+Date:   Mon Dec 5 13:05:39 2016 +0100
+
+    die ist 1 commitong vong den testonk hea
+
+[33mcommit feab3f92ece91e5019cef19be886884710c46e14[m
+Author: Robubabu <robert.appel@udo.edu>
+Date:   Fri Dec 2 16:30:01 2016 +0100
+
+    Auswertung angefangen und zu 2/3 fertig
+    plots alle fertig
+    vill.überarbeitung fällig wenn ich geräte daten erhalte
+    werte aus hauptordner NICHT löschen !!
+
+[33mcommit 46e3dd579ca4d102dac50b2c7db2eb8cace83c00[m
+Author: Robubabu <robert.appel@udo.edu>
+Date:   Wed Nov 30 11:56:13 2016 +0100
+
+    FFS template wurde aus Bequemlichkeitsgründen hochgeladen.
+
+[33mcommit 98c5ba6e6ea0d5792d47f39492413c47272012db[m
+Author: Robubabu <robert.appel@udo.edu>
+Date:   Tue Nov 29 17:21:24 2016 +0100
+
+    Neuer Versuch neues Glück
+
+[33mcommit 58976698d63a99a3174b69431fbd384337e9cc05[m
+Author: Robubabu <robert.appel@udo.edu>
+Date:   Tue Nov 29 10:31:55 2016 +0100
+
+    Druckfassung!
+
+[33mcommit fb7c15652d6d689ad9e379426393f25714007fbe[m
+Author: Robubabu <robert.appel@udo.edu>
+Date:   Tue Nov 29 10:16:58 2016 +0100
+
+    Alles Zusammen gefügt
+
+[33mcommit 0a9e5ed1b937d2ded59f584abd0143796b75f9bc[m
+Author: Plockwurst <p.ofenbach@web.de>
+Date:   Tue Nov 29 09:40:32 2016 +0100
+
+    Delete sweap.pdf
+
+[33mcommit f04eb7f7636c9c4f0923f5ff2e7561004842f1fa[m
+Author: Plockwurst <p.ofenbach@web.de>
+Date:   Tue Nov 29 09:40:22 2016 +0100
+
+    Delete resonance.pdf
+
+[33mcommit 15dd832603e94ca51331a402011a0a1789de2ece[m
+Author: Plockwurst <p.ofenbach@web.de>
+Date:   Tue Nov 29 09:40:12 2016 +0100
+
+    Delete freq-ratio.pdf
+
+[33mcommit 1f866d5155225e043d3ea4ca81a32afc1e7dcb37[m
+Author: Plockwurst <p.ofenbach@web.de>
+Date:   Tue Nov 29 09:39:59 2016 +0100
+
+    Delete diskussion.tex
+
+[33mcommit f84fbc0c9233afe133a6960242b7ec2527d15d1c[m
+Author: Plockwurst <p.ofenbach@web.de>
+Date:   Tue Nov 29 09:39:40 2016 +0100
+
+    Delete auswertung.tex
+
+[33mcommit 1823e3fb2f2a78149d7fda258822b714f3db0e62[m
+Author: Plockwurst <p.ofenbach@web.de>
+Date:   Tue Nov 29 09:38:12 2016 +0100
+
+    Desch stuff gell?
+
+[33mcommit 3c7349a05bce6a184409228367692d43ab9c36d2[m
+Author: Robubabu <robert.appel@udo.edu>
+Date:   Mon Nov 28 16:23:02 2016 +0100
+
+    Theorie  und Durchführung sind vollständig und sollten gegen gelsen werden.
+    Robubabu out
+
+[33mcommit c2e03c9863aa2ac35caad6b62116f3697a466a2c[m
+Author: Robubabu <robert.appel@udo.edu>
+Date:   Sun Nov 27 15:05:51 2016 +0100
+
+    Theorie wurde ergänzt noch nicht ganz fertig.
+
+[33mcommit e63a2ea268781883fc0e84e250c5c5cdc736def3[m
+Author: Robubabu <robert.appel@udo.edu>
+Date:   Sat Nov 26 16:26:36 2016 +0100
+
+    Schaltplan_Bilder Hinzugefügt
+
+[33mcommit aa8566500b064c182c6a9ba399fa8465d4a17c73[m
+Author: Robubabu <robert.appel@udo.edu>
+Date:   Sat Nov 26 16:02:44 2016 +0100
+
+    Erster Teil der Theorie wurde geschrieben.
+    Auf der Titelseite wurden die Daten eingetragen.
+    Es fehlen noch Bilder !
+
+[33mcommit 839dc5691f06ced988433bc7bbc792c2ad1914e9[m
+Author: Robubabu <robert.appel@udo.edu>
+Date:   Sat Nov 26 11:18:45 2016 +0100
+
+    template eingefügt.
