@@ -1,0 +1,5 @@
+#x/mm	#inlambda/2Schritten
+#max	#min
+3.15  10.86
+19.72 28.43
+37.43	46.02
