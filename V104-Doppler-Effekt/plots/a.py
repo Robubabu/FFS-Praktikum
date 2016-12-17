@@ -15,22 +15,21 @@ R = np.array([r1,r2,r3,r4,r5,r6,r7,r8,r9,r0])
 gv = unp.uarray       #Geschw. vorwärts
 gr = unp.uarray       #Geschw. rückwärts
 for v in V:
-    v*=1e-2
+    v*=1e-4
     gv = np.append(gv,np.mean(v))
 gv=gv[1:]
 gv = s/gv
 
 for r in R:
-    r*=1e-2
+    r*=1e-4
     gr = np.append(gr, np.mean(r))
 gr = gr[1:]
 gr = s/gr
 x = np.linspace(1,10, num=10)
 np.savetxt('GangGeschwVorRueck4Tab.txt',
-np.column_stack([x,noms(gv), stds(gv),-noms(gr),-stds(gr)]),
-header='Gang/MittelGeschwVor/FehlerVor/MittelGeschwRueck/FehlerRueck/inMeterproSek')
-
-
+np.column_stack([x,noms(gv), stds(gv),-noms(gr),stds(gr)]),
+delimiter=' & ', newline=r' \\''\n ')
+np.savetxt('GeschwVorRueck.txt', np.column_stack([noms(gv),stds(gv),-noms(gr),stds(gr)]))
 #
 # x= np.linspace(1,10,num=10)
 # np.savetxt('GeschwMittelproGang.txt',y,header='#inMeterproSekund')
