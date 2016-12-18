@@ -8,7 +8,21 @@ Gleichung
   \label{eqn:aM}
 \end{equation}
 brechnet, dabei bezeichnet $\bar{x}$ das arithmetische Mittel, $n$ die Anzahl
-der Messwerte und $x_i$ die einzelnen Messwerte.
+der Messwerte und $x_i$ die einzelnen Messwerte. \\
+Die Ausgleichsrechnungen, auch Fits genannt, wurden im folgenden mit der
+Formel
+\begin{equation}
+  \increment \nu \stackrel{!}{=} f(x) = a\cdot v
+  \label{eqn:fit}
+\end{equation}
+getätigt. Dabei bezeichnet $\increment \nu$ die Frequenzänderung, $v$ die
+Geschwindigkeit und $a$ ist der zu berechnende Proportionalitätsfaktor zwischen
+$ \increment \nu $ und $v$ . Laut Versuchsanleitung \cite{Anleitung} gilt für den
+Proportionalitätsfaktor $a$ der Zusammenhang
+\begin{equation*}
+  \increment \nu = a\cdot v = v\cdot\frac{\nu_0}{c} \quad \text{daraus folgt} \quad
+  a = \frac{\nu_0}{c}
+\end{equation*}
 \subsection{Geschwindigkeit des Wagens}
 Der Wagen durchfuhr in der Messung eine Strecke $s$ von 43 cm, als Messfehler
 wurde dafür ein Fehler von 0,2 mm angenommen. Die Zeit $t$ die der Wagen braucht
@@ -25,6 +39,7 @@ jeden Gang mit Fehler in der Tabelle \ref{tab:v} dargestellt.
   \caption{Arithmetisches Mittel der Gewindigkeiten $v$ für jeden Gang, vorwärts und rückwärts}
   \label{tab:v}
   \sisetup{round-mode = places, round-precision = 2}
+  \scalebox{0.8}{
   \begin{tabular}{S[round-precision=0] S@{\qquad $\pm$} S S@{\qquad$\pm$} S}
     \toprule
     \text{Gang} & \multicolumn{2}{c}{$v_{\text{vor}}/\symup{ms^{-1}}$} &
@@ -42,6 +57,7 @@ jeden Gang mit Fehler in der Tabelle \ref{tab:v} dargestellt.
      1.000000000000000000e+01 & 5.140589135424635803e-01 & 2.390971690895179861e-04 & -5.047303800737140689e-01 & 2.347583163133553686e-04 \\
          \bottomrule
   \end{tabular}
+}
 \end{table}
 \FloatBarrier
 \subsection{Frequenz \texorpdfstring{$\nu_0$}{[math]}}
@@ -67,6 +83,20 @@ Durch die Beziehung
 ergibt sich für die Schallgeschwindigkeit c $ = (288.1 \pm 2.3)\;
  \frac{\symup{m}}{\symup{s}}$ .
 \subsection{Frequenzänderung des bewegten Senders}
+In der Abbildung \ref{fig:d} ist die Frequenzänderung $\increment \nu$ eines
+bewegten Empfängers zu betrachten, der sowohl zur Quelle hin als auch von der
+Quelle des Signals weg fährt. Da die Messwerte im Bereich von ca. 0,3 bis 0,6
+Meter pro Sekunde sehr stark schwanken, wurde nur Werte im Bereich von -40 bis
+40 Hz für $\increment \nu $ für den Fit (s. \eqref{eqn:fit}) betrachtet.
+\begin{figure}
+  \centering
+  \includegraphics[width=0.8\textwidth]{plots/dplot.pdf}
+  \caption{Frequenzänderung für einen bewegten Empfänger}
+  \label{fig:d}
+\end{figure}
+\FloatBarrier
+
+
 
 \subsection{Frequenzänderung des bewegten Reflektors}
 
