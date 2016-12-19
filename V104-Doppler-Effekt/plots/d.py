@@ -6,6 +6,7 @@ from scipy.stats import linregress
 from uncertainties import correlated_values, correlation_matrix
 from uncertainties import ufloat
 from uncertainties.unumpy import (nominal_values as noms, std_devs as stds)
+import scipy.constants as const
 v1 , v2 , v3 , v4 , v5 , v6 , v7 , v8 , v9 , v0 = np.genfromtxt('dvor.txt' ,unpack = True)
 r1 , r2, r3, r4, r5, r6, r7, r8, r9, r0 =np.genfromtxt('drueck.txt', unpack = True)
 ngv , sgv , ngr , sgr = np.genfromtxt('GeschwVorRueck.txt' , unpack=True)
@@ -47,6 +48,7 @@ l,k = np.genfromtxt('xy.txt', unpack = True)
 params , cov = curve_fit(fit, l , k)
 params=correlated_values(params, cov)
 print('Schallgeschw. c = f/a =', (f/params))
+print('relativ.F von c:', (((f/params)-const.speed_of_sound)/const.speed_of_sound))
 s = np.linspace(-0.6 , 0.6, num = 50)
 plt.subplot(211)
 plt.errorbar(noms(gv), dfv, xerr=stds(gv), fmt='rx', label='Frequenzänderung zum Sender hin ')
@@ -67,7 +69,7 @@ plt.legend(loc='best')
 plt.xlim(-0.6,0.6)
 plt.ylim(-40,40)
 plt.grid()
-# plt.show()
+plt.show()
 
 # plt.xlabel(r'$\alpha \:/\: \si{\ohm}$')
 # plt.ylabel(r'$y \:/\: \si{\micro\joule}$')
@@ -75,4 +77,4 @@ plt.grid()
 #
 # # in matplotlibrc leider (noch) nicht möglich
 # plt.tight_layout(pad=0, h_pad=1.08, w_pad=1.08)
-plt.savefig('dplot.pdf')
+# plt.savefig('dplot.pdf')

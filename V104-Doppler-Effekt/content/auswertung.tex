@@ -19,10 +19,18 @@ getätigt. Dabei bezeichnet $\increment \nu$ die Frequenzänderung, $v$ die
 Geschwindigkeit und $a$ ist der zu berechnende Proportionalitätsfaktor zwischen
 $ \increment \nu $ und $v$ . Laut Versuchsanleitung \cite{Anleitung} gilt für den
 Proportionalitätsfaktor $a$ der Zusammenhang
-\begin{equation*}
+\begin{equation}
   \increment \nu = a\cdot v = v\cdot\frac{\nu_0}{c} \quad \text{daraus folgt} \quad
   a = \frac{\nu_0}{c}
+  \label{eqn:a}
+\end{equation}
+\\
+Relative Fehler werden im folgenden mit der Formel
+\begin{equation*}
+  \increment x = \frac{\lvert x_e - x_m \rvert}{\lvert x_e \rvert}\cdot 100\%
 \end{equation*}
+brechnet, dabei ist $\increment x $ der relative Fehler in Prozent, $x_e$ der
+Literatur-bzw. Erwartungswert und $ x_m$ der Messwert.
 \subsection{Geschwindigkeit des Wagens}
 Der Wagen durchfuhr in der Messung eine Strecke $s$ von 43 cm, als Messfehler
 wurde dafür ein Fehler von 0,2 mm angenommen. Die Zeit $t$ die der Wagen braucht
@@ -54,7 +62,7 @@ jeden Gang mit Fehler in der Tabelle \ref{tab:v} dargestellt.
      7.000000000000000000e+00 & 3.586202295169468313e-01 & 1.668001067520683283e-04 & -3.546040804209067421e-01 & 1.649321304283287131e-04 \\
      8.000000000000000000e+00 & 4.105090311986863139e-01 & 1.909344331156680576e-04 & -4.048582995951417463e-01 & 1.883061858582054629e-04 \\
      9.000000000000000000e+00 & 4.617895957730143164e-01 & 2.147858584990764319e-04 & -4.544397708778085132e-01 & 2.113673352920039975e-04 \\
-     1.000000000000000000e+01 & 5.140589135424635803e-01 & 2.390971690895179861e-04 & -5.047303800737140689e-01 & 2.347583163133553686e-04 \\
+     10 & 5.140589135424635803e-01 & 2.390971690895179861e-04 & -5.047303800737140689e-01 & 2.347583163133553686e-04 \\
          \bottomrule
   \end{tabular}
 }
@@ -64,7 +72,7 @@ jeden Gang mit Fehler in der Tabelle \ref{tab:v} dargestellt.
 Bei der Messung der Ruhefrequenz wurde fünfmal der gleich Wert ermittelt, da
 keine explizieten Messungenauigkeiten angegeben waren wird dieser Wert fest
 mit $\nu_0 = $ 16593,3 Hz angenommen.
-\subsection{Schallgeschwindigkeit c}
+\subsection{Wellenlänge \texorpdfstring{$\lambda$}{[math]}}
 Zur Bestimmung der Schallgeschwindigkeit wurde erst die Wellenlänge $\lambda$ des Signals
 bestimmt. Dazu wird der Abstand $\increment l$ zwischen den Wellenbäuchen und Wellenbergen
 bestimmt. Dann gilt,
@@ -94,12 +102,26 @@ Meter pro Sekunde sehr stark schwanken, wurde nur Werte im Bereich von -40 bis
   \caption{Frequenzänderung für einen bewegten Empfänger}
   \label{fig:d}
 \end{figure}
+%354.3946558999303+/-2.443400369412976
+Aus dem Fit ergibt sich mit dem Zusammenhang \eqref{eqn:a} die
+Schallgeschwindigkeit $c \approx (354,39 \pm 2,44)\; \frac{\symup{m}}{\symup{s}}$.
+
 \FloatBarrier
-
-
-
 \subsection{Frequenzänderung des bewegten Reflektors}
+% 347.9546534809624+/-1.0812460480766823] vor wärts
+% -353.20864806363323+/-11.01047986738201 rueckwärts
 
+Auch hier wurde mit Formel \eqref{eqn:fit} ein Fit durchgeführt. Daraus ergibt
+sich für den Reflektor der sich von der Quelle weg bewegt mit Gleichung \eqref{eqn:a}
+die Schallgeschwindigkeit $c \approx ( 353,2 \pm 11)\; \frac{\symup{m}}{\symup{s}}$
+und für den Reflektor der sich auf die Quelle zu bewegt ergibt sich
+$c \approx (347,95 \pm 1,08)\; \frac{\symup{m}}{\symup{s}}$.
+\begin{figure}
+  \centering
+  \includegraphics[width = 0.8\textwidth]{plots/eplot.pdf}
+  \caption{Frequenzänderung bei einem bewegten Reflektor}
+  \label{fig:e}
+\end{figure}
 
 
 
