@@ -5,7 +5,7 @@ from scipy.optimize import curve_fit
 from uncertainties import correlated_values, correlation_matrix
 from uncertainties import ufloat
 from uncertainties.unumpy import (nominal_values as noms, std_devs as stds)
-
+import scipy.constants as const
 berg , tal = np.genfromtxt('c2.txt' , unpack= True) # in mm
 f = np.genfromtxt('b.txt', unpack = True)   #in 1/s
 berg= unp.uarray(berg, 0.2) #fehler von 0.2 mm
@@ -20,4 +20,5 @@ stds([berg[-1]-berg[-2], berg[-2]-berg[-3], tal[-1]-tal[-2],tal[-2]-tal[-3]]))
 lm = np.mean(lamb)  #arithmetisches Mittel der Wellenlänge
 # print(np.mean(lamb))
 print(lm*f)
+print((((lm*f)-const.speed_of_sound)/const.speed_of_sound))
 np.savetxt('Mittelwellenlaenge.txt',np.column_stack([noms(lm),stds(lm)]),header='#inMeter #fehler')
