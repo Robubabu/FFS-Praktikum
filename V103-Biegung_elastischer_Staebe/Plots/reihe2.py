@@ -6,10 +6,10 @@ from scipy.optimize import curve_fit
 x,y0,y1 = np.genfromtxt('../Werte/V103-Reihe2.txt', unpack = True)
 
 F = 0.7675*9.81
-E = 1e8
+E =9.7e10
 I = 8.3e-10
 L =0.6
-d = F/(2*E*I)*(L*(x/100)**2 - (x/100)**3/3) #in mm
+d = F/(2*E*I)*(L*(x/100)**2 - (x/100)**3/3) *1000#in mm
 
 def f(t, a, b):
     return a * t**2 - b*t**3
