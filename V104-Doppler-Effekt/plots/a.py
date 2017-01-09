@@ -15,13 +15,13 @@ R = np.array([r1,r2,r3,r4,r5,r6,r7,r8,r9,r0])
 gv = unp.uarray       #Geschw. vorwärts
 gr = unp.uarray       #Geschw. rückwärts
 for v in V:
-    v*=1e-4
+    v*=1.25e-4      #Zählwerkverzögerung
     gv = np.append(gv,np.mean(v))
 gv=gv[1:]
 gv = s/gv
 
 for r in R:
-    r*=1e-4
+    r*=1.25e-4  #Zählwerkverzögerung
     gr = np.append(gr, np.mean(r))
 gr = gr[1:]
 gr = s/gr
