@@ -14,7 +14,7 @@ bzw
 \begin{equation}
   A_q = a^2
 \end{equation}
-zu $\rho_r =8397 \frac{kg}{m^3}$  bzw. $\rho_q = 8373 \frac{kg}{m^3}$. Messing CuZnPb3 beispielsweise besitzt eine Dichte von $\rho_{Messing} = 8.47 \cdot 10^9 \frac{kg}{m^3}$ und einem Elastizitätsmodul von $E_{Messing} = 9.7 \cdot 10^10 {N}{m^2}$ \cite{DKI}. Es wird somit von Messingstäben ausgegangen und als vergleichender Theoriewert $E_{Messing}$ hinzugezogen. Auf qualitativen Vergleich wird jedoch verzichtet, da Messing als Legierung je nach Ausführung enorme Unterschiede in seiner Beschaffenheit aufweisen kann.
+zu $\rho_r =8397 \, \symup{\frac{kg}{m^3}}$  bzw. $\rho_q = 8373 \, \symup{\frac{kg}{m^3}}$. Messing CuZnPb3 beispielsweise besitzt eine Dichte von $\rho_{Messing} = 8470 \, \symup{ \frac{kg}{m^3}}$ und einem Elastizitätsmodul von $E_{Messing} = 9.7 \cdot 10^{10} \, \symup{\frac{N}{m^2}}$ \cite{DKI}. Es wird somit von Messingstäben ausgegangen und als vergleichender Theoriewert $E_{Messing}$ hinzugezogen. Auf qualitativen Vergleich wird jedoch verzichtet, da Messing als Legierung je nach Ausführung enorme Unterschiede in seiner Beschaffenheit aufweisen kann.
 \subsection{Einseitige Einspannung}
 \label{sec:Einseitig}
 
@@ -116,139 +116,51 @@ zu $\rho_r =8397 \frac{kg}{m^3}$  bzw. $\rho_q = 8373 \frac{kg}{m^3}$. Messing C
 \end{table}
 \FloatBarrier
 
-Für den runden Stab wurde eine Belastungsmasse von $m_1 = 238.9g$ gewählt, für den eckigen $m_2 = 767.5g$. Ihre Auslenkungen sind in den Tabellen \ref{tab:einseitig-r} und \ref{tab: einseitig-q} aufgelistet. Hierbei bezeichnet $x$ die Position auf dem Stab (Einspannung bei $x = 0$). $D_0$ die Auslenkung im unbelasteten Zustand, $ D_m$ die Auslenkung im belasteten Zustand und $\Delta D$ ihre Differenzen, also die Auslenkung durch die Belastung. Graphisch dargestellt sind die Werte in Abb.\ref{fig:Reihe1} bzw. Abb.\ref{fig:Reihe2}.
+Für den runden Stab wurde eine Belastungsmasse von $m_1 = 238.9 \, \symup{g}$ gewählt, für den eckigen $m_2 = 767.5\, \symup{g}$. Ihre Auslenkungen sind in den Tabellen \ref{tab:einseitig-r} und \ref{tab:einseitig-q} aufgelistet. Hierbei bezeichnet $x$ die Position auf dem Stab (Einspannung bei $x = 0$). $D_0$ die Auslenkung im unbelasteten Zustand, $ D_m$ die Auslenkung im belasteten Zustand und $\Delta D$ ihre Differenzen, also die Auslenkung durch die Belastung. Graphisch dargestellt sind die Werte in Abb.\ref{fig:Reihe1} bzw. Abb.\ref{fig:Reihe2}.
 
 \begin{figure}
   \centering
   \includegraphics[width = \textwidth]{./Plots/Reihe1.pdf}
-  \caption{Auslenkung des runden Stabes, verglichen mit dem Theoriewert}
+  \caption{Auslenkung des runden Stabes, verglichen mit dem Theoriewert.}
   \label{fig:Reihe1}
 \end{figure}
 
 \begin{figure}
   \centering
   \includegraphics[width = \textwidth]{./Plots/Reihe2.pdf}
-  \caption{Auslenkung des eckigen Stabes, verglichen mit dem Theoriewert}
+  \caption{Auslenkung des eckigen Stabes, verglichen mit dem Theoriewert.}
   \label{fig:Reihe2}
 \end{figure}
 
 Die Flächenträgheitsmomente der Stäbe ergeben sich über \eqref{eqn:I} zu
 \begin{equation}
-  I_r = \frac{\pi}{64}d^4 = 4.9e-10 m^4
+  I_r = \int_{-\pi/2}^{\pi/2} \frac{d^4}{8} sin^2(\phi) cos^2(\phi)\symup{d\phi}= \frac{\pi}{64}d^4 = 4.9 \cdot 10^{-10} \, \symup{m^4}
 \end{equation}
 bzw.
 \begin{equation}
-  I_q = \frac{a^4}{12} = 8.3e-10 m^4
+  I_q = a \int_{-a/2}^{a/2} y^2 \symup{dy} =\frac{a^4}{12} = 8.3\cdot 10^{-10} \, \symup{m^4}
 \end{equation}
 
-Mittels dieser Flächenträgheitsmomente und der Auslenkung der Stäbe lässt sich durch \eqref{eqn:D1} der Elastizitätsmodul bestimmen (Tabellen \ref{tab:Er} und \ref{tab:Eq}). Hierraus ergeben sich im Mittel
+Mittels linearer Ausgleichsrechnung ($f = a z +b$ mit $z = Lx^2-x^3/3$) der Auslenkung der Stäbe lässt sich durch \eqref{eqn:D1} der Elastizitätsmodul bestimmen, wobei $a = \frac{F}{2aI}$ gilt, da $b \approx 0$. Die entsprechenden Werte der Parameter lauten:
+\begin{equation}
+  a_r = \left( 2.1968\pm 0.0324 \right)  \cdot 10^{-2}  \, \symup{\frac{1}{m^2}}
+  \label{eqn:ar}
+\end{equation}
+\begin{equation}
+  b_r = \left(7.36 \pm 1.60 \right) \cdot 10^{-5} \, \symup{m}
+  \label{eqn:br}
+\end{equation}
+ Hierraus ergeben sich
 
 \begin{equation*}
-  E_r = \left(9.76e9 \pm 4.3e9 \right) \frac{N}{m^2}
+  E_r = \left(1.089 \pm 0.004\right)\cdot 10^{11} \, \symup{\frac{N}{m^2}}
 \end{equation*}
 und
 \begin{equation*}
-  E_q = \left(1.35e10 \pm 6.1 e9 \right) \frac{N}{m^2}.
+  E_q = \left(1.35\cdot 10^{10} \pm 6.1 \cdot 10^{9} \right) \, \symup{\frac{N}{m^2}}.
 \end{equation*}
 
-\begin{table}
-  \centering
-  \caption{$E_r$ berechnet aus $x$}
-  \label{tab:Er}
-  \sisetup{round-mode = places , round-precision = 2}
-  \begin{tabular}{S S}
-    \toprule
-    {$x/cm$} & {$E_r / \frac{N}{m^2}$}\\
-    \midrule
-    3.000000000000000000e+00 & 2.432092196938775852e+07\\
-    4.000000000000000000e+00 & 5.116917609329446405e+07\\
-    5.000000000000000000e+00 & 3.836837394440537095e+08\\
-    6.000000000000000000e+00 & 8.687441153988867998e+07\\
-    7.000000000000000000e+00 & 6.276169733009708673e+07\\
-    8.000000000000000000e+00 & 6.713881782857143879e+07\\
-    9.000000000000000000e+00 & 7.762501448454383016e+07\\
-    10.00000000000000000e+0 & 7.402069241982510686e+07\\
-    11.00000000000000000e+0 & 7.711597506819559634e+07\\
-    12.00000000000000000e+0 & 8.690394559106662869e+07\\
-    13.00000000000000000e+0 & 8.123805974499444664e+07\\
-    14.00000000000000000e+0 & 7.504283363636365533e+07\\
-    15.00000000000000000e+0 & 8.308487788865548372e+07\\
-    16.00000000000000000e+0 & 8.516494419591836631e+07\\
-    17.00000000000000000e+0 & 8.737399755724242330e+07\\
-    18.00000000000000000e+0 & 9.068984177643781900e+07\\
-    19.00000000000000000e+0 & 9.299504283673468232e+07\\
-    20.00000000000000000e+0 & 9.123058352797029912e+07\\
-    21.00000000000000000e+0 & 9.327235468476358056e+07\\
-    22.00000000000000000e+0 & 9.335322023426735401e+07\\
-    23.00000000000000000e+0 & 8.942224613764655590e+07\\
-    24.00000000000000000e+0 & 9.536317940345370770e+07\\
-    25.00000000000000000e+0 & 9.302137892340481281e+07\\
-    26.00000000000000000e+0 & 7.796992481934997439e+07\\
-    27.00000000000000000e+0 & 9.889224443071967363e+07\\
-    28.00000000000000000e+0 & 1.020418833898305297e+08\\
-    29.00000000000000000e+0 & 1.012656415150375962e+08\\
-    30.00000000000000000e+0 & 1.007231172715391666e+08\\
-    31.00000000000000000e+0 & 9.618198553546531498e+07\\
-    32.00000000000000000e+0 & 8.340871095807048678e+07\\
-    33.00000000000000000e+0 & 1.036804972275126129e+08\\
-    34.00000000000000000e+0 & 1.041859954335693866e+08\\
-    35.00000000000000000e+0 & 1.008027519707207233e+08\\
-    36.00000000000000000e+0 & 1.044580011428571343e+08\\
-    37.00000000000000000e+0 & 1.026876175584608912e+08\\
-    38.00000000000000000e+0 & 1.008599908621950448e+08\\
-    39.00000000000000000e+0 & 1.014816731882157475e+08\\
-    40.00000000000000000e+0 & 1.033608163265306354e+08\\
-    41.00000000000000000e+0 & 1.039588796306664497e+08\\
-    42.00000000000000000e+0 & 1.191588212337662280e+08\\
-    43.00000000000000000e+0 & 1.060405572202381045e+08\\
-    44.00000000000000000e+0 & 1.030185833702623993e+08\\
-    45.00000000000000000e+0 & 1.086085022683215886e+08\\
-    46.00000000000000000e+0 & 1.058934176441991478e+08\\
-    47.00000000000000000e+0 & 1.047357177137537748e+08\\
-    48.00000000000000000e+0 & 1.039362329053803682e+08\\
-    49.00000000000000000e+0 & 1.089274183064516187e+08\\
 
-    \bottomrule
-  \end{tabular}
-\end{table}
-
-\begin{table}
-  \centering
-  \caption{$E_q$ berechnet aus $x$}
-  \label{tab:Eq}
-  \sisetup{round-mode = places , round-precision = 2}
-  \begin{tabular}{S S}
-    \toprule
-    {$x/cm$} & {$E_q/ \frac{N}{m^2}$}\\
-    \midrule
-    3.000000000000000000e+00 & 1.204214435240963846e+08\\
-    5.000000000000000000e+00 & 3.307243034638555050e+08\\
-    7.000000000000000000e+00 & 8.544152138554215431e+07\\
-    9.000000000000000000e+00 & 8.547381601917876303e+07\\
-    11.00000000000000000e+0 & 9.093084076009921730e+07\\
-    13.00000000000000000e+0 & 8.620173868200075626e+07\\
-    15.00000000000000000e+0 & 9.231684034658369422e+07\\
-    17.00000000000000000e+0 & 8.992455851816356182e+07\\
-    19.00000000000000000e+0 & 9.012525593141797185e+07\\
-    21.00000000000000000e+0 & 9.218407924305915833e+07\\
-    23.00000000000000000e+0 & 9.441081186022284627e+07\\
-    25.00000000000000000e+0 & 9.623102503641371429e+07\\
-    27.00000000000000000e+0 & 9.581297827389101684e+07\\
-    29.00000000000000000e+0 & 9.623833302382460237e+07\\
-    31.00000000000000000e+0 & 9.664506589527754486e+07\\
-    33.00000000000000000e+0 & 9.759140768922466040e+07\\
-    35.00000000000000000e+0 & 9.811769616830490530e+07\\
-    37.00000000000000000e+0 & 9.816806211412814260e+07\\
-    39.00000000000000000e+0 & 9.915591415662653744e+07\\
-    41.00000000000000000e+0 & 9.979236161170102656e+07\\
-    43.00000000000000000e+0 & 9.896111094377507269e+07\\
-    45.00000000000000000e+0 & 9.983354750523835421e+07\\
-    47.00000000000000000e+0 & 9.970517434384000301e+07\\
-    49.00000000000000000e+0 & 1.021555153772986829e+08\\
-
-    \bottomrule
-  \end{tabular}
-\end{table}
 
 \subsection{Beidseitige Auflage}
 \label{sec:Beidseitig}
@@ -291,13 +203,13 @@ und
   \end{tabular}
 \end{table}
 
-In diesem Versuchsteil ist die Belastung $m_3 = 4722.5g$. Die Auslenkungen des Stabes sind Tabelle \ref{tab:beidseitig} zu entnehmen. Die Berrechnung von $E_r$ erfolgt diesmal durch \eqref{eqn:D2} ($x<27cm$) und \eqref{D3} ($x>27cm$). Ihre Ergebnisse lassen sich Tabelle \ref{tab:Erb} entnehmen. Hierbei ergibt sich der mittlere Elastizitätsmodul der beiden Seiten links ($x<27cm$) und rechts ($x>27cm$) zu
+In diesem Versuchsteil ist die Belastung $m_3 = 4722.5 \, \symup{g}$. Die Auslenkungen des Stabes sind Tabelle \ref{tab:beidseitig} zu entnehmen. Die Berrechnung von $E_r$ erfolgt diesmal durch \eqref{eqn:D2} ($x<27 \, \symup{cm}$) und \eqref{D3} ($x>27 \, \symup{cm}$). Ihre Ergebnisse lassen sich Tabelle \ref{tab:Erb} entnehmen. Hierbei ergibt sich der mittlere Elastizitätsmodul der beiden Seiten links ($x<27 \, \symup{cm}$) und rechts ($x> \symup{27 \,cm}$) zu
 \begin{equation*}
-  E_{links} = \left(1.07e10 \pm 8e8 \right)\frac{N}{m^2}
+  E_{links} = \left(1.07\cdot 10^{10} \pm 8\cdot 10^{8} \right) \, \symup{\frac{N}{m^2}}
 \end{equation*}
 und
 \begin{equation*}
-  E_{rechts} = \left(1.587e10 \pm 6e7 \right) \frac{N}{m^2}
+  E_{rechts} = \left(1.587\cdot 10^{10} \pm 6\cdot 10^{7} \right) \, \symup{\frac{N}{m^2}}
 \end{equation*}
 
 \begin{table}
