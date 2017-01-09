@@ -31,9 +31,9 @@ def g(t, a, b):
 parameters, pcov = curve_fit(g, z, (y1-y0))
 print(parameters, np.sqrt(np.diag(pcov)), sep='\n')
 
-plt.plot(z,y0, 'ko', label = 'Unbelastet')
-plt.plot(z,y1, 'ro', label = 'Belastet')
-plt.plot(z,y1-y0, 'go', label = 'Differenz')
+plt.plot(z,y0, 'kx', label = 'Unbelastet')
+plt.plot(z,y1, 'rx', label = 'Belastet')
+plt.plot(z,y1-y0, 'gx', label = 'Differenz')
 plt.plot(z, g(z, *parameters), 'g--', label = 'fit')
 plt.plot(z, d, 'y-', label = 'Theoriewert')
 
@@ -44,7 +44,7 @@ print('E: ', E)
 
 plt.grid()
 
-plt.xlabel(r'$X \:/\: m$')
+plt.xlabel(r'$X \:/\: m^3$')
 plt.ylabel(r'$y \:/\: m$')
 plt.legend(loc='best')
 

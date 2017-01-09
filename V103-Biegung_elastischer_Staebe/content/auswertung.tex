@@ -141,15 +141,13 @@ bzw.
   I_q = a \int_{-a/2}^{a/2} y^2 \symup{dy} =\frac{a^4}{12} = 8.3\cdot 10^{-10} \, \symup{m^4}
 \end{equation}
 
-Mittels linearer Ausgleichsrechnung ($f = a z +b$ mit $z = Lx^2-x^3/3$) der Auslenkung der Stäbe lässt sich durch \eqref{eqn:D1} der Elastizitätsmodul bestimmen, wobei $a = \frac{F}{2aI}$ gilt, da $b \approx 0$. Die entsprechenden Werte der Parameter lauten:
-\begin{equation}
-  a_r = \left( 2.1968\pm 0.0324 \right)  \cdot 10^{-2}  \, \symup{\frac{1}{m^2}}
-  \label{eqn:ar}
-\end{equation}
-\begin{equation}
-  b_r = \left(7.36 \pm 1.60 \right) \cdot 10^{-5} \, \symup{m}
-  \label{eqn:br}
-\end{equation}
+Mittels linearer Ausgleichsrechnung ($f = a z +b$ mit $z = Lx^2-x^3/3$) der Auslenkung der Stäbe lässt sich durch \eqref{eqn:D1} der Elastizitätsmodul bestimmen, wobei $E = \frac{F}{2aI}$ gilt, da $b \approx 0$. Die entsprechenden Werte der Parameter lauten:
+\begin{align}
+  a_r &= \left( 2.1968\pm 0.0324 \right)  \cdot 10^{-2}  \, \symup{\frac{1}{m^2}} \\
+  b_r &= \left(7.36 \pm 1.60 \right) \cdot 10^{-5} \, \symup{m}                   \\
+  a_q &= \left(4.4922 \pm 0.0027 \right)  \cdot 10^{-2}  \, \symup{\frac{1}{m^2}} \\
+  b_r &= \left(5.69 \pm 1.43 \right) \cdot 10^{-5} \, \symup{m}
+\end{align}
  Hierraus ergeben sich
 
 \begin{equation*}
@@ -157,7 +155,7 @@ Mittels linearer Ausgleichsrechnung ($f = a z +b$ mit $z = Lx^2-x^3/3$) der Ausl
 \end{equation*}
 und
 \begin{equation*}
-  E_q = \left(1.35\cdot 10^{10} \pm 6.1 \cdot 10^{9} \right) \, \symup{\frac{N}{m^2}}.
+  E_q = \left(1.0097 \pm 0.0013 \right)\cdot 10^{11} \, \symup{\frac{N}{m^2}}.
 \end{equation*}
 
 
@@ -203,57 +201,23 @@ und
   \end{tabular}
 \end{table}
 
-In diesem Versuchsteil ist die Belastung $m_3 = 4722.5 \, \symup{g}$. Die Auslenkungen des Stabes sind Tabelle \ref{tab:beidseitig} zu entnehmen. Die Berrechnung von $E_r$ erfolgt diesmal durch \eqref{eqn:D2} ($x<27 \, \symup{cm}$) und \eqref{D3} ($x>27 \, \symup{cm}$). Ihre Ergebnisse lassen sich Tabelle \ref{tab:Erb} entnehmen. Hierbei ergibt sich der mittlere Elastizitätsmodul der beiden Seiten links ($x<27 \, \symup{cm}$) und rechts ($x> \symup{27 \,cm}$) zu
+In diesem Versuchsteil ist die Belastung $m_3 = 4722.5 \, \symup{g}$. Die Auslenkungen des Stabes sind Tabelle \ref{tab:beidseitig} zu entnehmen, die entsprechende Graphik stellt Abb. \ref{fig:Reihe2} dar. In Abb. \ref{fig:Fit} sind die Werte der linken Hälfte des Stabes gemäß \eqref{eqn:D2} linearisiert dargestellt.
+Die Berrechnung von $E_r$ erfolgt erneut durch einen linearen Ausgleich ($f = ax +b$), aus dem sich der Elastizitätsmodul aus \eqref{eqn:D2} bestimmen lässt, wobei $E = \frac{F}{48aI}$ gilt, da $b \approx 0$. Es wird hierbei nur mit den Werten der linken Hälfte ($x<27 \, \symup{cm}$) gerechnet, da sich Abb. \ref{fig:Reihe3} entnehmen lässt, dass die Werte der rechten Hälfte eine starke systematische Abweichung aufweisen (siehe Abschnitt \ref{sec:Diskussion}).
 \begin{equation*}
-  E_{links} = \left(1.07\cdot 10^{10} \pm 8\cdot 10^{8} \right) \, \symup{\frac{N}{m^2}}
-\end{equation*}
-und
-\begin{equation*}
-  E_{rechts} = \left(1.587\cdot 10^{10} \pm 6\cdot 10^{7} \right) \, \symup{\frac{N}{m^2}}
+  E_{links} = \left(1.01 \pm 0.04 \right)\cdot 10^{11} \, \symup{\frac{N}{m^2}}
 \end{equation*}
 
-\begin{table}
-  \centering
-  \caption{$E_{r}$ berechnet aus $x$}
-  \label{tab:Erb}
-  \sisetup{round-mode = places , round-precision = 2}
-  \begin{tabular}{S S}
-    \toprule
-    {$x/cm$} & {$E_r/\frac{N}{m^2}$}\\
-    \midrule
-    3.000000000000000000e+00 & 1.091563332642928660e+08\\
-    5.000000000000000000e+00 & 1.068516625896733105e+08\\
-    7.000000000000000000e+00 & 1.051430644826680869e+08\\
-    9.000000000000000000e+00 & 1.033984258367385417e+08\\
-    11.00000000000000000e+0 & 1.323117016126535833e+08\\
-    13.00000000000000000e+0 & 1.044912702761775404e+08\\
-    15.00000000000000000e+0 & 1.028824978931304514e+08\\
-    17.00000000000000000e+0 & 1.025951820224975795e+08\\
-    19.00000000000000000e+0 & 1.031428275735751539e+08\\
-    21.00000000000000000e+0 & 1.025268713210350424e+08\\
-    23.00000000000000000e+0 & 1.035114701746776551e+08\\
-    25.00000000000000000e+0 & 1.029072679660552442e+08\\
-    30.00000000000000000e+0 & 1.289862189238956422e+08\\
-    32.00000000000000000e+0 & 1.280676701165902168e+08\\
-    34.00000000000000000e+0 & 1.274540919390886575e+08\\
-    36.00000000000000000e+0 & 1.284755721351069808e+08\\
-    38.00000000000000000e+0 & 1.303244816543946117e+08\\
-    40.00000000000000000e+0 & 1.311482947857238948e+08\\
-    42.00000000000000000e+0 & 1.330829644096574336e+08\\
-    44.00000000000000000e+0 & 1.359478122026320100e+08\\
-    46.00000000000000000e+0 & 1.429876576892364025e+08\\
-    48.00000000000000000e+0 & 1.490396020896440744e+08\\
-    50.00000000000000000e+0 & 1.646029000332620740e+08\\
-    52.00000000000000000e+0 & 2.053062434952365458e+08\\
-    54.00000000000000000e+0 & 3.581164346951395273e+08\\
-
-    \bottomrule
-  \end{tabular}
-\end{table}
 
 \begin{figure}
   \centering
   \includegraphics[width = \textwidth]{./Plots/Reihe3.pdf}
-  \caption{Auslenkung des runden Stabes bei beidseitiger Auflage, verglichen mit dem Theoriewert}
-  \label{fig:Reihe2}
+  \caption{Auslenkung des runden Stabes bei beidseitiger Auflage, verglichen mit dem Theoriewert.}
+  \label{fig:Reihe3}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \includegraphics[width = \textwidth]{./Plots/beidseitigFit.pdf}
+  \caption{Auslenkung der linken Hälfte des runden Stabes bei beidseitiger Auflage, verglichen mit dem Theoriewert sowie linearem Ausgleich.}
+  \label{fig:Fit}
 \end{figure}
