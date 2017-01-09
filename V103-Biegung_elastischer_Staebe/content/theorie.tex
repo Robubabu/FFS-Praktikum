@@ -11,7 +11,7 @@ parallelen als Tangential-oder Schubspannung bezeichnet. Ist nun die relative
 Änderung $ \increment \symup{L /L} $ hinreichend klein, wobei L eine lineare Körperdimension
 ist, so gibt das Hooksche Gesetz den Zusammenhang:
 \begin{equation}
-  \sigma = \symup{E}\frac{\increment \symup{L}}{\symup{L}}.
+  \sigma = E\frac{\increment L}{L}.
   \label{eqn:hook}
 \end{equation}
 E bezeichnet dabei das Elastizitätsmodul.
@@ -39,14 +39,14 @@ ursprüngliche Länge behält, diese wird neutrale Faser gennant und ist in
 Abb.\ref{fig:abb2} als gestrichelte Linie innerhalb des Stabes eingezeichnet.
 Daraus ergibt sich dann für die Auslenkung
 \begin{equation}
-  \symup{D(x)} = \frac{\symup{F}}{2\symup{EI}} \left(\symup{Lx^2}-
-  \frac{\symup{x}^3}{3}\right) \; \text{für} \; 0 \leq \symup{x} \leq \symup{L}.
+  D(x) = \frac{F}{2EI} \left(Lx^2-
+  \frac{x^3}{3}\right) \; \text{für} \; 0 \leq x \leq L.
   \label{eqn:D1}
 \end{equation}
 I in Gleichung \eqref{eqn:D1}, bezeichnet dabei das Flächenträgheitsmoment, dies
 ist definiert durch:
 \begin{equation}
-  I \coloneq \int_{\symup{Q}}\symup{y}^2\symup{dq(y)}.
+  I \coloneq \int_{Q}{y}^2\symup{dq}(y).
   \label{eqn:I}
 \end{equation}
 Dabei ist y definiert als der Abstand des Flächenelemntes dq von der neutralen
@@ -66,45 +66,17 @@ wirkt die Kraft F mit Hebelarm x am Querschnitt Q.
 \FloatBarrier
 Dann ergibt sich für die Auslenkung:
 \begin{equation}
-  \symup{D(x)} = \frac{\symup{F}}{48 \symup{EI}}
-  \left( 3\symup{L^2 x}-4\symup{x^3} \right) \; \text{für} \;
-  0 \leq \symup{x} \leq \frac{\symup{L}}{2} .
+  D(x) = \frac{F}{48 EI}
+  \left( 3L^2 x-4x^3 \right) \; \text{für} \;
+  0 \leq x \leq \frac{L}{2} .
   \label{eqn:D2}
 \end{equation}
 Für die rechte Stabhälfte mit D(L)$=$0 gilt dann:
 \begin{equation}
-  \symup{D(x)} = \frac{\symup{F}}{48 \symup{EI}}
-  \left(4 \symup{x^3} - 12\symup{Lx^2} + 9\symup{L^2x} - \symup{L^3}\right)
-  \; \text{für} \; \frac{\symup{L}}{2} \leq x \leq L .
+  D(x) = \frac{F}{48 EI}
+  \left(4 x^3 - 12 Lx^2 + 9 L^2x - L^3\right)
+  \; \text{für} \; \frac{L}{2} \leq x \leq L .
   \label{eqn:D3}
 \end{equation}
 Auch hier ist bei beiden Gleichungen (\eqref{eqn:D2}\&\eqref{eqn:D3}) I das
 Flächenträgheitsmoment aus Gleichung \eqref{eqn:I}.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-%
