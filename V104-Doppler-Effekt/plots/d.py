@@ -13,6 +13,7 @@ ngv , sgv , ngr , sgr = np.genfromtxt('GeschwVorRueck.txt' , unpack=True)
 gv = unp.uarray(ngv, sgv)
 gr = unp.uarray(ngr, sgr)
 f = np.genfromtxt('b.txt' , unpack = True)  #f ist \nu_0
+f*=1.25
 V = np.array([v1,v2,v3,v4,v5,v6,v7,v8,v9,v0])
 R = np.array([r1,r2,r3,r4,r5,r6,r7,r8,r9,r0])
 v = np.array
@@ -26,7 +27,8 @@ for j in R:
 r=r[1:]
 def fit(x,a):
     return a*x
-
+v*=1.25
+r*=1.25
 dfv = v-f
 dfr = r-f
 x = np.append(gr,gv)
@@ -69,7 +71,8 @@ plt.legend(loc='best')
 plt.xlim(-0.6,0.6)
 plt.ylim(-40,40)
 plt.grid()
-plt.show()
+# plt.show()
+np.savetxt('dpropfak.txt',np.column_stack([noms(params),stds(params)]),header='#inMeter #fehler')
 
 # plt.xlabel(r'$\alpha \:/\: \si{\ohm}$')
 # plt.ylabel(r'$y \:/\: \si{\micro\joule}$')
@@ -77,4 +80,4 @@ plt.show()
 #
 # # in matplotlibrc leider (noch) nicht möglich
 # plt.tight_layout(pad=0, h_pad=1.08, w_pad=1.08)
-# plt.savefig('dplot.pdf')
+plt.savefig('dplot.pdf')

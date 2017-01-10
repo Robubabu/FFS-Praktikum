@@ -10,6 +10,7 @@ v1 , v2 , v3 , v4 , v5 , v6 , v7 , v8 , v9 , v0 = np.genfromtxt('evor.txt' ,unpa
 r1 , r2, r3, r4, r5, r6, r7, r8, r9, r0 =np.genfromtxt('erueck.txt', unpack = True)
 ngv , sgv , ngr , sgr = np.genfromtxt('GeschwVorRueck.txt' , unpack=True)
 f = np.genfromtxt('b.txt' , unpack = True)  #f ist \nu_0
+f*=1.25
 gv = unp.uarray(ngv, sgv)
 gr = unp.uarray(ngr, sgr)
 V = np.array([v1,v2,v3,v4,v5,v6,v7,v8,v9,v0])
@@ -25,6 +26,8 @@ for j in R:
 r=r[1:]
 def fit(x,a):
     return a*x
+v*=1.25
+r*=1.25
 np.savetxt('evorxy.txt', np.column_stack([noms(2*gv),v]))
 vx , vy = np.genfromtxt('evorxy.txt', unpack = True)
 np.savetxt('erueckxy.txt', np.column_stack([noms(2*gr),r]))
@@ -38,12 +41,12 @@ rparams = correlated_values(rparams , rcov)
 va = vparams
 ra = rparams
 x = np.linspace(0,1.2, num = 50)
-print(va)
-print(ra)
-print(f/va)
-print(f/ra)
-print((np.absolute(f/va)-const.speed_of_sound)/const.speed_of_sound)
-print((np.absolute(f/ra)-const.speed_of_sound)/const.speed_of_sound)
+# print(va)
+# print(ra)
+print("Schallgeschw vorwärts",f/va)
+print("Schallgeschw rückwärts",f/ra)
+print("relativerFehler schall vor:",(np.absolute(f/va)-const.speed_of_sound)/const.speed_of_sound)
+print("relativer Fehler schall rueck",(np.absolute(f/ra)-const.speed_of_sound)/const.speed_of_sound)
 
 plt.subplot(1, 2, 1)
 plt.errorbar(noms(2*gr), r , xerr=stds(2*gr), fmt='gx', label= r'$\Delta \nu$ ')
@@ -63,6 +66,7 @@ plt.ylabel(r'$ \Delta \nu \:/\: Hz$')
 plt.xlim(0,1.2)
 plt.grid()
 plt.legend(loc='best')
+np.savetxt('epropfak.txt',np.column_stack([noms(va),stds(va), noms(ra),stds(ra)]),header='#inMeter #fehler')
 
 # plt.show()
 
