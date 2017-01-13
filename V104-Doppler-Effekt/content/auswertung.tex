@@ -74,6 +74,7 @@ Bei der Messung der Ruhefrequenz wurde fünfmal der gleich Wert ermittelt, da
 keine explizieten Messungenauigkeiten angegeben waren und mit Berücksichtigung
 der Zählwerksverzögerung, wird fest mit $\nu_0 = 20741,62$ Hz angenommen.
 \subsection{Wellenlänge \texorpdfstring{$\lambda$}{[math]}}
+\label{sec:welll}
 Zur Bestimmung der Schallgeschwindigkeit wurde erst die Wellenlänge $\lambda$ des Signals
 bestimmt. Dazu wird der Abstand $\increment l$ zwischen den Wellenbäuchen und Wellenbergen
 bestimmt. Dann gilt,
@@ -92,6 +93,7 @@ Durch die Beziehung
 ergibt sich für die Schallgeschwindigkeit c $ = (360 \pm 2.9)\;
  \frac{\symup{m}}{\symup{s}}$ .
 \subsection{Frequenzänderung des bewegten Senders}
+\label{sec:fqs}
 In der Abbildung \ref{fig:d} ist die Frequenzänderung $\increment \nu$ eines
 bewegten Empfängers zu betrachten, der sowohl zur Quelle hin als auch von der
 Quelle des Signals weg fährt. Da die Messwerte im Bereich von ca. 0,3 bis 0,6
@@ -111,7 +113,7 @@ Schallgeschwindigkeit $c \approx (283,51 \pm 1,95)\; \frac{\symup{m}}{\symup{s}}
 \subsection{Frequenzänderung des bewegten Reflektors}
 % 347.9546534809624+/-1.0812460480766823] vor wärts
 % -353.20864806363323+/-11.01047986738201 rueckwärts
-
+\label{sec:fqr}
 Auch hier wurde mit Formel \eqref{eqn:fit} ein Fit durchgeführt. Daraus ergibt
 sich für den Reflektor der sich von der Quelle weg bewegt mit Gleichung \eqref{eqn:a}
 die Schallgeschwindigkeit $c \approx ( 278,36 \pm 0,86)\; \frac{\symup{m}}{\symup{s}}$
@@ -123,6 +125,28 @@ $c \approx (282,56 \pm 8,8)\; \frac{\symup{m}}{\symup{s}}$.
   \caption{Frequenzänderung bei einem bewegten Reflektor}
   \label{fig:e}
 \end{figure}
+\FloatBarrier
+\subsection{T-Test}
+Der T-Test vergleicht die Werte aus \ref{sec:welll} , \ref{sec:fqs} und
+\ref{sec:fqr}. Der Test macht eine Aussage wie wahrscheinlich es ist dieses
+Ergebnis zu erhalten, somit kann auch eingeschätzt werden ob ein systematischer
+Fehler vorliegt. Hier für werden die errechneten Werten aus \ref{sec:fqs}
+und \ref{sec:fqr} mit $ \frac{1}{\lambda} $ aus \ref{sec:welll} gegenübergestellt.
+Das wird durch die Formel
+\begin{equation*}
+  t = \frac{\bar{X_1} - \bar{X_2}}{\sqrt{\frac{s_1 ^2}{n_1} +
+    \frac{s_2 ^2}{n_2}}}
+\end{equation*}
+erreicht. Dabei bezeichnen $ \bar{X}$ jeweils die Mittel der Stichproben
+$s$ die jeweiligen Standardabweichungen der Stichproben und $n$ bezeichnet
+die Varianz der Stichproben.
+Werden die Werte von \ref{sec:fqs} mit den aus \ref{sec:welll} in die Formel
+eingesätz, ergibt sich $ t = 56,94 $. Das bedeutet, dass mit $ 99 \% $ ein
+systematischer Fehler vorliegt. Der Test ergibt für die Werte aus \ref{sec:fqr}
+und \ref{sec:welll}, dass $ t = 68,79 $ für die Werte die gemessen wurden, wenn
+der Wagen auf den Sender zu fährt und $ t = 20,77 $ wenn er vom Sender weg fährt.
+Beide Ergebnisse bedeuten, dass mit einer Wahrscheinlichkeit von
+$99\%$ ein systematischer Fehler vorliegt.
 
 
 
