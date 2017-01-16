@@ -1,4 +1,19 @@
 \section{Theorie}
 \label{sec:Theorie}
+Gibt es in einem Körper eine inhomogene Temperaturverteilung, so gleicht sich diese stets über einige Zeit zu einer homogenen Verteilung aus. In Stäben wird dieser Vorgang wird durch die folgende \textit{Wärmeleitungsgleichung} beschrieben:
+\begin{equation}
+  \frac{\delta T}{\delta t} = \frac{\kappa}{\rho c} \frac{\delta^2 T}{\delta x^2}
+  \label{eqn:T}
+\end{equation}
+Hier bei beschreibt $T$ die Temperatur, $t$ die Zeit, $\kappa$ die Wärmeleitfähigkeit, $\rho$ die Dichte des Materials, $c$ die spezifische Wärme, und $x$ die Position auf dem Stab.
+Durch abwechselndes Heizen und Kühlen des Stabes können Temperaturwellen der Form
+\begin{equation}
+  T(x,t) = T_{max} e^(-\sqrt(\frac{\omega \rho c}{2\kappa})x) \cos\left(\omega t - \sqrt(\frac{\omega \rho c}{2 \kappa})x \right)
+  \label{eqn:Welle}
+\end{equation}
 
-\cite{sample}
+Hierraus ergibt sich für $\kappa$ der Zusammenhang
+\begin{equation}
+  \kappa = \frac{\rho c (\Delta x)^2}{2 \Delta t ln(T_{nah}/T_{fern})}
+  \label{eqn:kappa}
+\end{equation}
