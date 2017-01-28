@@ -8,12 +8,12 @@ Gibt es in einem Körper eine inhomogene Temperaturverteilung, so gleicht sich d
 Hier bei beschreibt $T$ die Temperatur, $t$ die Zeit, $\kappa$ die Wärmeleitfähigkeit, $\rho$ die Dichte des Materials, $c$ die spezifische Wärme, und $x$ die Position auf dem Stab.
 Durch abwechselndes Heizen und Kühlen des Stabes können Temperaturwellen der Form
 \begin{equation}
-  T(x,t) = T_{max} e^(-\sqrt(\frac{\omega \rho c}{2\kappa})x) \cos\left(\omega t - \sqrt(\frac{\omega \rho c}{2 \kappa})x \right)
+  T(x,t) = T_{max} \symup{exp}\left(-\sqrt{\frac{\omega \rho c}{2\kappa}}x \right) \cos\left(\omega t - \sqrt{\frac{\omega \rho c}{2 \kappa}}x \right)
   \label{eqn:Welle}
 \end{equation}
 
 Hierraus ergibt sich für $\kappa$ der Zusammenhang
 \begin{equation}
-  \kappa = \frac{\rho c (\Delta x)^2}{2 \Delta t ln(T_{nah}/T_{fern})}
+  \kappa = \frac{\rho c (\Delta x)^2}{2 \Delta t \cdot \symup{ln}(T_{nah}/T_{fern})}
   \label{eqn:kappa}
 \end{equation}

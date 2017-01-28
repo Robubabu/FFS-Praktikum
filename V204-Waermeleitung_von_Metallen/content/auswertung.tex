@@ -24,7 +24,9 @@ nur darin, wie stark der Anstieg für das jeweilige Element ist. Das lässt sich
 gut vergleichen in dem die Temperatur nach einer bestimmten Zeit bei gleichen
 Bedingungen für jedes Element gemessen wird. Das ist in der Tabelle \ref{tab:700s}
 dargestellt. Daraus kann man erkennen, dass Aluminium den stärksten Anstieg und
-somit die bessere Wärmeleitung hat.
+somit die bessere Wärmeleitung hat. Bemerkenswert ist, dass der schmale Messingstab
+schwächer ansteigt als der bereitere. Daraus ist zu folgern, dass die Wärmeleitung
+abhängig von der Querschnittsfläche ist.
 \begin{table}
   \centering
   \caption{Temperaturen nach 700s bei der statischen Methode}
@@ -110,7 +112,8 @@ kann dann die Wärmeleitfähigkeit $\kappa$ berechnet werden. In der Gleichung
 bezeichnet $\rho$ dabei die Dichte, $c$ die spezifische Wärme und $\increment x$
 den Abstand zwischen den Termoelementen. Diese Weise der Brechnung wird auch
 Angström-Methode genannt. Die so brechneten Werte sind in der Tabelle
-\ref{tab:kappa} dargestellt.
+\ref{tab:kappa} dargestellt. Die Phasendifferenzen und Amplituden sind in den
+Tabellen \ref{tab:A12}, \ref{tab:A56} und \ref{tab:A78}. 
 
 \begin{figure}
   \centering
@@ -138,18 +141,72 @@ Angström-Methode genannt. Die so brechneten Werte sind in der Tabelle
 \end{figure}
 \begin{table}
   \centering
-  \caption{Mittel der berechneten Wärmeleitfähigkeiten}
-  \begin{tabular}{c c}
+  \caption{Mittel der berechneten Wärmeleitfähigkeiten mit Abweichung}
+  \begin{tabular}{c c c}
     \toprule
-    Metal & $\kappa$/$\si{\watt\per\meter\per\kelvin}$ \\
+    Metal & $\kappa$/$\si{\watt\per\meter\per\kelvin}$ & $\increment \kappa $
+    / \si{\watt\per\meter\per\kelvin}\\
     \midrule
-    Messing & 117.35 \\
-    Aluminium & 203.19 \\
-    Edelstahl & 20.72 \\
+    Messing & 117.35 & 8.26\\
+    Aluminium & 203.19 & 19.34\\
+    Edelstahl & 20.72 & 0.49 \\
     \bottomrule
   \end{tabular}
   \label{tab:kappa}
 \end{table}
+\begin{table}
+  \centering
+  \caption{Phasendifferenz und Amplituden von Termoelement 1 und 2}
+    \sisetup{round-mode = places , round-precision = 2}
+    \begin{tabular}{S S S}
+      \toprule
+      $\Delta t / \si{\second}$ & $A_{nah} / \si{\celsius}$ &
+      $A_{fern} / \si{\celsius}$ \\
+      \midrule
+      1.303999999999999915e+01 & 3.000000000000000000e+00 & 1.639999999999999902e+00\\
+      1.086999999999999922e+01 & 3.370000000000000107e+00 & 1.040000000000000036e+00\\
+      1.196000000000000085e+01 & 3.459999999999999964e+00 & 1.100000000000000089e+00\\
+      1.303999999999999915e+01 & 3.279999999999999805e+00 & 1.000000000000000000e+00\\
+      1.522000000000000064e+01 & 3.319999999999999840e+00 & 1.000000000000000000e+00\\
+      \bottomrule
+    \end{tabular}
+\label{tab:A12}
+\end{table}
+\begin{table}
+  \centering
+  \caption{Phasendifferenz und Amplituden von Termoelement 5 und 6}
+    \sisetup{round-mode = places , round-precision = 2}
+    \begin{tabular}{S S S}
+      \toprule
+      $\Delta t / \si{\second}$ & $A_{nah} / \si{\celsius}$ &
+      $A_{fern} / \si{\celsius}$ \\
+      \midrule
+      8.689999999999999503e+00 & 3.649999999999999911e+00 & 2.649999999999999911e+00\\
+      8.689999999999999503e+00 & 4.099999999999999645e+00 & 2.000000000000000000e+00\\
+      8.689999999999999503e+00 & 4.200000000000000178e+00 & 2.000000000000000000e+00\\
+      8.689999999999999503e+00 & 4.049999999999999822e+00 & 1.899999999999999911e+00\\
+      8.689999999999999503e+00 & 4.099999999999999645e+00 & 1.850000000000000089e+00\\
+      \bottomrule
+    \end{tabular}
+\label{tab:A56}
+\end{table}
+\begin{table}
+  \centering
+  \caption{Phasendifferenz und Amplituden von Termoelement 7 und 8}
+    \sisetup{round-mode = places , round-precision = 2}
+    \begin{tabular}{S S S}
+      \toprule
+      $\Delta t / \si{\second}$ & $A_{nah} / \si{\celsius}$ &
+      $A_{fern} / \si{\celsius}$ \\
+      \midrule
+      6.785999999999999943e+01 & 1.891000000000000014e+01 & 2.021999999999999886e+01\\
+      7.143000000000000682e+01 & 2.021999999999999886e+01 & 7.389999999999999680e+00\\
+      6.428000000000000114e+01 & 1.978000000000000114e+01 & 6.950000000000000178e+00\\
+      \bottomrule
+    \end{tabular}
+    \label{tab:A78}
+\end{table}
+
 \FloatBarrier
 Mit den Werten aus Abbildung \ref{fig:dfall} und
 Tabelle \ref{tab:kappa} lässt sich mit

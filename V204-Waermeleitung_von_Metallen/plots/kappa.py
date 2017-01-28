@@ -28,9 +28,16 @@ def kappa(p,c , t , an ,af ):
 km = np.mean(kappa(pm , cm , tm , anm , afm))
 ka = np.mean(kappa(pa , ca , ta , ana , afa))
 ke = np.mean(kappa(pe,ce , te, ane , afe)[1:])  # [1:] weil erster wert funkt nicht :(
+#Fehler des Mittelwerts
+kme = np.std(kappa(pm , cm , tm , anm , afm), ddof = 1)/ len(kappa(pm , cm , tm , anm , afm))
+kae = np.std(kappa(pa , ca , ta , ana , afa) , ddof = 1)/ len(kappa(pa , ca , ta , ana , afa) )
+kee = np.std(kappa(pe,ce , te, ane , afe)[1:], ddof = 1)/ len(kappa(pe,ce , te, ane , afe)[1:])
 print("Kappa von Messing:", km)
+print("################ Std.Abweich: ",kme)
 print("Kappa von Aluminium:", ka)
+print("################ Std.Abweich: ", kae)
 print("Kappa von Edelstahl:", ke)
+print("################ Std.Abweich: ",kee)
 
 def lam(k , f , p, c):
     return (1/f)*np.sqrt((4*np.pi * k * f)/(p*c))
@@ -46,4 +53,4 @@ def rlerr(x ,y):
 
 print("relativer Fehler von kappa für Messing in %:",  rlerr(km , wfm))
 print("relativer Fehler von kappa fürAluminium in %:", rlerr(ka , wfa))
-print("relativer Fehler von kappa für Edelstahl in %:", rlerr(ke , wfe))
+print("relativer Fehler von kappa für Edelstahl in %:", rlerr(ke , 15))
