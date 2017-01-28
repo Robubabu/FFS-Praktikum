@@ -7,6 +7,12 @@ from uncertainties import ufloat
 from uncertainties.unumpy import (nominal_values as noms, std_devs as stds)
 x = np.linspace(0, 10, 1000)
 y = x ** np.sin(x)
+def mittel(x):              #the real mean()-ing of life
+    return ufloat(np.mean(x),np.std(x,ddof=1)/np.sqrt(len(x)))
+params , cov = curve_fit(f , x ,y )
+params = correlated_values(params, cov)
+for p in params:
+    print p
 
 #plt.subplot(1, 2, 1)
 plt.plot(x, y, label='Kurve')
