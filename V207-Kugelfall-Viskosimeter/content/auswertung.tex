@@ -2,20 +2,14 @@
 \label{sec:Auswertung}
 \subsection{Bestimmung der Apparatekonstante \texorpdfstring{$K_{gr}$}{math}}
 \label{sec:BdA}
-Zuerst wird mit der Gleichung
-\begin{equation}
-  \eta = K (\rho_k - \rho_{Fl})t
-  \label{eqn:eta1}
-\end{equation}
-die Viskosität $\nu$ ermittelt. Dabei beschreibt $\rho_k$ die Dichte der Kugel,
-$\rho_{Fl}$ die Dichte der Flüssigkeit, $K$ die Apparatekonstante abhängig von
-der Kugel und $t$ die Fallzeit.
+Zuerst wird mit der Gleichung \eqref{eqn:eta}
+die Viskosität $\nu$ ermittelt.
 Die Apparatekonstante ist für die kleine Kugel mit $K_{kl} = 7,64 \cdot 10^{-5}
 \,\si{\milli\pascal\meter\tothe{3}\per\kilo\gram} $
 gegeben. Im Folgenden wird die Dichte $\rho_{Fl}$ des destillierten Wassers, mit
 1000 \si{\kilo\gram\per\meter\tothe{3}} angenommen. Mit der Gleichung
 \begin{equation*}
-  \rho_{k} = \frac{m}{\frac{4}{3}\pi\left(\frac{d}{2}\right)^3}
+  \rho_{K} = \frac{m}{\frac{4}{3}\pi\left(\frac{d}{2}\right)^3}
 \end{equation*}
 lässt sich die Dichte der beiden Kugeln bestimmen. Dabei bezeichnet $m$ das
 Gewicht der Kugel und $d$ den Durchmesser der Kugel. Das Gewicht der Kugeln
@@ -29,7 +23,7 @@ $\rho_{gr} = (2415.7 \pm 0.6) \si{\kilo\gram\per\meter\tothe{3}} $.
 Schlussendlich ergibt sich dann
 für die Viskosität, brechnet anhand der Daten der kleinen Kugel,
 $(1.2084 \pm 0.0032)\si{\milli\pascal\second}$.
-Aus der Gleichung \eqref{eqn:eta1} folgt nun die Beziehung
+Aus der Gleichung \eqref{eqn:eta} folgt nun die Beziehung
 \begin{equation*}
   K_{gr} = \frac{\eta}{(\rho_{gr} - \rho_{Fl})t_{gr}}
         = \frac{K_{kl} (\rho_{kl} - \rho_{Fl})t_{kl}}{(\rho_{gr} - \rho_{Fl})t_{gr}}\, ,
@@ -40,7 +34,7 @@ $(12.71 \pm 0.033) \si{\second}$ und für $t_{gr}$ bei $(85.84 \pm 0.22)
 \si{\second}$. Daraus ergibt sich die Apparatekonstante $K_{gr}  = (9.94 \pm 0.04)
 \cdot 10^{-6} \si{\milli\pascal\meter\tothe{3}\per\kilo\gram}$.
 \subsection{Temperaturabhängigkeit der Viskosität}
-Zuerst wird mit der Gleichung \eqref{eqn:eta1} die Viskosität brechnet, logarithmiert
+Zuerst wird mit der Gleichung \eqref{eqn:eta} die Viskosität brechnet, logarithmiert
 und gegen $\frac{1}{T}$ aufgetragen, hierbei ist $T$ natürlich die Temperatur.
 Wird nun eine Ausgleichrechnung mit
 \begin{equation*}
@@ -56,11 +50,8 @@ beschriebene Vorgang ist in Abbildung \ref{fig:plot} dargestellt.
   \label{fig:plot}
 \end{figure}
 Die oben genannte Gleichung zur Ausgleichsrechnung kommt von der Andratschen
-Gleichung \cite{Anleitung}, diese Beschreibt die Temperaturabhängigkeit der
-Viskosität wie folgt:
-\begin{equation*}
-  \eta(T) = A\cdot \symup{exp}\left(\frac{B}{T}\right)\,.
-\end{equation*}
+Gleichung \eqref{eqn:eta(T)}, diese beschreibt die Temperaturabhängigkeit der
+Viskosität.
 Werden die Konstanten in die Gleichung eingesetzt ergibt sich für die Viskosität
 im Mittel $(0.856 \pm 0.032) \si{\milli\pascal\second}$. Dabei ist zu beachten,
 dass das destillierte Wasser seine Dichte mit der Temperatur ändert. Deshalb
