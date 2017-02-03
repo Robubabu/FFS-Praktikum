@@ -5,6 +5,9 @@ from scipy.optimize import curve_fit
 from uncertainties import correlated_values, correlation_matrix
 from uncertainties import ufloat
 from uncertainties.unumpy import (nominal_values as noms, std_devs as stds)
+def mittel(x):              #the real mean()-ing of life
+    return ufloat(np.mean(x),np.std(x,ddof=1)/np.sqrt(len(x)))
+
 tk1 = np.genfromtxt('M1K1.txt', unpack = True)  #zeit von kugel 1 klein
 tk2 = np.genfromtxt('M1K2.txt', unpack = True)  #"""""""" Kugel 2 groß
 s = 0.1 #strecke
@@ -34,11 +37,13 @@ r1 = rho(g1,d1)
 r2 = rho(g2,d2)
 rey1= (1000 * v1 * (d1/2))*1000/nu1
 rey2 = (1000* v2 * (d2/2))*1000/nu(K2,rho(g2,d2),1000,t2)
-print(rerr(nu1 , 1))
-print("Fallgeschw. Kugel1:",v1)
-print("Fallgeschw. Kugel2:", v2)
-print("Reynoldszahl für Kugel 1:",rey1)
-print("Reynoldszahl für Kugel 2:", rey2)
+# print('Durchmesser im Mittel von Kugel1:', d1)
+# print('Durchmesser im Mittel von Kugel2:', d2)
+# # print(rerr(nu1 , 1))
+# print("Fallgeschw. Kugel1:",v1)
+# print("Fallgeschw. Kugel2:", v2)
+# print("Reynoldszahl für Kugel 1:",rey1)
+# print("Reynoldszahl für Kugel 2:", rey2)
 # print("Viskosität für die kleine Kugel 1:", nu1)
 # print ("Apparatekonstante K1:", K1)
 # print ("Apparatekonstante K2:", K2)
