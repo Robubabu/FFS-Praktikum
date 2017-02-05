@@ -44,7 +44,11 @@ Tm = T(unp.uarray(Um, [0.001, 0.001, 0.001]))
 
 cpb = (cw*mw + g)*(Tm-Tw)/(mpb*(Tpb-Tm))
 
-print('Cpb = ', noms(cpb), '+/-', stds(cpb))
+print('Tpb:', Tpb)
+print('Tw:', Tw)
+print('Tm:', Tm)
+print('-----------------------')
+#print('Cpb = ', noms(cpb), '+/-', stds(cpb))
 
 mw = 0.6
 Ugr, Uw, Um = np.genfromtxt('./Graphit.txt', unpack = True)
@@ -54,7 +58,11 @@ Tm = T(unp.uarray(Um, [0.001, 0.001, 0.001]))
 
 cgr = (cw*mw + g)*(Tm-Tw)/(mgr*(Tgr-Tm))
 
-print('Cgr = ',noms(cgr), '+/-', stds(cgr))
+print('Tgr:', Tgr)
+print('Tw:', Tw)
+print('Tm:', Tm)
+print('-----------------------')
+#print('Cgr = ',noms(cgr), '+/-', stds(cgr))
 
 mw = 0.6
 Ucu, Uw, Um = np.genfromtxt('./Kupfer.txt', unpack = True)
@@ -62,6 +70,11 @@ Tcu = T(unp.uarray(Ucu, [0.001]))
 Tw = T(unp.uarray(Uw, [0.001]))
 Tm = T(unp.uarray(Um, [0.001]))
 
+
 ccu = (cw*mw + g)*(Tm-Tw)/(mcu*(Tcu-Tm))
 
-print('Ccu = ',noms(ccu), '+/-', stds(ccu))
+print('Tcu:', Tcu)
+print('Tw:', Tw)
+print('Tm:', Tm)
+print('-----------------------')
+#print('Ccu = ',noms(ccu), '+/-', stds(ccu))
