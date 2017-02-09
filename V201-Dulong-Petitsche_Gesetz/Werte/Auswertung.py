@@ -3,6 +3,11 @@ import uncertainties.unumpy as unp
 from uncertainties import ufloat
 from uncertainties.unumpy import (nominal_values as noms,
                                   std_devs as stds)
+molpb = 0.2072
+molcu = 0.06355
+molgr = 0.012011
+
+R = 8.3
 
 mcu =0.37865 - 0.14005 #Masse Kupfer
 mgr = 0.24765 -0.13977 #Masse Graphit
@@ -43,12 +48,15 @@ Tw = T(unp.uarray(Uw, [0.001, 0.001, 0.001]))
 Tm = T(unp.uarray(Um, [0.001, 0.001, 0.001]))
 
 cpb = (cw*mw + g)*(Tm-Tw)/(mpb*(Tpb-Tm))
-
-print('Tpb:', Tpb)
-print('Tw:', Tw)
-print('Tm:', Tm)
+Cpb = cpb*mpb
+CV = Cpb + R/molpb
+#print('Tpb:', Tpb)
+#print('Tw:', Tw)
+#print('Tm:', Tm)
 print('-----------------------')
-#print('Cpb = ', noms(cpb), '+/-', stds(cpb))
+print('cpb = ', cpb)
+print('Cpb= ', Cpb)
+print('CV = ', CV)
 
 mw = 0.6
 Ugr, Uw, Um = np.genfromtxt('./Graphit.txt', unpack = True)
@@ -57,12 +65,16 @@ Tw = T(unp.uarray(Uw, [0.001, 0.001, 0.001]))
 Tm = T(unp.uarray(Um, [0.001, 0.001, 0.001]))
 
 cgr = (cw*mw + g)*(Tm-Tw)/(mgr*(Tgr-Tm))
+Cgr =cgr*mgr
+CV = Cgr + R/molgr
 
-print('Tgr:', Tgr)
-print('Tw:', Tw)
-print('Tm:', Tm)
+#print('Tgr:', Tgr)
+#print('Tw:', Tw)
+#print('Tm:', Tm)
 print('-----------------------')
-#print('Cgr = ',noms(cgr), '+/-', stds(cgr))
+print('cgr = ', cgr)
+print('Cgr = ', Cgr)
+print('CV = ', CV)
 
 mw = 0.6
 Ucu, Uw, Um = np.genfromtxt('./Kupfer.txt', unpack = True)
@@ -72,9 +84,13 @@ Tm = T(unp.uarray(Um, [0.001]))
 
 
 ccu = (cw*mw + g)*(Tm-Tw)/(mcu*(Tcu-Tm))
+Ccu = ccu *mcu
+CV = Ccu + R/molcu
 
-print('Tcu:', Tcu)
-print('Tw:', Tw)
-print('Tm:', Tm)
+#print('Tcu:', Tcu)
+#print('Tw:', Tw)
+#print('Tm:', Tm)
 print('-----------------------')
-#print('Ccu = ',noms(ccu), '+/-', stds(ccu))
+print('ccu = ', ccu)
+print('Ccu = ', Ccu)
+print('CV = ', CV)

@@ -1,7 +1,7 @@
 \section{Auswertung}
 \label{sec:Auswertung}
 \paragraph{Eichung}
-Für den Zusammmenhang zwischen am Thermoelement auftretender Spannung und Temperatur erhält man:
+Für den Zusammmenhang zwischen am Thermoelement auftretender Spannung und Temperatur ergibt sich:
 
 \begin{align*}
   a &= \left(61.65 \pm 0.34 \right) \si{\kelvin \per \milli \volt} \\
@@ -9,7 +9,14 @@ Für den Zusammmenhang zwischen am Thermoelement auftretender Spannung und Tempe
 \end{align*}
 
 \paragraph{Bestimmung der Wärmekapazität des Isolierenden Gefäßes}
-Für die $0.3 \si{\liter}$ heißes Wasser werden $(0.510 \pm 0.001) \si{\milli \volt}$ am Thermoelement gemessen, dies entspricht einer Temperatur von $(363.5 \pm 0.5) \si{\kelvin}$. Für das kalte Wasser ergibt sich $-(0.557 \pm 0.001)\si{\milli \volt}$ (d.i. $(297.7 \pm 0.2) \si{\kelvin}$) und für das gemischte Wasser  $-(0.103 \pm 0.001)\si{\milli \volt}$ (d.i. $(325.7 \pm 0.3) \si{\kelvin}$). Die Wärmekapazität des Gefäßes beträgt somit $m_gc_g = (441 \pm 8) \si{\joule \per \kelvin}$. Die Wärmekapazität von Wasser wird hierbei mit $4200 \si{\joule \per \kilo \gram \kelvin}$ \cite{Stoffwerte} angenommen.
+Für die $0.3 \si{\liter}$ heißes Wasser werden $(0.510 \pm 0.001) \si{\milli \volt}$ am Thermoelement gemessen, dies entspricht einer Temperatur von $(363.5 \pm 0.5) \si{\kelvin}$. Für das kalte Wasser ergibt sich $-(0.557 \pm 0.001)\si{\milli \volt}$ (d.i. $(297.7 \pm 0.2) \si{\kelvin})$ und für das gemischte Wasser  $-(0.103 \pm 0.001)\si{\milli\volt}$ (d.i. $(325.7 \pm 0.3) \si{\kelvin}$). Die Wärmekapazität des Gefäßes beträgt somit gemäß \eqref{eqn:cgmg} $m_gc_g = (441 \pm 8) \si{\joule \per \kelvin}$. Die Wärmekapazität von Wasser wird hierbei mit $4200 \si{\joule \per \kilo \gram \per \kelvin}$ \cite{Stoffwerte} angenommen.
+
+\paragraph{Berechnung von C_K}
+Da $9 \alpha^2 \kappa V_0 T = \frac{R}{M}$, mit $M$ als Molmasse des Stoffes, gilt nach \eqref{eqn:cp-cv}:
+\begin{equation}
+  C_V = C_P + \frac{R}{M}
+  \label{eqn:cr}
+\end{equation}
 
 \paragraph{Wärmekapazität von Blei}
 
@@ -28,9 +35,8 @@ Für die $0.3 \si{\liter}$ heißes Wasser werden $(0.510 \pm 0.001) \si{\milli \
   \end{tabular}
 \end{table}
 
-Die für Blei bemessenen und berechneten Werte lassen sich Tab. \ref{tab:blei} entnehmen. Aus diesen Werten ergibt sich die gemittelte Wärmekapazität von Blei zu $c_{pb} = (206 \pm 3) \si{\joule\per
-\kilo\gram\per\kelvin}$. Die nach dem Dulong-Petitschen Gesetz erwartete Wärme Kapazität beträgt $c_{pb,t} = 3 R \approx 120 \si{\joule\per
-\kilo\gram\per\kelvin}$, wobei wie für die anderen Körper auch $R = 8.3 \si{\joule \per \kelvin \per \mole}$ \cite{Gaskonstante} verwendet wird.
+Die für Blei gemessenen und berechneten Werte lassen sich Tab. \ref{tab:blei} entnehmen. Aus diesen Werten ergibt sich über \eqref{eqn:ck} die gemittelte Wärmekapazität von Blei zu $c_{pb} = (206 \pm 3) \si{\joule\per
+\kilo\gram\per\kelvin}$. Dies ergibt $C_{pb} = c_{pb} \cdot m_{pb} = (112 \pm 5)\si{\joule\per\kelvin}$, wobei $m_{pb} = \si{0.5443}{\kilo\gram}$. Es folgt somit über \eqref{eqn:cr} mit $M_{pb} = 0.2072 \si{\kilo \gram \per \mole}$ \cite{Molmasse} die Wärmekapazität des Bleikörpers bei konstantem Volumen zu $C_{pb,v}=(152 \pm 6) \si{\joule \per \kelvin}$. Die nach dem Dulong-Petitschen Gesetz erwartete Wärme Kapazität beträgt $C_{pb,t} = 3 R \approx 120 \si{\joule\per \kilo\gram\per\kelvin}$, wobei wie für die anderen Körper auch $R = 8.3 \si{\joule \per \kelvin \per \mole}$ \cite{Gaskonstante} verwendet wird.
 
 
 \paragraph{Wärmekapazität von Graphit}
@@ -51,7 +57,7 @@ Die für Blei bemessenen und berechneten Werte lassen sich Tab. \ref{tab:blei} e
   \end{tabular}
 \end{table}
 
-Die für Graphit gemessenen und berechneten Werte lassen sich Tab. \ref{tab:graphit} entnehmen. Aus diesen Werten ergibt sich die gemittelte Wärmekapazität von Graphit zu $c_{gr} = (660 \pm 28) \si{\joule \per \kilo \gram \per\kelvin}$. Die nach dem Dulong-Petitschen Gesetz erwartete Wärme Kapazität beträgt jedoch $c_{gr,t} = 3 R \approx 2073 \si{\joule \per \kilo \gram \per\kelvin}$.
+Die für Graphit gemessenen und berechneten Werte lassen sich Tab. \ref{tab:graphit} entnehmen. Aus diesen Werten ergibt sich die gemittelte Wärmekapazität von Graphit zu $c_{gr} = (660 \pm 28) \si{\joule \per \kilo \gram \per\kelvin}$. Dies ergibt $C_{gr} = c_{gr} \cdot m_{gr} = (71 \pm 5)\si{\joule\per\kelvin}$, wobei $m_{gr} = \si{0.10788}{\kilo\gram}$.Es folgt somit über \eqref{eqn:cr} mit $M_{gr} = 0.012011 \si{\kilo \gram \per \mole}$ \cite{Molmasse} die Wärmekapazität des Bleikörpers bei konstantem Volumen zu $C_{gr,v}=(762 \pm 5) \si{\joule \per \kelvin}$. Die nach dem Dulong-Petitschen Gesetz erwartete Wärme Kapazität beträgt jedoch $c_{gr,t} = 3 R \approx 2073\si{\joule \per \kilo \gram \per\kelvin}$.
 
 \paragraph{Wärmekapazität von Kupfer}
 
@@ -69,4 +75,4 @@ Die für Graphit gemessenen und berechneten Werte lassen sich Tab. \ref{tab:grap
   \end{tabular}
 \end{table}
 
-Die für Kupfer gemessenen und berechneten Werte lassen sich Tab. \ref{tab:kupfer} entnehmen. Aus diesen Werten ergibt sich die Wärmekapazität von Kupfer zu $c_{cu} = (263 \pm 23) \si{\joule \per \kilo \gram \per\kelvin}$. Die nach dem Dulong-Petitschen Gesetz erwartete Wärme Kapazität beträgt $c_{cu,t} = 3 R \approx 130 \si{\joule \per \kilo \gram \per\kelvin}$.
+Die für Kupfer gemessenen und berechneten Werte lassen sich Tab. \ref{tab:kupfer} entnehmen. Aus diesen Werten ergibt sich die Wärmekapazität von Kupfer zu $c_{cu} = (263 \pm 23) \si{\joule \per \kilo \gram \per\kelvin}$. Dies ergibt $C_{cu} = c_{cu} \cdot m_{cu} = (63 \pm 6)\si{\joule\per\kelvin}$, wobei $m_{cu} = \si{0.2386}{\kilo\gram}$. Es folgt somit über \eqref{eqn:cr} mit $M_{cu} = 0.06355 \si{\kilo \gram \per \mole}$ \cite{Molmasse} die Wärmekapazität des Bleikörpers bei konstantem Volumen zu $C_{pb,v}=(193 \pm 6) \si{\joule \per \kelvin}$. Die nach dem Dulong-Petitschen Gesetz erwartete Wärme Kapazität beträgt $c_{cu,t} = 3 R \approx 392 \si{\joule \per \kilo \gram \per\kelvin}$.
