@@ -1,0 +1,48 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.8 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \sortlist[entry]{nty/global/}
+    \entry{Tipler}{book}{}
+      \name{author}{1}{}{%
+        {{hash=e2377398f86d8d3f409311c63b0abe9f}{%
+           family={Paul\bibnamedelimb A.\bibnamedelimi Tipler},
+           familyi={P\bibinitperiod\bibinitdelim A\bibinitperiod\bibinitdelim T\bibinitperiod},
+           given={Gene\bibnamedelima Mosca},
+           giveni={G\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer Verlag}%
+      }
+      \strng{namehash}{e2377398f86d8d3f409311c63b0abe9f}
+      \strng{fullhash}{e2377398f86d8d3f409311c63b0abe9f}
+      \strng{authornamehash}{e2377398f86d8d3f409311c63b0abe9f}
+      \strng{authorfullhash}{e2377398f86d8d3f409311c63b0abe9f}
+      \field{sortinit}{P}
+      \field{sortinithash}{c0a4896d0e424f9ca4d7f14f2b3428e7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{subtitle}{Für Wissenschaftler und Ingenieure}
+      \field{title}{Physik}
+      \field{year}{2015}
+    \endentry
+  \endsortlist
+\endrefsection
+\endinput
+
