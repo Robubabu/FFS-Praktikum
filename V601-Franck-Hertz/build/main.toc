@@ -1,13 +1,22 @@
 \boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
 \defcounter {refsection}{0}\relax 
 \select@language {german}
-\contentsline {section}{\numberline {1}Theorie}{3}{section.1}
-\contentsline {section}{\numberline {2}Durchführung}{3}{section.2}
-\contentsline {section}{\numberline {3}Auswertung}{3}{section.3}
-\contentsline {subsection}{\numberline {3.1}Methoden}{3}{subsection.3.1}
-\contentsline {subsection}{\numberline {3.2}Dampfdruck und die mittlere freie Weglänge}{3}{subsection.3.2}
-\contentsline {subsection}{\numberline {3.3}Differentielle Energieverteilung}{3}{subsection.3.3}
-\contentsline {subsection}{\numberline {3.4}Franck-Hertz Kurve}{8}{subsection.3.4}
-\contentsline {subsection}{\numberline {3.5}Ionisierung}{11}{subsection.3.5}
-\contentsline {section}{\numberline {4}Diskussion}{14}{section.4}
-\contentsline {section}{\nonumberline Literatur}{14}{section*.3}
+\contentsline {section}{\numberline {1}Zielsetzung}{3}{section.1}
+\contentsline {section}{\numberline {2}Theorie}{3}{section.2}
+\contentsline {paragraph}{\nonumberline Art der Anregung}{3}{section*.2}
+\contentsline {paragraph}{\nonumberline Gewinnung und Beschleunigung freier Elektronen}{3}{section*.3}
+\contentsline {paragraph}{\nonumberline Quecksilberdampf}{3}{section*.4}
+\contentsline {paragraph}{\nonumberline Komposition einer Franck-Hertz-Röhre}{3}{figure.caption.6}
+\contentsline {paragraph}{\nonumberline Messung der Elektronenzahl}{4}{section*.7}
+\contentsline {section}{\numberline {3}Durchführung}{5}{section.3}
+\contentsline {paragraph}{\nonumberline Integrale Energieverteilung der Elektronen}{5}{section*.9}
+\contentsline {paragraph}{\nonumberline Franck-Hertz-Kurve}{5}{section*.10}
+\contentsline {paragraph}{\nonumberline Ionisierungsenergie des Quecksilberatoms}{5}{section*.11}
+\contentsline {section}{\numberline {4}Auswertung}{6}{section.4}
+\contentsline {subsection}{\numberline {4.1}Methoden}{6}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Dampfdruck und die mittlere freie Weglänge}{6}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.3}Differentielle Energieverteilung}{6}{subsection.4.3}
+\contentsline {subsection}{\numberline {4.4}Franck-Hertz Kurve}{10}{subsection.4.4}
+\contentsline {subsection}{\numberline {4.5}Ionisierung}{12}{subsection.4.5}
+\contentsline {section}{\numberline {5}Diskussion}{14}{section.5}
+\contentsline {section}{\nonumberline Literatur}{14}{section*.15}

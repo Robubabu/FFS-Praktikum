@@ -1,4 +1,4 @@
-This is LuaTeX, Version 0.95.0 (TeX Live 2016)  (format=lualatex 2016.10.10)  20 APR 2017 12:48
+This is LuaTeX, Version 0.95.0 (TeX Live 2016)  (format=lualatex 2016.10.10)  21 APR 2017 13:02
  restricted system commands enabled.
 **main.tex
 (./main.tex
@@ -467,7 +467,7 @@ Inserting `luaotfload.aux.patch_cambria_domh' at position 2 in `luaotfload.patch
 Inserting `luaotfload.aux.fixup_fontdata' at position 1 in `luaotfload.patch_font_unsafe'.
 Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font'.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'.
-luaotfload | main : initialization completed in 0.122 seconds)
+luaotfload | main : initialization completed in 0.118 seconds)
 Lua module: fontspec 2016/02/01 2.5a Advanced font selection for LuaLaTeX. (/home/robert/.local/texlive/2016/texmf-dist/tex/latex/fontspec/fontspec-luatex.sty
 Package: fontspec-luatex 2016/02/01 v2.5a Font selection for XeLaTeX and LuaLaTeX
 \l_fontspec_script_int=\count118
@@ -2031,53 +2031,40 @@ Language ngerman already loaded; id is 8)
 \openout5 = main.toc
  [2
 
-] (./content/theorie.tex) (./content/durchfuehrung.tex) (./content/auswertung.tex(load luc: /home/robert/.local/texlive/2016/texmf-var/luatex-cache/generic/fonts/otl/lmroman8-regular.luc)(load luc: /home/robert/.local/texlive/2016/texmf-var/luatex-cache/generic/fonts/otl/lmroman6-regular.luc)
-LaTeX Font Info:    Calculating math sizes for size <7.63431> on input line 21.
+] (./content/theorie.tex
+Missing character: There is no ä (U+00E4) in font cmmi8!
+(load luc: /home/robert/.local/texlive/2016/texmf-var/luatex-cache/generic/fonts/otl/lmroman8-regular.luc)(load luc: /home/robert/.local/texlive/2016/texmf-var/luatex-cache/generic/fonts/otl/lmroman8-bold.luc)(load luc: /home/robert/.local/texlive/2016/texmf-var/luatex-cache/generic/fonts/otl/lmroman6-regular.luc)(load luc: /home/robert/.local/texlive/2016/texmf-var/luatex-cache/generic/fonts/otl/lmroman6-bold.luc)
+Missing character: There is no ä (U+00E4) in font cmmi8!
+Missing character: There is no ä (U+00E4) in font cmmi8!
+Missing character: There is no ä (U+00E4) in font cmmi8!
+Missing character: There is no ä (U+00E4) in font cmmi8!
+ <./logos/roehre.PNG, id=46, 560.8453pt x 367.3725pt>
+File: ./logos/roehre.PNG Graphic file (type png)
+ <use ./logos/roehre.PNG>
+Package luatex.def Info: ./logos/roehre.PNG used on input line 35.
+(luatex.def)             Requested size: 418.25555pt x 273.9703pt.
+ [3] <./logos/ideal.PNG, id=66, 490.83376pt x 318.43968pt>
+File: ./logos/ideal.PNG Graphic file (type png)
+ <use ./logos/ideal.PNG>
+Package luatex.def Info: ./logos/ideal.PNG used on input line 47.
+(luatex.def)             Requested size: 418.25555pt x 271.36012pt.
+) (./content/durchfuehrung.tex [4<./logos/roehre.PNG>]) (./content/auswertung.tex [5<./logos/ideal.PNG>]
+LaTeX Font Info:    Calculating math sizes for size <7.63431> on input line 23.
 LaTeX Font Info:    Font shape `EU2/LatinModernMath(1)/m/n' will be
-(Font)              scaled to size 7.63441pt on input line 21.
+(Font)              scaled to size 7.63441pt on input line 23.
 LaTeX Font Info:    Font shape `EU2/LatinModernMath(1)/m/n' will be
-(Font)              scaled to size 5.34406pt on input line 21.
+(Font)              scaled to size 5.34406pt on input line 23.
 LaTeX Font Info:    Font shape `EU2/LatinModernMath(1)/m/n' will be
-(Font)              scaled to size 3.8172pt on input line 21.
+(Font)              scaled to size 3.8172pt on input line 23.
 LaTeX Font Info:    Font shape `EU2/LatinModernMath(2)/m/n' will be
-(Font)              scaled to size 7.63419pt on input line 21.
+(Font)              scaled to size 7.63419pt on input line 23.
 LaTeX Font Info:    Font shape `EU2/LatinModernMath(2)/m/n' will be
-(Font)              scaled to size 5.34389pt on input line 21.
+(Font)              scaled to size 5.34389pt on input line 23.
 LaTeX Font Info:    Font shape `EU2/LatinModernMath(2)/m/n' will be
-(Font)              scaled to size 3.8171pt on input line 21.
+(Font)              scaled to size 3.8171pt on input line 23.
 (load luc: /home/robert/.local/texlive/2016/texmf-var/luatex-cache/generic/fonts/otl/lmroman5-regular.luc)
 Missing character: There is no ä (U+00E4) in font cmmi8!
 
-Overfull \hbox (1.672pt too wide) detected at line 41
- 
- []
-
-
-Overfull \hbox (1.672pt too wide) detected at line 41
- 
- []
-
-
-Overfull \hbox (1.672pt too wide) detected at line 42
- 
- []
-
-
-Overfull \hbox (5.475pt too wide) detected at line 42
- 
- []
-
-
-Overfull \hbox (1.672pt too wide) detected at line 43
- 
- []
-
-
-Overfull \hbox (5.61736pt too wide) detected at line 43
- 
- []
-
-
 Overfull \hbox (1.672pt too wide) detected at line 44
  
  []
@@ -2087,72 +2074,75 @@ Overfull \hbox (1.672pt too wide) detected at line 44
  
  []
 
-[3] <8a1.pdf, id=59, page=1, 844.83629pt x 597.432pt>
+
+Overfull \hbox (1.672pt too wide) detected at line 45
+ 
+ []
+
+
+Overfull \hbox (5.475pt too wide) detected at line 45
+ 
+ []
+
+
+Overfull \hbox (1.672pt too wide) detected at line 46
+ 
+ []
+
+
+Overfull \hbox (5.61736pt too wide) detected at line 46
+ 
+ []
+
+
+Overfull \hbox (1.672pt too wide) detected at line 47
+ 
+ []
+
+
+Overfull \hbox (1.672pt too wide) detected at line 47
+ 
+ []
+
+[6] <plots/8a1plot.pdf, id=101, 578.16pt x 433.62pt>
+File: plots/8a1plot.pdf Graphic file (type pdf)
+ <use plots/8a1plot.pdf>
+Package luatex.def Info: plots/8a1plot.pdf used on input line 96.
+(luatex.def)             Requested size: 265.55983pt x 199.16928pt.
+ [7<./plots/8a1plot.pdf>] <8a1.pdf, id=156, page=1, 844.83629pt x 597.432pt>
 File: 8a1.pdf Graphic file (type pdf)
  <use 8a1.pdf, page 1>
-Package luatex.def Info: 8a1.pdf, page1 used on input line 51.
-(luatex.def)             Requested size: 675.86995pt x 477.94624pt.
+Package luatex.def Info: 8a1.pdf, page1 used on input line 102.
+(luatex.def)             Requested size: 422.41711pt x 298.71527pt.
+ [8
 
-Overfull \hbox (91.01968pt too wide) in paragraph at lines 51--53
-[][]
- []
-
-[4
-
-]
-Overfull \vbox (73.2907pt too high) has occurred while \output is active []
-
- [5<./8a1.pdf>] <8a2.pdf, id=72, page=1, 844.83629pt x 597.432pt>
+<./8a1.pdf>] <8a2.pdf, id=165, page=1, 844.83629pt x 597.432pt>
 File: 8a2.pdf Graphic file (type pdf)
  <use 8a2.pdf, page 1>
-Package luatex.def Info: 8a2.pdf, page1 used on input line 55.
-(luatex.def)             Requested size: 675.86995pt x 477.94624pt.
-
-Overfull \hbox (91.01968pt too wide) in paragraph at lines 55--57
-[][]
- []
-
-[6
+Package luatex.def Info: 8a2.pdf, page1 used on input line 106.
+(luatex.def)             Requested size: 422.41711pt x 298.71527pt.
+ [9
 
 
-]
-Overfull \vbox (73.2907pt too high) has occurred while \output is active []
+<./8a2.pdf>] [10
 
- [7<./8a2.pdf>] [8
-
-] <8b.pdf, id=89, page=1, 844.83629pt x 597.432pt>
+] <8b.pdf, id=179, page=1, 844.83629pt x 597.432pt>
 File: 8b.pdf Graphic file (type pdf)
  <use 8b.pdf, page 1>
-Package luatex.def Info: 8b.pdf, page1 used on input line 60.
-(luatex.def)             Requested size: 675.86995pt x 477.94624pt.
+Package luatex.def Info: 8b.pdf, page1 used on input line 111.
+(luatex.def)             Requested size: 422.41711pt x 298.71527pt.
+ [11
 
-Overfull \hbox (91.01968pt too wide) in paragraph at lines 60--62
-[][]
- []
+<./8b.pdf>] [12
 
-[9
-
-]
-Overfull \vbox (73.2907pt too high) has occurred while \output is active []
-
- [10<./8b.pdf>] [11
-
-] <8c.pdf, id=107, page=1, 844.83629pt x 597.432pt>
+] <8c.pdf, id=193, page=1, 844.83629pt x 597.432pt>
 File: 8c.pdf Graphic file (type pdf)
  <use 8c.pdf, page 1>
-Package luatex.def Info: 8c.pdf, page1 used on input line 65.
-(luatex.def)             Requested size: 675.86995pt x 477.94624pt.
+Package luatex.def Info: 8c.pdf, page1 used on input line 116.
+(luatex.def)             Requested size: 422.41711pt x 298.71527pt.
+ [13
 
-Overfull \hbox (91.01968pt too wide) in paragraph at lines 65--67
-[][]
- []
-
-[12
-
-]
-Overfull \vbox (73.2907pt too high) has occurred while \output is active []
-
- [13<./8c.pdf>]) (./content/diskussion.tex)
+<./8c.pdf>]) (./content/diskussion.tex)
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 25.
  [14
 
@@ -2163,28 +2153,28 @@ Language ngerman already loaded; id is 8)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 25.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 25.
 Package rerunfilecheck Info: File `main.aux' has not changed.
-(rerunfilecheck)             Checksum: 55BAA01307621608F4B4034FA7084005;6750.
+(rerunfilecheck)             Checksum: AB4833BAD34A00F3A4C6E89764BDF468;9189.
 Package rerunfilecheck Info: File `main.toc' has not changed.
-(rerunfilecheck)             Checksum: 2C64B8A9C752B6F22363B6E67F4E679E;929.
+(rerunfilecheck)             Checksum: 594C8078144E748762D56BEF78EB9717;1702.
 Package logreq Info: Writing requests to 'main.run.xml'.
 
 \openout1 = main.run.xml
 )
 
 Here is how much of LuaTeX's memory you used:
- 44856 strings out of 495118
+ 44913 strings out of 495118
  100000,1648299 words of node,token memory allocated
- 1559 words of node memory still in use:
-   6 hlist, 2 vlist, 2 rule, 120 glue, 1 kern, 66 attribute, 59 glue_spec, 66 attribute_list, 1 write nodes
-   avail lists: 1:1,2:870,3:98,4:16,5:170,6:1354,7:611,8:72,9:325,10:5,11:167
- 47014 multiletter control sequences out of 65536+600000
- 196 fonts using 69810571 bytes
- 71i,12n,104p,8833b,2512s stack positions out of 5000i,500n,10000p,200000b,100000s
-</home/robert/.local/texlive/2016/texmf-dist/fonts/opentype/public/lm/lmroman10-italic.otf></home/robert/.local/texlive/2016/texmf-dist/fonts/opentype/public/lm/lmroman10-bold.otf></home/robert/.local/texlive/2016/texmf-dist/fonts/opentype/public/lm-math/latinmodern-math.otf></home/robert/.local/texlive/2016/texmf-dist/fonts/opentype/public/lm-math/latinmodern-math.otf></home/robert/.local/texlive/2016/texmf-dist/fonts/opentype/public/lm-math/latinmodern-math.otf></home/robert/.local/texlive/2016/texmf-dist/fonts/opentype/public/lm/lmroman10-regular.otf></home/robert/.local/texlive/2016/texmf-dist/fonts/opentype/public/lm/lmroman12-regular.otf></home/robert/.local/texlive/2016/texmf-dist/fonts/opentype/public/lm/lmsans10-bold.otf></home/robert/.local/texlive/2016/texmf-dist/fonts/opentype/public/lm/lmroman12-bold.otf>
-Output written on main.pdf (14 pages, 6484329 bytes).
+ 3304 words of node memory still in use:
+   6 hlist, 2 vlist, 2 rule, 315 glue, 1 kern, 161 attribute, 59 glue_spec, 161 attribute_list, 1 write nodes
+   avail lists: 1:3,2:3159,3:138,4:41,5:614,6:3468,7:3222,8:166,9:2178,10:23,11:380
+ 47043 multiletter control sequences out of 65536+600000
+ 199 fonts using 70205611 bytes
+ 71i,18n,104p,8833b,2983s stack positions out of 5000i,500n,10000p,200000b,100000s
+</home/robert/.local/texlive/2016/texmf-dist/fonts/opentype/public/lm/lmroman10-italic.otf></home/robert/.local/texlive/2016/texmf-dist/fonts/opentype/public/lm-math/latinmodern-math.otf></home/robert/.local/texlive/2016/texmf-dist/fonts/opentype/public/lm/lmroman10-bold.otf></home/robert/.local/texlive/2016/texmf-dist/fonts/opentype/public/lm-math/latinmodern-math.otf></home/robert/.local/texlive/2016/texmf-dist/fonts/opentype/public/lm-math/latinmodern-math.otf></home/robert/.local/texlive/2016/texmf-dist/fonts/opentype/public/lm/lmroman10-regular.otf></home/robert/.local/texlive/2016/texmf-dist/fonts/opentype/public/lm/lmroman12-regular.otf></home/robert/.local/texlive/2016/texmf-dist/fonts/opentype/public/lm/lmsans10-bold.otf></home/robert/.local/texlive/2016/texmf-dist/fonts/opentype/public/lm/lmroman12-bold.otf>
+Output written on main.pdf (14 pages, 6564372 bytes).
 
-PDF statistics: 216 PDF objects out of 1000 (max. 8388607)
- 161 compressed objects within 2 object streams
- 29 named destinations out of 1000 (max. 131072)
- 81 words of extra memory for PDF output out of 10000 (max. 10000000)
+PDF statistics: 303 PDF objects out of 1000 (max. 8388607)
+ 211 compressed objects within 3 object streams
+ 45 named destinations out of 1000 (max. 131072)
+ 89 words of extra memory for PDF output out of 10000 (max. 10000000)
 
