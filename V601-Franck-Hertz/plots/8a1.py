@@ -22,11 +22,12 @@ a = a*f
 p = p/sx
 m = p[10:13]
 M = np.mean(m)
-print(M)
+print('Mittel Maxium :' ,M)
+print('Kontaktpotential:', 11 - M)
 #plt.subplot(1, 2, 1)
 np.savetxt('steigung.txt',np.column_stack([a_u,p_u,noms(a),stds(a),noms(p),stds(p)]), delimiter=' & ',newline= r'\\'+'\n' )
 plt.plot(noms(p), noms(a), 'rx' ,label='Differentielle Energieverteilung')
-plt.axvline(x=noms(M))
+plt.axvline(x=noms(M), label = 'Position des Maximums')
 plt.xlabel(r'$U_A / V$')
 plt.ylabel(r'$ \frac{\Delta I_A}{\Delta U_A} / \frac{A}{V}$')
 plt.legend(loc='best')

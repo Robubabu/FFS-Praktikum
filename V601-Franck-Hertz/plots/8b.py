@@ -5,27 +5,27 @@ from scipy.optimize import curve_fit
 from uncertainties import correlated_values, correlation_matrix
 from uncertainties import ufloat
 from uncertainties.unumpy import (nominal_values as noms, std_devs as stds)
-x = np.linspace(0, 10, 1000)
-y = x ** np.sin(x)
+import scipy.constants as const
 def mittel(x):              #the real mean()-ing of life
     return ufloat(np.mean(x),np.std(x,ddof=1)/np.sqrt(len(x)))
-s = np.genfromtxt('8b-Skalar.txt',  unpack = True)
-a = np.genfromtxt('8b-Abs.txt', unpack = True)
-s = mittel(s)
-a = mittel(s)
-#plt.subplot(1, 2, 1)
-# plt.plot(x, y, label='Kurve')
-# plt.xlabel(r'$\alpha \:/\: \si{\ohm}$')
-# plt.ylabel(r'$y \:/\: \si{\micro\joule}$')
-# plt.legend(loc='best')
-# plt.savefig('build/plot.pdf')
-# plt.clf()
-# #plt.subplot(1, 2, 2)
-# plt.plot(x, y, label='Kurve')
-# plt.xlabel(r'$\alpha \:/\: \si{\ohm}$')
-# plt.ylabel(r'$y \:/\: \si{\micro\joule}$')
-# plt.legend(loc='best')
-#
-# # in matplotlibrc leider (noch) nicht möglich
-# #plt.tight_layout(pad=0, h_pad=1.08, w_pad=1.08)
-# plt.savefig('build/plot2.pdf')
+A = 2.3 # position erster Anregung in cm
+s = np.genfromtxt('8b-Skalar.txt',  unpack = True) #10volt pro cm
+a = np.genfromtxt('8b-Abs.txt', unpack = True) # abstände in cm
+K = ufloat(1.11, 0.18)
+
+ms = mittel(s)
+ma = mittel(a)
+
+print('Mittlerer Skalenabs:', ms)
+print('Mittlerer Abs. in cm:', ma)
+f = 10/ms       # Umrechnungsfaktor Volt pro cm
+print(f)
+av = ma*f
+print('Mittlerer Abs. in V:',av)
+Av = A*f - K
+print('Beschleunigungsspannung der ersten Anregung in Volt:', Av)
+Av*= const.e
+print('Beschleunigungsenrgie in eV:', Av)
+print('Wellenlänge des emittierten Lichts:' , const.c /(Av/const.h))
+# np.savetxt('8btab1.txt',np.column_stack(s), delimiter=' & ',newline= r'\\'+'\n' )
+# np.savetxt('steigung.txt',np.column_stack(a), delimiter=' & ',newline= r'\\'+'\n' )

@@ -9,7 +9,7 @@
 % \end{figure}
 
 \subsection{Methoden}
-Alle Mittelwerte und deren Fehler wurden mit der Formel
+Alle Mittelwerte und deren Fehler wurden mit den Formeln
 \begin{equation}
   \langle x \rangle = \frac{1}{n} \sum_{i=1} ^{n} x_i \quad \text{und} \quad
   \Delta x = \sqrt{\frac{1}{n(n-1)} \sum_{i=1}^n (x_i - \langle x \rangle )^2}
@@ -24,7 +24,7 @@ sowie der Größenfaktor $ \sfrac{a}{\bar{w}}$ dargestellt, wobei $a = 1 \si{\ce
 der verwendeten Versuchapparatur beträgt. Die Tabelle zeigt die Werte zweilenweise für
 die verschieden Versuchsteile, d.h. die ersten beiden Zeilen zeigen die Werte für
 die Messung der integralen Energieverteilung bei verschiedenen Temperturen, die Dritte
-für die Messung der Franck-Hertz-Kurve und die vierte für die Messung de Ionisierungsspannung.
+für die Messung der Franck-Hertz-Kurve und die vierte für die Messung der Ionisierungsspannung.
 Der Größenfaktor sollte zischen 1000 und
 4000 liegen, da sonst keine ausreichend große Stoßwahrscheinlichkeit gewährleistet ist.
 Aus der Tabelle \ref{tab:ue} ist also zu entnehmen, dass nur bei der Messung
@@ -49,22 +49,23 @@ wesentlich zu hoch war.
   \end{tabular}
   \label{tab:ue}
 \end{table}
+\FloatBarrier
 \subsection{Differentielle Energieverteilung}
-Zur Bestimmung der differentielle Energieverteilung wurde die Steigung $\frac{I_A}{U_A} $
+Zur Bestimmung der differentielle Energieverteilung wurde die Steigung $\sfrac{I_A}{U_A} $
 des Graphen
-der gemessenen integralen Energieverteilung gemessen und gegen die Bremsspannung $U_A$
+der gemessenen integralen Energieverteilung \ref{fig:8a1} gemessen und gegen die Bremsspannung $U_A$
 aufgetragen. Dabei wurden die Werte erst in Centimetern bestimmt und dann wurden
 die x-Achsen Skalenwerte gemittelt, für die y-Achse wurde ein Referenzwert des Maximums
 genommen um einen Umrechnungsfaktor zu berechnen. Dann ergibt sich für die gemittelten
 x-Achsen Skalenwerte $  (2,3 \pm 0,04)\si{\volt \per \centi \meter} $,
 aus dem Referenzwert für die y-Achse ergibt sich der Wert $ 0,37 \si{\nano \ampere\per\centi \meter}$
 somit ergibt sich der Umrechnungsfaktor für die Steigung mit $(1,62 \pm 0.03)\cdot 10^{-10}
-\si{\ampere \per \volt} $. Auf Ablesefehler wurde verzichtet.
-
+\si{\ampere \per \volt} $. Auf Ablesefehler wurde verzichtet. Die Werte sind in der
+Tabelle \ref{tab:abc} dargestellt.
 \begin{table}
   \centering
   \sisetup{round-mode = places, round-precision = 2}
-  \resizebox{\textwidth}{!}{
+  \resizebox{\textwidth}{!}{%
   \begin{tabular}{S S[scientific-notation = fixed , fixed-exponent = 0] S@{$ \; \pm$} S S@{${}\pm{}$} S}
     \toprule
      $\frac{\Delta x}{\Delta y} $& $x$ / \si{\centi \meter} &
@@ -86,33 +87,133 @@ somit ergibt sich der Umrechnungsfaktor für die Steigung mit $(1,62 \pm 0.03)\c
     6.700000000000000178e+00 & 2.300000000000000000e+01 & 1.087067703648837137e-09 & 1.939737935668015222e-11 & 9.978308026030369149e+00 & 1.780505717068402161e-01\\
     2.700000000000000178e+00 & 2.350000000000000000e+01 & 4.380720596793820990e-10 & 7.816854367617375329e-12 & 1.019522776572668299e+01 & 1.819212363091628482e-01\\
     \bottomrule
-  \end{tabular}
+  \end{tabular}%
   }
+  \caption{Werte der differentiellen Energieverteilung im Überblick}
+  \label{tab:abc}
 \end{table}
-\FloatBarrier
-Die Werte die in
+Die differenzielle Energieverteilung ist in dem
+Graphen \ref{fig:8a1p} dargestellt. Aus beiden Darstellungen ist zu entnehmen,
+dass die Energieverteilung im Mittel bei ($  9,89 \pm 0,18  $) \si{\volt}
+ihr Maximum erreicht. Daraus folgt, dass effektive Beschleunigungpotential $ U_{B,eff} $
+bei diesem Wert liegt und aus der Umformung der Gleichung
+\begin{equation*}
+  U_{B,eff} = U_B - K \implies K = U_B -U_{B,eff}
+\end{equation*}
+geht dann hervor, dass das Kontaktpotential $K$ den Wert ($ 1,11 \pm 0.18 $)
+\si{\volt} hat.
+Aus der zweiten Messung der integrierten Energieverteilung \ref{fig:8a2} ist zu
+erkennen, dass der Graph bei erhöhter Temperatur wesentlich schneller abfällt als zuvor.
 \begin{figure}
   \centering
   \includegraphics[height = 7cm]{plots/8a1plot.pdf}
-  \caption{Differentielle Energieverteilung bei 296.35 \si{\kelvin}}
+  \caption{Differentielle Energieverteilung bei 296,35 \si{\kelvin}}
   \label{fig:8a1p}
 \end{figure}
 
-\begin{landscape}
-\includegraphics[page = 1, scale = 0.5]{8a1.pdf}
-\label{fig:8a1}
-\end{landscape}
-\begin{landscape}
-\includegraphics[page = 1, scale = 0.5]{8a2.pdf}
-\label{fig:8a2}
-\end{landscape}
-\subsection{Franck-Hertz Kurve}
-\begin{landscape}
-\includegraphics[page = 1, scale = 0.5]{8b.pdf}
-\label{fig:8b}
-\end{landscape}
+  \begin{figure}
+    \centering
+    \includegraphics[height=7cm]{8a1.png}
+    \caption{Auffängerstrom in Anhängikeit von der Bremsspannung bei 293,35 K}
+    \label{fig:8a1}
+  \end{figure}
+
+
+
+\begin{figure}
+  \centering
+  \includegraphics[height=7cm]{8a2.png}
+  \caption{Auffängerstrom in Anhängikeit von der Bremsspannung bei 432,15 K}
+  \label{fig:8a2}
+\end{figure}
+
+
+\subsection{Franck-Hertz-Kurve}
+Die Abbildung \ref{fig:8b} zeigt die Franck-Hertz-Kurve. Die Abstande ziwschen
+den Maxima wurden in der Abbildung vermessen, genauso wie die Skalenabstände.
+Es wurde wieder auf Ablesefehler verzichtet. Danach
+wurden die Skalenabstände gemittelt um einen Umrechnungsfaktor zu berechnen. Der
+mittlere Skalenabstand beträgt ($3,91 \pm 0,07$) \si{\centi \meter}, der mittlere
+Abstand zwischen den Maxima beträgt ($1,93 \pm 0,05$) \si{\centi \meter}. Daraus
+ergibt sich der Umrechnungsfaktor ($2,56 \pm 0,05$) \si{\volt \per \centi \meter}
+und daraus wiederum der mittlere Abstand der Maxima mit ($4,77 \pm 0,21$)\si{\volt}.
+Aus dem mittleren Abstand der Maxima folgt dann die erste Anregungsenergie
+$ U_1 = \left(4,77 \pm 0,21 \right) $\si{ \eV}. Mit der Gleichung
+\begin{equation*}
+  h\nu = E_1 - E_0 = U_1 \symup{e}
+ \quad \text{und der Beziehung}\quad
+   \lambda = \frac{c}{\nu}
+\end{equation*}
+lässt sich die Wellenlänge $\lambda $ des emittierten Lichtes berechenen, hier
+bei bezeichet $h$ das Plancksche Wirkungsquantum \cite{scipy}, $ U_1 \symup{e}$ die
+Anregungsenergie $U_1$ multipliziert mit der Elementarladung \cite{scipy},
+ $\nu$ die Frequenz des emittierten Lichtes und $c$ die Lichtgeschwindigkeit \cite{scipy}.
+Daraus ergibt sich, dass die Wellenlänge des emittierten Lichts
+\begin{equation*}
+  \lambda = \left( 260 \pm 11 \right) \si{\nano \meter}
+\end{equation*}
+beträgt.
+
+
+
+
+
+\begin{figure}
+  \centering
+  \includegraphics[height= 7cm]{8b.png}
+  \caption{Franck-Hertz-Kurve bei 471.15 K}
+  \label{fig:8b}
+\end{figure}
+
 \subsection{Ionisierung}
-\begin{landscape}
-\includegraphics[page = 1, scale = 0.5]{8c.pdf}
-\label{fig:8c}
-\end{landscape}
+Zur Bestimmung der Ionisierungsspannung wird der Graph \ref{fig:8c} herangezogen und
+an dessen Ausschlag wird eine Tangente bestimmt. Der Nulldurchlauf dieser Tangente
+ist dann an der Stelle der Ionisierungsspannung plus das Kontaktpotential $K$. Die Ausgleichsgerade
+\begin{equation*}
+  f(x) = ax + b
+\end{equation*}
+wurde mit Scipy \cite{scipy} und Uncertainties \cite{uncertainties} bestimmt.
+Dafür wurden die Werte erst aus dem Graph in Centimetern bestimmt, dann wurden
+die Skalen gemittelt, ein Umrechnungsfaktor für die x-Achse bestimmt und die Werte
+sowie die Ausgleichgerade in die Abbildung \ref{fig:io} eingezeichnet. Aus den
+Werten $a$ und $b$ der Auslgeichsgeraden lässt sich dann rechnerisch der Wert
+für den Nulldurchlauf bestimmen, dieser liegt demnach bei $ \left(8,5 \pm 0,5 \right)
+\si{\centi \meter} $ was mit dem Umrechnungsfaktor $ \left(1,52 \pm 0,034 \right)
+\si{\volt \per \centi \meter}$ ca. $\left( 12,9 \pm 0,8 \right) \si{\volt}$ entsprechen würde.
+Daraus folgt dann, dass die Ionisierungsspannung bei $\left(11,8 \pm 0,8 \right) \si{\volt}$
+liegt.
+Alle Werte dazu sind in der Tabelle \ref{tab:iotab} dargestellt.
+\begin{table}
+  \centering
+  \sisetup{round-mode = places , round-precision = 2}
+  \begin{tabular}{S[scientific-notation = fixed, fixed-exponent = 0, round-precision =1] S[scientific-notation = fixed, fixed-exponent = 0, round-precision =1] S[scientific-notation = fixed, fixed-exponent = 0]@{$ \; \pm$} S[scientific-notation = fixed, fixed-exponent = 0]}
+    \toprule
+    $ x $ / \si{\centi \meter} & $y$ / \si{\centi \meter} & \multicolumn{2}{c}{$U_B \pm \Delta U_B / \si{\volt}$} \\
+    \midrule
+    7.400000000000000355e+00 & 0.000000000000000000e+00 & 1.125205576066159630e+01 & 2.514431713434237547e-01\\
+    9.400000000000000355e+00 & 1.199999999999999956e+00 & 1.429315191219175674e+01 & 3.194007852200247966e-01\\
+    1.140000000000000036e+01 & 2.600000000000000089e+00 & 1.733424806372191895e+01 & 3.873583990966257828e-01\\
+    1.340000000000000036e+01 & 4.799999999999999822e+00 & 2.037534421525207762e+01 & 4.553160129732268246e-01\\
+    1.540000000000000036e+01 & 7.200000000000000178e+00 & 2.341644036678223983e+01 & 5.232736268498278109e-01\\
+    1.739999999999999858e+01 & 1.030000000000000071e+01 & 2.645753651831239850e+01 & 5.912312407264287417e-01\\
+    1.939999999999999858e+01 & 1.350000000000000000e+01 & 2.949863266984255716e+01 & 6.591888546030297835e-01\\
+    1.969999999999999929e+01 & 1.394999999999999929e+01 & 2.995479709257208256e+01 & 6.693824966845199897e-01\\
+    \bottomrule
+  \end{tabular}
+  \caption{Werte der Ionisierungsspannung im Überblick}
+  \label{tab:iotab}
+\end{table}
+
+\begin{figure}
+  \centering
+  \includegraphics[height=7cm]{plots/8cplot.pdf}
+  \caption{Ionisierungsspannung}
+  \label{fig:io}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \includegraphics[height=7cm]{8c.png}
+  \caption{Ionisierungspannung von Hg bei 376.15 K}
+  \label{fig:8c}
+\end{figure}
