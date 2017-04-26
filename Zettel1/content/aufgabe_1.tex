@@ -1,0 +1,83 @@
+\section{Skalarprodukte und orthogonale Polynome}
+\label{sec:a1}
+
+a) \newline
+\begin{equation}
+  \left< f|g \right>  := \int_a^b \overline{f(x)} g(x) \omega(x) \symup{d}x .
+  \label{eq:prod}
+\end{equation}
+
+Behauptung: \eqref{eq:prod} definiert 1 Skalarprodukt.
+Prüfung:
+1.
+\begin{align*}
+  \left<f|\alpha _1 +g_2 \right>  &= \int_a^b \overline{f(x)} \left[\alpha g_1 +g_2 \right] \omega(x) \symup{d}x \\
+                                  &= \int_a^b \overline{f(x)} \alpha g_1 \omega(x) \symup{d}x + \int_a^b \overline{f(x)} g_2 \omega(x) \symup{d}x \\
+                                  &= \alpha \left<f|g_1\right>+\left<f|g_2\right>
+\end{align*}
+2. Beachte: $\omega > 0 \implies \omega \in \mathbb{R}$
+\begin{align*}
+  \left< \overline{f|g} \right> &= \int_a^b \overline{\overline{f(x)}g(x)\omega(x)}\symup{d}x \\
+                                &=  \int_a^b f(x) \overline{g(x)}\omega(x)\symup{d}x \\
+                                &= \left<g|f\right>
+\end{align*}
+3.
+\begin{align*}
+  \left<f|f\right> &= \int_a^b \overline{f(x)}f(x)\omega(x)\symup{d}x \\
+                   &= \int_a^b \left|f(x)\right|^2 \omega(x) \symup{d}x > 0
+\end{align*}
+\eqref{eq:prod} gildet somit.\newline
+\newline
+b) \newline
+Für die laut Aufgabenstellung verwendete Norm gilt: $||\Psi|| = \sqrt{\left< \Psi|\Psi\right>}.$ Zur Normierung werden hier deshalb nur die Betragsquadrate verwendet:
+\begin{align*}
+  &||\Psi_a|| = 1 \\
+  \iff &1 = \left<\Psi_a|\Psi_a\right> \\
+  \iff &1 = \int_{-\infty}^{\infty} \overline{\Psi_a(x)}\Psi_a(x)\symup{d}x \\
+  \iff &1 = \int_{-\infty}^{\infty} N\, \symup{\symbf{exp}}\left(-\lambda \left|x\right|\right)\cdot N\, \symup{\symbf{exp}}\left(-\lambda \left|x\right|\right) \:\symup{d}x \\
+  \iff &1 = N^2 \int_{-\infty}^{\infty} \symup{\symbf{exp}}\left(-2\lambda \left|x\right|\right) \:\symup{d}x  \\
+  \iff &1 = 2 N^2 \int_{0}^{\infty} \symbf{exp}\left(-2\lambda x\right)\: \symup{d}x \\
+  \iff &1 = \frac{N^2}{\lambda} \symbf{exp}\left(-\lambda x\right)\big |_0^\infty \\
+  \iff &1 = \frac{N^2}{\lambda} \\
+  \iff &N = \pm \sqrt{\lambda} \\
+  \implies &\widehat{\Psi_a}(x) = \pm \sqrt{\lambda}\symbf{exp}\left(-\lambda \left|x\right|\right)
+\end{align*}
+Für $\Psi_b(x)$ ergibt sich:
+
+\begin{align*}
+  \left<\Psi_b|\Psi_b\right> &= \int_0^A N\, \sin \left(\frac{\pi x}{A}\right) \cdot N \, \sin \left(\frac{\pi x}{A}\right) \: \symup{d}x \\
+  &= N^2 \left[\frac{x}{2}- \frac{A}{4\pi} \sin \left(\frac{2\pi}{A}x\right)\right]_0^A \\
+  &= N^2 \frac{A}{2} \\
+  &\implies N = \pm \sqrt{\frac{2}{A}}\\
+  &\implies \Psi_b(x) = \pm \sqrt{\frac{2}{A}} \sin \left(\frac{\pi}{A} x\right)
+\end{align*}
+
+c) \newline
+Wir wähle $w_1= v_1 =1$ als erstes Element unserer Orthogonalbasis. Mit $w_2 =x$ und $w_3 = x^2$ und dem Gram-Schmidtschen-Orthogonalisierungsverfahren folgt:
+\begin{align*}
+  v_2 &= w_2- \frac{\left<v_1|w_2\right>}{\left<v_1|v_1\right>}\, v_1\\
+  \left<v_1|v_1\right> &= \int_{-\infty}^{\infty}\symbf{exp}\left(-x^2\right) \, \symup{d}x = \sqrt{\pi} \\
+  \left<v_1|w_2\right> &= \int_{-\infty}^{\infty}x \,\symbf{exp}\left(-x^2\right)  \, \symup{d}x = 0 \\
+ \implies v_2 &= x\\
+  \\
+ v_3 &= w_3 - \frac{\left<v_1|w_3\right>}{\left<v_1|v_1\right>}\, v_1 -\frac{\left<v_2|w_3\right>}{\left<v_2|v_2\right>}\, v_2 \\
+\left<v_1|w_3\right> &= \int_{-\infty}^{\infty}x^2 \,\symbf{exp}\left(-x^2\right)  \, \symup{d}x \\
+  &= \frac{-1}{2}\int_{-\infty}^{\infty}x \left(-2x \,\symbf{exp}\left(-x^2\right) \right) \, \symup{d}x \\
+  &= \frac{-1}{2} \left[x\,\symbf{exp}\left(-x^2\right)\right]_{-\infty}^\infty - \int_{-\infty}^\infty \left[-2x\,\symbf{exp}\left(-x^2\right)\right] \: \symup{d}x \\
+  &= \left[\,\symbf{exp}\left(-x^2\right)\right]_{-\infty}^\infty \\
+  &= \frac{\sqrt{\pi}}{2} \\
+\end{align*}
+Offensichtlich gilt $\left<v_1|v1\right> = \sqrt{\pi}$ (Gauß-Integral).
+$v_3$ ergibt sich somit zu
+\begin{align*}
+  v_3 &= w_1^2-\frac{1}{2}-\frac{\left<v_2|v_3\right>}{\left<v_2|v_2\right>}v_2.
+\end{align*}
+
+Berechnung von $\left<v_2|v_3\right>$:
+\begin{align*}
+  \left<v_2|v_3\right> &= \int_{-\infty}^\infty x \cdot x^2 \, \symbf{exp}\left(-x^2\right) \: \symup{d}x \\
+                       &= \frac{-1}{2}\int_{-\infty}^\infty x^2 \left[-2x \, \symbf{exp}\left(-x^2\right)\right] \: \symup{d}x \\
+                       &= \frac{-1}{2} \left(x^2\, \symbf{exp}\left(-x^2\right)\right]_{-infty}^\infty - \int_{-\infty}^{\infty} 2x \, \symbf{exp}\left(-x^2\right) \: \symup{d}x = 0
+\end{align*}
+
+Unsere Orthogonalbasis ergibt sich somit zu $\{1,x, x^2-\frac{1}{2}\}$. Dies entspricht  $\{H_0,H_1/2, H_2/4\}$.
