@@ -18,7 +18,7 @@ E =2*h*c*d*np.sin(theta) #eV
 
 
 plt.grid()
-plt.plot(theta, imps, 'bx')
-plt.xlabel(r'$\theta /$')
+plt.plot(theta2, imps, 'bx')
+plt.xlabel(r'$\theta$')
 plt.ylabel(r'$Imp \,/\, \mathrm{s}$')
 plt.savefig('bragg.pdf')
