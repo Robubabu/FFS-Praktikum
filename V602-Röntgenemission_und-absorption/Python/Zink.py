@@ -15,7 +15,7 @@ h = 4.136*10**(-15) #eVs
 c = 2.998*10**8 #m/s'
 d = 201.4*10**(-12)
 E =h*c/(2*d*np.sin(2*np.pi*theta/360)) #eV
-plt.plot(E/1000, imps, 'bx', label = 'Zink')
+plt.plot(E[0:48]/1000, imps[0:48], 'bx', label = 'Zink')
 
 
 plt.grid()
