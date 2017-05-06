@@ -41,9 +41,11 @@ print('Postition des Nulldurchlaufes in cm:', -b/a)
 print('Position des Nulldurchlaufes in Volt:', (-b/a)*s)
 z = x*s
 i =(-b/a)*s
-k = ufloat(1.11,0.18)
-
-print('Ionisierungsspannung:', i-k) 
+k1 = ufloat(1.11,0.18)
+k2 = ufloat(0.94 , 0.12)
+k = np.mean([k1,k2])
+print('mittleres Kontaktpotential:', k)
+print('Ionisierungsspannung:', i-k)
 #plt.subplot(1, 2, 1)
 plt.plot(x, y,'rx' ,label='Ionisierungsspannung')
 plt.plot(l, f(l,noms(a), noms(b)), label= 'Ausgleichsgerade')

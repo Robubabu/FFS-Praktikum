@@ -12,7 +12,7 @@ A = 2.3 # position erster Anregung in cm
 s = np.genfromtxt('8b-Skalar.txt',  unpack = True) #10volt pro cm
 a = np.genfromtxt('8b-Abs.txt', unpack = True) # abstände in cm
 K = ufloat(1.11, 0.18)
-
+m1= 2.3  #cm Abs von 0 bis zum ersten Maximum
 ms = mittel(s)
 ma = mittel(a)
 
@@ -21,8 +21,11 @@ print('Mittlerer Abs. in cm:', ma)
 f = 10/ms       # Umrechnungsfaktor Volt pro cm
 print(f)
 av = ma*f
+k = (m1*f) - av
+print('Abs. des ersten MAximums von 0 in V:', m1*f)
+print('Kontaktpotential der FHK in Volt:',k)
 print('Mittlerer Abs. in V:',av)
-Av = A*f - K
+Av = A*f - k
 print('Beschleunigungsspannung der ersten Anregung in Volt:', Av)
 Av*= const.e
 print('Beschleunigungsenrgie in eV:', Av)

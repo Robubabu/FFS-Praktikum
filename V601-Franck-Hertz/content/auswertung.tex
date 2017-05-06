@@ -21,10 +21,10 @@ Die Werte für Dampfdruck und mittlerer freier Weglänge wurden mit den Formeln
 \eqref{eqn:p} und \eqref{eqn:Weg} berechnet.
 In der Tabelle \ref{tab:ue} sind die Temperturen, Dampfdrücke, mittlere Weglängen
 sowie der Größenfaktor $ \sfrac{a}{\bar{w}}$ dargestellt, wobei $a = 1 \si{\centi \meter}$ bei
-der verwendeten Versuchapparatur beträgt. Die Tabelle zeigt die Werte zweilenweise für
+der verwendeten Versuchapparatur beträgt. Die Tabelle zeigt die Werte zeilenweise für
 die verschieden Versuchsteile, d.h. die ersten beiden Zeilen zeigen die Werte für
-die Messung der integralen Energieverteilung bei verschiedenen Temperturen, die Dritte
-für die Messung der Franck-Hertz-Kurve und die vierte für die Messung der Ionisierungsspannung.
+die Messung der integralen Energieverteilung bei verschiedenen Temperturen, die dritte Zeile
+für die Messung der Franck-Hertz-Kurve und die vierte Zeile für die Messung der Ionisierungsspannung.
 Der Größenfaktor sollte zischen 1000 und
 4000 liegen, da sonst keine ausreichend große Stoßwahrscheinlichkeit gewährleistet ist.
 Aus der Tabelle \ref{tab:ue} ist also zu entnehmen, dass nur bei der Messung
@@ -57,10 +57,10 @@ der gemessenen integralen Energieverteilung \ref{fig:8a1} gemessen und gegen die
 aufgetragen. Dabei wurden die Werte erst in Centimetern bestimmt und dann wurden
 die x-Achsen Skalenwerte gemittelt, für die y-Achse wurde ein Referenzwert des Maximums
 genommen um einen Umrechnungsfaktor zu berechnen. Dann ergibt sich für die gemittelten
-x-Achsen Skalenwerte $  (2,3 \pm 0,04)\si{\volt \per \centi \meter} $,
-aus dem Referenzwert für die y-Achse ergibt sich der Wert $ 0,37 \si{\nano \ampere\per\centi \meter}$
-somit ergibt sich der Umrechnungsfaktor für die Steigung mit $(1,62 \pm 0.03)\cdot 10^{-10}
-\si{\ampere \per \volt} $. Auf Ablesefehler wurde verzichtet. Die Werte sind in der
+x-Achsen Skalenwerte \SI{2.3(04)}{\volt \per \centi \meter} ,
+aus dem Referenzwert für die y-Achse ergibt sich der Wert \SI{0.37}{\nano \ampere\per\centi \meter}
+somit ergibt sich der Umrechnungsfaktor für die Steigung mit \SI{1.62(03)e-10}{\ampere \per \volt} .
+Auf Ablesefehler wurde verzichtet. Die Werte sind in der
 Tabelle \ref{tab:abc} dargestellt.
 \begin{table}
   \centering
@@ -100,8 +100,7 @@ bei diesem Wert liegt und aus der Umformung der Gleichung
 \begin{equation*}
   U_{B,eff} = U_B - K \implies K = U_B -U_{B,eff}
 \end{equation*}
-geht dann hervor, dass das Kontaktpotential $K$ den Wert ($ 1,11 \pm 0.18 $)
-\si{\volt} hat.
+geht dann hervor, dass das Kontaktpotential $K$ den Wert \SI{1.1(2)}{\volt} hat.
 Aus der zweiten Messung der integrierten Energieverteilung \ref{fig:8a2} ist zu
 erkennen, dass der Graph bei erhöhter Temperatur wesentlich schneller abfällt als zuvor.
 \begin{figure}
@@ -133,20 +132,29 @@ Die Abbildung \ref{fig:8b} zeigt die Franck-Hertz-Kurve. Die Abstande ziwschen
 den Maxima wurden in der Abbildung vermessen, genauso wie die Skalenabstände.
 Es wurde wieder auf Ablesefehler verzichtet. Danach
 wurden die Skalenabstände gemittelt um einen Umrechnungsfaktor zu berechnen. Der
-mittlere Skalenabstand beträgt ($3,91 \pm 0,07$) \si{\centi \meter}, der mittlere
-Abstand zwischen den Maxima beträgt ($1,93 \pm 0,05$) \si{\centi \meter}. Daraus
-ergibt sich der Umrechnungsfaktor ($2,56 \pm 0,05$) \si{\volt \per \centi \meter}
-und daraus wiederum der mittlere Abstand der Maxima mit ($4,77 \pm 0,21$)\si{\volt}.
-Aus dem mittleren Abstand der Maxima folgt dann die erste Anregungsenergie
-$ U_1 = \left(4,77 \pm 0,21 \right) $\si{ \eV}. Mit der Gleichung
+mittlere Skalenabstand beträgt \SI{3.91(07)}{\volt}, der mittlere
+Abstand zwischen den Maxima beträgt \SI{1.93(05)}{\centi \meter}. Daraus
+ergibt sich der Umrechnungsfaktor \SI{2.56(05)}{\volt \per \centi \meter}
+und daraus wiederum der mittlere Abstand der Maxima mit \SI{4.9(2)}{\volt}.
+Daraus kann das Kontaktpotential bestimmt werden, indem der Abstand des ersten
+Maximas von Null \SI{5.9(1)}{\volt} minus den mittleren Abstand der Maxima
+gerechnet wird. Es folgt, dass das Kontaktpotential
 \begin{equation*}
-  h\nu = E_1 - E_0 = U_1 \symup{e}
+  K = \SI{0.9(1)}{\volt}
+\end{equation*}
+beträgt.
+Aus dem mittleren Abstand der Maxima folgt dann die erste Anregungsenergie
+\begin{equation*}
+ E_A = \SI{4.8(2)}{ \eV}.
+ \end{equation*} Mit der Gleichung
+\begin{equation*}
+  h\nu = E_1 - E_0 = E_A \symup{e}
  \quad \text{und der Beziehung}\quad
    \lambda = \frac{c}{\nu}
 \end{equation*}
-lässt sich die Wellenlänge $\lambda $ des emittierten Lichtes berechenen, hier
-bei bezeichet $h$ das Plancksche Wirkungsquantum \cite{scipy}, $ U_1 \symup{e}$ die
-Anregungsenergie $U_1$ multipliziert mit der Elementarladung \cite{scipy},
+lässt sich die Wellenlänge $\lambda $ des emittierten Lichtes berechenen, hierbei
+ bezeichet $h$ das Plancksche Wirkungsquantum \cite{scipy}, $ E_A \symup{e}$ die
+Anregungsenergie $E_A$ multipliziert mit der Elementarladung \cite{scipy},
  $\nu$ die Frequenz des emittierten Lichtes und $c$ die Lichtgeschwindigkeit \cite{scipy}.
 Daraus ergibt sich, dass die Wellenlänge des emittierten Lichts
 \begin{equation*}
@@ -161,7 +169,7 @@ beträgt.
 \begin{figure}
   \centering
   \includegraphics[height= 7cm]{8b.png}
-  \caption{Franck-Hertz-Kurve bei 471.15 K}
+  \caption{Franck-Hertz-Kurve bei 471,15 K}
   \label{fig:8b}
 \end{figure}
 
@@ -177,11 +185,11 @@ Dafür wurden die Werte erst aus dem Graph in Centimetern bestimmt, dann wurden
 die Skalen gemittelt, ein Umrechnungsfaktor für die x-Achse bestimmt und die Werte
 sowie die Ausgleichgerade in die Abbildung \ref{fig:io} eingezeichnet. Aus den
 Werten $a$ und $b$ der Auslgeichsgeraden lässt sich dann rechnerisch der Wert
-für den Nulldurchlauf bestimmen, dieser liegt demnach bei $ \left(8,5 \pm 0,5 \right)
-\si{\centi \meter} $ was mit dem Umrechnungsfaktor $ \left(1,52 \pm 0,034 \right)
-\si{\volt \per \centi \meter}$ ca. $\left( 12,9 \pm 0,8 \right) \si{\volt}$ entsprechen würde.
-Daraus folgt dann, dass die Ionisierungsspannung bei $\left(11,8 \pm 0,8 \right) \si{\volt}$
-liegt.
+für den Nulldurchlauf bestimmen, dieser liegt demnach bei \SI{8.5(5)}{\centi \meter} was mit dem Umrechnungsfaktor
+\SI{1,52(03)}{\volt \per \centi \meter} ca. $\SI{12.9(8)}{\volt}$ entsprechen würde.
+Daraus folgt dann, dass die Ionisierungsspannung bei $\SI{11.9(8)}{\volt}$
+liegt. Die Ionisierungssspannung ergibt sich in dem das gemittelte Kontaktpotential
+$ \bar{K} = \SI{1(1)}{\volt} $ von der Position des Nulldurchlaufes abgezogen wird.
 Alle Werte dazu sind in der Tabelle \ref{tab:iotab} dargestellt.
 \begin{table}
   \centering
