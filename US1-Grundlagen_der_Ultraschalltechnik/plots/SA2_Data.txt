@@ -1,0 +1,5 @@
+# Peak | Abstands der Peaks µs
+1	2	
+2	30
+3 	34
+4 	40
