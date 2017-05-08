@@ -101,6 +101,51 @@ Im Mittel ergibt sich also für die Schallgeschwindigkeit in Acryl
   \caption{Durchsschallungs-Verfahren}
   \label{fig:DSplot}
 \end{figure}
+\FloatBarrier
+\subsection{Bestimmung des materialspezifischen Schwächungskoeffizienten}
+Zur Bestimmung des Schwächungskoeffizienten wird erst der Gain $g$ von den Amplituden
+abgerechnet, da folgender Zusammenhang gilt:
+\begin{equation*}
+  g = 20 \cdot \symup{log}_{10}\left(\frac{I_v}{I_u}\right).
+\end{equation*}
+Dabei bezeichnet $I_u$ die unverstärkte und $I_v$ die verstärkte Amplitude.
+Außerdem ist zu bemerken das nur die Amplitude $I_x$ verstärkt wurde.
+Nun wird $ \symup{ln}\left(\sfrac{I_x}{I_0}\right)$ gegen $x$ aufgetragen,
+dabei ist $x$ die doppelte Höhe der Zylinder. Die Ausgleichgerade kann nun mit
+\begin{equation*}
+  \symup{ln}\left(\frac{I_x}{I_0}\right) = \alpha x
+\end{equation*}
+berechnet werden. So ergibt sich für den Schwächungskoeffizient
+\begin{equation*}
+  \alpha = -\SI{21695(1524)}{\per\meter}\;.
+\end{equation*}
+Alle Daten dazu sind in der Tabelle \ref{tab:alpha} und der Abbildung \ref{fig:alpha}
+dargestellt.
+\begin{table}
+  \centering
+  \caption{Werte zur Bestimmung des Schwächungskoeffizienten im Überblick}
+  \sisetup{round-mode=places , round-precision= 2}
+  \begin{tabular}{S S S S S}
+    \toprule
+    x / \si{\meter} & ln $\frac{I_x}{I_0}$& $I_{0}$/ \si{\volt}& $I_x$/\si{\volt}& Gain / dB \\
+    \midrule
+    2.401199999999999982e-04 & -5.243157530807446065e+00 & 1.314999999999999947e+00 & 2.020000000000000129e-01 & 2.926999999999999957e+01\\
+    2.039999999999999984e-04 & -4.893557677756856350e+00 & 1.284999999999999920e+00 & 2.800000000000000266e-01 & 2.926999999999999957e+01\\
+    1.601999999999999908e-04 & -3.424203187938578807e+00 & 1.284999999999999920e+00 & 1.217000000000000082e+00 & 2.926999999999999957e+01\\
+    8.007999999999999223e-05 & -1.229715290417348283e+00 & 1.284999999999999920e+00 & 1.227000000000000091e+00 & 1.027999999999999936e+01\\
+    6.200000000000000270e-05 & -4.640524218794533362e-01 & 1.284999999999999920e+00 & 1.002000000000000002e+00 & 1.870000000000000107e+00\\
+    \bottomrule
+  \end{tabular}
+  \label{tab:alpha}
+\end{table}
+\begin{figure}
+  \centering
+  \includegraphics[height = 7cm]{plots/alphaplot.pdf}
+  \caption{Ausgleichsgerade zur Bestimmung des Schwächungskoeffizienten}
+  \label{fig:alpha}
+\end{figure}
+
+\FloatBarrier
 \subsection{Spektrale Analyse}
 Duch den Zusammenhang
 \begin{equation*}
