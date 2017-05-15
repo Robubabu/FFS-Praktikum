@@ -16,8 +16,8 @@ c = 2.998*10**8 #m/s'
 d = 201.4*10**(-12)
 E =h*c/(2*d*np.sin(2*np.pi*theta/360)) #eV
 plt.plot(E[68:]/1000, imps[68:], 'rx', label = 'Kupfer')
-plt.plot([E[68+23]/1000,E[68+23]/1000],[0,250], 'r--', label = r'$K_\alpha$')
-plt.plot([E[68+12]/1000,E[68+12]/1000],[0,250], 'r-', label = r'$K_\beta$')
+plt.plot([E[68+23]/1000,E[68+23]/1000],[0,250], 'r--', label = r'$K_\beta$')
+plt.plot([E[68+12]/1000,E[68+12]/1000],[0,250], 'r-', label = r'$K_\alpha$')
 
 print('Ka: ', E[68+12]/1000)
 print('Kb: ', E[68+23]/1000)

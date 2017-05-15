@@ -24,16 +24,16 @@ Der Erwartungswert für das Intensitätsmaximum liegt bei $\gamma = 2*theta = 28
   \label{fig:brems}
 \end{figure}
 
-Die maximale Energie der in der Apparatur auftretenden Röntgenquanten beträgt durch die verwendete Beschleunigungsspannung bedingt $35\symup{keV}$. Es sollte somit im in Abb. \ref{fig:brems} dargestellten Spektrum ein Bremsberg erkennbar sein, dieser lässt sich jedoch nicht nachweisen.
+Die maximale Energie der in der Apparatur auftretenden Röntgenquanten beträgt durch die verwendete Beschleunigungsspannung bedingt $\SI{35}{\kilo \eV}$. Es sollte somit im in Abb. \ref{fig:brems} dargestellten Spektrum ein Bremsberg erkennbar sein, mit einer maximalen Energie von $\SI{35}{\kilo \eV}$. Diese Grenze lässt sich jedoch nicht nachweisen.
 
 \begin{figure}
   \centering
   \includegraphics[height = 7cm]{./Python/Kupfer.pdf}
-  \caption{Spektrum der verwendeten Kupfer-Röntgenröhre, eingeschränkt auf $7-10.5 \si{\kilo \electronvolt}$}
+  \caption{Spektrum der verwendeten Kupfer-Röntgenröhre, eingeschränkt auf $\SI{7}{\kilo \eV}$ bis $\SI{10.5}{\kilo \eV}$.
   \label{fig:klinie}
 \end{figure}
 
-Aus Abb. \ref{fig:klinie} lassen sich die Werte $K_\beta = \SI{9}{\kilo \electronvolt}$ und $K_\alpha = \SI{8.15}{\kilo \electronvolt}$ der klar erkennbaren $K_\alpha$- bzw. $K_\beta$-Linie entnehmen. Die Halbwertsbreite der $K_alpha$-Linie beträgt $\Delta E_\alpha = 0.05 \si{\kilo \electronvolt}$, die der $K_beta$-Linie $\Delta E_\alpha = 0.09 \si{\kilo \electronvolt}$. Die Auflösung entspricht dann etwa $0.1-0.2 \si{\kilo \electronvolt}$, da sich zwei Peaks, deren Halbwertsbreiten nicht überlappen zweifelsfrei unterscheiden lassen.
+Aus Abb. \ref{fig:klinie} lassen sich die Werte $K_\beta = \SI{9}{\kilo \eV}$ und $K_\alpha = \SI{8.15}{\kilo \eV}$ der klar erkennbaren $K_\alpha$- bzw. $K_\beta$-Linie entnehmen. Die Halbwertsbreite der $K_\alpha$-Linie beträgt $\Delta E_\alpha = 0.05 \,\si{\kilo \eV}$, die der $K_\beta$-Linie $\Delta E_\beta = 0.09 \, \si{\kilo \eV}$. Die Auflösung entspricht dann etwa $0.1-0.2 \si{\kilo \eV}$, da sich zwei Peaks, deren Halbwertsbreiten nicht überlappen zweifelsfrei unterscheiden lassen.
 
 
 \subsection{Absorbtionsspektrum}
@@ -42,22 +42,26 @@ Aus Abb. \ref{fig:brom} lassen sich für die K-Kanten der verwendeten Elemente d
 
 \begin{table}
   \centering
-  \caption{Aus der Messung des Beugungsspektrums gewonnene K-Kanten-Energien und Abschirmungskonstanten, mit Abweichungen zur Theorie \cite{princeton}.}
+  \caption{Aus der Messung des Beugungsspektrums gewonnene K-Kanten-Energien und Abschirmungskonstanten, mit Abweichungen zur Theorie. \cite{princeton}.}
   \label{tab:Kkanten}
-  \begin{tabular}{|c|c|c|c|c|}
+  \begin{tabular}{|c|c|c|c|c|c|c|}
     \toprule
-    Element & $E_K$/keV & $\Delta E$ /keV& $\sigma_K$ & $\Delta \sigma$ \\
+    Element & $E_K$/keV & $E_{theo}$/keV & $\Delta E$ /keV & $\sigma_K$ & $\sigma_{theo}$ & $\Delta \sigma$ \\
     \midrule
-    Zn & 9.5 & 0.2 & 3.57 & 0.21\\
-    Ge & 11.0 & 0.1 & 3.56 & 0.13\\
-    Br  & 13.5 & 0.1 & 3.49 & 0.04\\
-    Sr  & 16.0 & 0.1 & 3.70 & 0.11\\
-    Zr  & 18.0 & 0.0 & 3.62 & 0.0 \\
+    Zn & 9.5 & 9.65 & 0.2 & 3.57 & 3.36 & 0.21\\
+    Ge & 11.0 & 11.1 & 0.1 & 3.56 & 3.42 & 0.13\\
+    Br  & 13.5 & 13.47 & 0.1 & 3.49 & 3.53 & 0.04\\
+    Sr  & 16.0 & 16.1 & 0.1 & 3.70 & 3.59 & 0.11\\
+    Zr  & 18.0 & 18.0 & 0.0 & 3.62 & 3.62 & 0.0 \\
     \bottomrule
     \end{tabular}
 \end{table}
 
-Mit diesen Werten lässt sich durch den in Abb. \ref{fig:moseley} dargestellten linearen Fit ($f=R_\infty Z^2 +b$) über das Moseley-Gesetz ($E = hc R_\infty Z_eff^2$) die Rydbergenergie zu $R_\infty = (12.08 \pm 0.11)$keV ($b= -1.36 \pm 0.14$keV).
+Mit diesen Werten lässt sich durch den in Abb. \ref{fig:moseley} dargestellten linearen Fit ($f=E_{ryd} Z^2 +b$) über das Moseley-Gesetz ($E = E_{ryd} Z_eff^2$) die Rydbergenergie zu
+\begin{equation*}
+  E_{ryd} = \SI{12.08 \pm 0.11}{\eV}
+\end{equation*}
+bestimmen ($b= \SI{-1.36 \pm 0.14}{\kilo \eV}$).
 
 \begin{figure}
   \centering
@@ -107,14 +111,14 @@ Mit diesen Werten lässt sich durch den in Abb. \ref{fig:moseley} dargestellten 
   \label{fig:brom}
 \end{figure}
 
-Für Quecksilber liegt der Erwartungswert der $L_2$-Kante bei 14.2keV, für die $L_3$-Kante bei 12.3keV \cite{skuld}. Die aus Abb. \ref{fig:queck} abgelesenen Werte betragen $E_2 = 13.8 \si{\kilo \electronvolt}$ und $E_3 = 12$keV ($\Delta E_2 = 0.4$keV, $\Delta E_3 = 0.3$keV).
+Für Quecksilber liegt der Erwartungswert der $L_2$-Kante bei 14.2keV, für die $L_3$-Kante bei 12.3keV \cite{skuld}. Die aus Abb. \ref{fig:queck} abgelesenen Werte betragen $E_{L2} = 13.8 \si{\kilo \eV}$ und $E_{L3} = 12$keV ($\Delta E_2 = 0.4$keV, $\Delta E_3 = 0.3$keV).
 Hierraus lässt sich $\sigma_L$ über die Formel
 
 \begin{equation}
-  \sigma_L = Z - \left(\frac{4}{\alpha}\sqrt{\frac{\Delta E_L}{R_\infty}-\frac{5\Delta E_L}{R_\infty}}\right)^2 \left(1+\alpha^2   \frac{19\Delta E_L}{32 R_\infty}\right)
+  \sigma_L = Z - \left(\frac{4}{\alpha}\sqrt{\frac{\Delta E_L}{E_{ryd}}}-\frac{5\Delta E_L}{E_{ryd}}\right)^{\frac{1}{2}} \left(1+\alpha^2   \frac{19\Delta E_L}{32 E_{ryd}}\right)^{\frac{1}{2}}
 \end{equation}
 
-mit $\alpha = \frac{2}{Z} \sqrt{\frac{E_k}{R_\infty} (Z-\sigma_k)^2} = 7.3 \cdot 10^{-3}$ und den Literaturwerten $E_K = 83.1$keV \cite{skuld} und $\sigma_K = 1.8$ berrechnen zu $\sigma_L = 4.89$.
+mit $\alpha = 7.3 \cdot 10^{-3}$ als der Sommerfeldschen Strukturkonstante und den Literaturwerten $E_K = 83.1$keV \cite{skuld} und $\sigma_K = 1.8$ berrechnen zu $\sigma_L = 4.89$.
 
 \begin{figure}
   \centering
