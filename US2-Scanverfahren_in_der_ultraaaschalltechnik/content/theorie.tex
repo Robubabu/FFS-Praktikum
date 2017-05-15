@@ -1,3 +1,31 @@
+\section{Ziel}
+\label{sec:ziel}
+Ziel dieses Versuches ist das Vertrautmachen mit Ultraschallscans und das Bestimmen der Schallgeschwindigkeit in Acryl, sowie das Vermessen einer Augatrappe.
+
+
 \section{Theorie}
 \label{sec:Theorie}
 
+Ultraschall bezeichnet kurzwelligen Schall von ca. $\SI{20}{\kilo \hertz}$ bis etwa $\SI{1}{\giga \hertz}$, also gerade oberhalb des von Menschen hörbaren Frequenzspektrums.
+Die Ausbreitung des Ultraschalls ist natürlich durch die Schallgeschwindigkeit des beschallten Mediums bedingt. Zudem nimmt die Intensität $I$ des Schalls natürlich durch eine materialabhängige Dämpfung mit der zurückgelegten Strecke $x$ gemäß des Zusammenhanges
+\begin{equation}
+  I(x) = I_0 \exp(-\alpha x)
+  \label{eqn:I}
+\end{equation}
+ab. Da $\alpha$ in Luft sehr groß ist und die Schallgeschwindigkeit relativ klein, wird ein \textit{Kontaktmittel} verwendet, welches zwischen der Ultraschallsonde und dem zu untersuchenden Material eingesetzt.
+Die einfachste Anwendung des Ultraschalls ist damit durch das sogenannte \textit{Durchschallungsverfahren} gegeben: Ein Impuls wird auf der einen Seite über eine Sonde in das Material gegeben und auf der anderen Seite durch eine zweite Sonde aufgenommen. Die Zeit $t$ zwischen dem Aussenden und Detektieren des Impulses ist dann durch
+\begin{equation}
+  t = \frac{d}{c}
+  \label{eqn:durch}
+\end{equation}
+gegeben, wobei $c$ die Schallgeschwindigkeit und $d$ die Materialstärke bezeichnet. Durch eine örtliche Änderung der Intensität des aufgezeichneten Impulses lassen sich auf diese Weise zusätzlich Fehlstellen im Material finden, da auf Grund der Teilreflektion an Grenzflächen an Fehlstellen der Schall stärker gedämpft wird.
+
+Nutzt man die Reflektion des Schalls an Grenzflächen aus, so genügt eine einzige Sonde, welche einen kurzen Schallimpuls sendet und danach den reflektierten Schall wieder detektiert. Dieses Verfahren wird als \textit{Puls-Echo-Verfahren} bezeichnet. Bei diesem Verfahren gilt offensichtlich der Ort-Zeit-Zusammenhang:
+\begin{equation}
+  s = \frac{ct}{2}
+  \label{eqn:echo}
+\end{equation}
+Da nun alle reflektierten Impulse gemessen werden, lassen sich auf diese Weise auch die Lagen von Fehlstellen im Material feststellen.
+
+In diesem Versuch wird sowohl der \textit{A-Scan} also die Messung der Impuls-Zeiten und -Amplituden, als auch der \textit{B-Scan} verwendet. Beim B-Scan werden die Amplituden des detektierten Schalls farblich kodiert dargestellt. Die erlaubt es, die Sonde zu bewegen und durch Aufzeichnen des Laufzeit des Schalls gegen die Messzeit zweidimensionale Aufnahmen des Inneren eines Materials. Ist die Geschwindigkeit der Sonde bekannt, so lässt sich aus dieser Messung sehr leicht nicht nur Position, sondern auch Ausmaß einer Fehlstelle feststellen.
+Eine Sonderform des B-Scan ist der in der Medizin häufig eingesetzte \textit{Time-Motion-Scan}, bei dem ein Video erstellt wird, dessen Einzelbilder aus B-Scans bestehen.
