@@ -1,0 +1,13 @@
+# Fehlstelle | Depth µs  # Boden ist Fehlstelle 0 # mit 1MHz Sonde
+11	40.1
+9	10.8
+8	16.6
+7	22.4
+6	28.1
+5	33.5
+4	38.9
+3	44.5
+2	13.6
+1	13.6
+0	58.4
+10	4.7

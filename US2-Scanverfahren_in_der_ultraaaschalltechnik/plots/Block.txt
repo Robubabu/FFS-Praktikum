@@ -1,0 +1,2 @@
+# Dicke in cm  # Länge in cm
+8.0225	15.02

@@ -1,0 +1,4 @@
+#Fehlstelle | Depth µs # 0 ist Boden # 4MHz Sonde
+2	12.2
+1	13.4
+0	57.6

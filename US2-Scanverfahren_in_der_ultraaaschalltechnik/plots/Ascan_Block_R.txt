@@ -1,0 +1,12 @@
+# Fehlstelle | Depth µs # Fehlstelle ist wieder Boden # Bei 10 kA # mit 1 Mhz Sonde
+11	11
+9	45.4
+8	39.9
+7	34
+6	28.2
+5	22.1
+4	15.6
+3	9.4
+2 43.4
+1 43.4
+0	58.4
