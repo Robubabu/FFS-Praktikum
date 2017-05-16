@@ -33,7 +33,14 @@ Die maximale Energie der in der Apparatur auftretenden Röntgenquanten beträgt 
   \label{fig:klinie}
 \end{figure}
 
-Aus Abb. \ref{fig:klinie} lassen sich die Werte $K_\beta = \SI{9}{\kilo \eV}$ und $K_\alpha = \SI{8.15}{\kilo \eV}$ der klar erkennbaren $K_\alpha$- bzw. $K_\beta$-Linie entnehmen. Die Halbwertsbreite der $K_\alpha$-Linie beträgt $\Delta E_\alpha = 0.05 \,\si{\kilo \eV}$, die der $K_\beta$-Linie $\Delta E_\beta = 0.09 \, \si{\kilo \eV}$. Die Auflösung entspricht dann etwa $0.1-0.2 \si{\kilo \eV}$, da sich zwei Peaks, deren Halbwertsbreiten nicht überlappen zweifelsfrei unterscheiden lassen.
+Aus Abb. \ref{fig:klinie} lassen sich die Werte $K_\beta = \SI{9}{\kilo \eV}$ und $K_\alpha = \SI{8.15}{\kilo \eV}$ der klar erkennbaren $K_\alpha$- bzw. $K_\beta$-Linie entnehmen. Die Halbwertsbreite der $K_\alpha$-Linie beträgt $\Delta E_\alpha = 0.05 \,\si{\kilo \eV}$, die der $K_\beta$-Linie $\Delta E_\beta = 0.09 \, \si{\kilo \eV}$. Die Auflösung entspricht dann etwa $0.1-0.2 \si{\kilo \eV}$, da sich zwei Peaks, deren Halbwertsbreiten nicht überlappen zweifelsfrei unterscheiden lassen. Für die Absorptionszahl $\sigma_2$ erhält man näherungsweise:
+\begin{equation*}
+  \sigma_2 = Z-\sqrt{\frac{K_\beta}{E_{ryd}}}= 3.28
+\end{equation*}
+Mit diesem groben Näherungswert lässt sich nun $\sigma_1$ berechnen.
+\begin{equation*}
+  \sigma_1 = Z - \sqrt{\frac{K_\alpha}{E_{ryd}}+(Z_\sigma_2)/4} = 1.35
+\end{equation*}
 
 
 \subsection{Absorbtionsspektrum}
