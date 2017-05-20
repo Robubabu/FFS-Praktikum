@@ -48,9 +48,9 @@ Im Mittel ergibt sich also für die Schallgeschwindigkeit in Acryl
 \end{equation*}
 \begin{figure}
   \centering
-  \caption{Werte des . . . }
+  \caption{Werte des}
   \begin{subfigure}{0.48\textwidth}
-    \caption{. . . Impuls-Echo-Verfahren im Überblick.}
+    \caption{Impuls-Echo-Verfahren im Überblick.}
     \sisetup{round-mode = places, round-precision = 2}
     \begin{tabular}{S S}
       \toprule
@@ -68,7 +68,7 @@ Im Mittel ergibt sich also für die Schallgeschwindigkeit in Acryl
     \label{tab:IE}
   \end{subfigure}
   \begin{subfigure}{0.48\textwidth}
-    \caption{. . . Durchschallungs-Verfahren im Überblick.}
+    \caption{Durchschallungs-Verfahren im Überblick.}
     \sisetup{round-mode= places, round-precision = 2}
     \begin{tabular}{S S}
       \toprule
@@ -92,32 +92,42 @@ Im Mittel ergibt sich also für die Schallgeschwindigkeit in Acryl
 \begin{figure}
   \centering
   \includegraphics[height= 7cm]{plots/IE_plot.pdf}
-  \caption{Impuls-Echo-Verfahren}
+  \caption{In diesem Diagramm wurde für das Impuls-Echo-Verfahren die Laufzeit des Ultraschallsignals gegen den "duchschallten" Weg aufgetragen. }
   \label{fig:IEplot}
 \end{figure}
 \begin{figure}
   \centering
   \includegraphics[height = 7cm]{plots/DS_plot.pdf}
-  \caption{Durchsschallungs-Verfahren}
+  \caption{In diesem Diagramm wurde für das Durchsschallungs-Verfahren die Laufzeit des Ultraschallsignals gegen den "duchschallten" Weg aufgetragen. }
   \label{fig:DSplot}
 \end{figure}
 \FloatBarrier
 \subsection{Bestimmung des materialspezifischen Schwächungskoeffizienten}
-Zur Bestimmung des Schwächungskoeffizienten wird erst der Gain $g$ von den Amplituden
+Zur Bestimmung des Schwächungskoeffizienten wird erst die Verstärkung $g$ von den Amplituden
 abgerechnet, da folgender Zusammenhang gilt:
-\begin{equation*}
+\begin{equation}
   g = 20 \cdot \symup{log}_{10}\left(\frac{I_v}{I_u}\right).
-\end{equation*}
+  \label{eqn:g}
+\end{equation}
 Dabei bezeichnet $I_u$ die unverstärkte und $I_v$ die verstärkte Amplitude.
 Außerdem ist zu bemerken das nur die Amplitude $I_x$ verstärkt wurde.
 Nun wird $ \symup{ln}\left(\sfrac{I_x}{I_0}\right)$ gegen $x$ aufgetragen,
 dabei ist $x$ die doppelte Höhe der Zylinder. Die Ausgleichgerade kann nun mit
-\begin{equation*}
+\begin{equation}
   \symup{ln}\left(\frac{I_x}{I_0}\right) = \alpha x
-\end{equation*}
+  \label{eqn:alph}
+\end{equation}
 berechnet werden. So ergibt sich für den Schwächungskoeffizient
 \begin{equation*}
   \alpha = -\SI{21695(1524)}{\per\meter}\;.
+\end{equation*}
+Aus den Gleichungen \eqref{eqn:g} und \eqref{eqn:alph} ergibt sich der Zusammenhang
+\begin{equation*}
+  10^{\frac{gx}{20}} = \exp{\left(\alpha x \right)} \quad  \implies \quad g = \frac{20 \alpha}{\ln{\left(10 \right)}} \; ,
+\end{equation*}
+damit kann $\alpha$ in \si{\dB\per\meter} angegeben werden. Somit ergibt sich
+\begin{equation*}
+  \alpha = \SI{-1.9(1)e5}{\dB\per\meter} \; .
 \end{equation*}
 Alle Daten dazu sind in der Tabelle \ref{tab:alpha} und der Abbildung \ref{fig:alpha}
 dargestellt.
@@ -176,19 +186,22 @@ und die zweite Platte ca. \SI{8.16(5)}{\milli\meter} dick ist.
   \end{tabular}
 \label{tab:SAW}
 \end{table}
-
+\FloatBarrier
+Im Vergleich zu den in den vorherigen Kapiteln bestimmten Werten sollte
+der Abstand zwischen Peak 1 und 2 \SI{16.3}{\micro\second} betragen.
 
 \begin{figure}
   \centering
   \includegraphics[height = 5cm]{FFS-Data/a_scan_spektrale_analyse.jpg}
-  \caption{Spektrale Analyse}
+  \caption{Spektrale Analyse von einem Acrylzylinder auf zwei unterschiedlich dicken Platten.}
   \label{fig:SA}
 \end{figure}
-% \begin{figure}
-%   \centering
-%   \includegraphics[height = 5cm]{FFS-Data/cepstrum_spektrale_analyse.jpg}
-%   \label{fig:SAC}
-% \end{figure}
+\begin{figure}
+  \centering
+  \includegraphics[height = 5cm]{FFS-Data/cepstrum_spektrale_analyse.jpg}
+  \caption{Cepstrum von einem Acrylzylinder auf zwei unterschiedlich dicken Platten.}
+  \label{fig:SAC}
+\end{figure}
 \subsection{Biometrische Untersuchung des Augenmodells}
 Wie im Kapitel zuvor wird aus der Abbildung \ref{fig:AU} die Positionen der
 Peaks bestimmt (s. Tabelle \ref{tab:AU}) und mit dem selben Zusammenhang wie zuvor die Abstände innerhalb
@@ -219,6 +232,6 @@ Der Abstand zwischen Linse und Retina beträgt \SI{3.8}{\centi\meter}.
 \begin{figure}
   \centering
   \includegraphics[height = 5cm]{FFS-Data/a_scan_auge.jpg}
-  \caption{Spektrale Analyse}
+  \caption{Spektrale Analyse des Augenmodells.}
   \label{fig:AU}
 \end{figure}

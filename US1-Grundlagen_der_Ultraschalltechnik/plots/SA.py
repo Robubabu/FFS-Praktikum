@@ -12,6 +12,7 @@ def mittel(x):
 c1 = ufloat(2720,10)
 c2 = ufloat(2717, 31)
 c = np.mean([c1,c2])
+
 print('Mittlere Schallgeschwindgkeit in Acryl:',c)
 p, d = np.genfromtxt('SA2_Data.txt', unpack = True)
 d*=10**(-6)

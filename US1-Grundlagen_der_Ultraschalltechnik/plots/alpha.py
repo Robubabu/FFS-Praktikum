@@ -16,6 +16,8 @@ def gain(a,g):
     return a*10**(-(g/20)) #gain von der amplitude abrechnen
 def fit(x,b):
     return b*x # Y =  bx  -> y = exp(b*x)
+def relf(l,m):
+    return (np.absolute(l-m)/l) *100
 
 ar = gain(a2,g)
 x = 2*h[0:5] # x ist 2h wegen Impuls Echo
@@ -26,11 +28,13 @@ lqI = np.log(qI)
 params , cov = curve_fit(fit , x ,lqI )
 params = correlated_values(params, cov)
 print(params)
-
+g =(20*params[0]) / np.log(10)
+print(g)
 c = np.linspace(0,0.00025 , 1000)
-
+print(relf(270,g))
+print(relf(570,g))
 #Tabelen
-np.savetxt('alphatab.txt',np.column_stack([x,lqI,a1,a2,g]), delimiter=' & ',newline= r'\\'+'\n' )
+# np.savetxt('alphatab.txt',np.column_stack([x,lqI,a1,a2,g]), delimiter=' & ',newline= r'\\'+'\n' )
 
 # #Plot
 # plt.subplot(1, 2, 1)
@@ -50,4 +54,4 @@ plt.legend(loc='best')
 #
 # # in matplotlibrc leider (noch) nicht möglich
 # #plt.tight_layout(pad=0, h_pad=1.08, w_pad=1.08)
-plt.savefig('alphaplot.pdf')
+# plt.savefig('alphaplot.pdf')

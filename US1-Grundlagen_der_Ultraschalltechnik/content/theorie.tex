@@ -1,15 +1,15 @@
 \section{Ziel}
 \label{sec:ziel}
-Ziel dieses Versuches ist das Vertrautmachen mit Ultraschallscans und das Bestimmen der Schallgeschwindigkeit in Acryl, sowie das Vermessen einer Augatrappe.
+Ziel dieses Versuches ist das Vertrautmachen mit Ultraschallscans und das Bestimmen der Schallgeschwindigkeit in Acryl, sowie das Vermessen einer Augenmodell.
 
 
 \section{Theorie}
 \label{sec:Theorie}
 
-Ultraschall bezeichnet kurzwelligen Schall von ca. $\SI{20}{\kilo \hertz}$ bis etwa $\SI{1}{\giga \hertz}$, also gerade oberhalb des von Menschen hörbaren Frequenzspektrums.
-Die Ausbreitung des Ultraschalls ist natürlich durch die Schallgeschwindigkeit des beschallten Mediums bedingt. Zudem nimmt die Intensität $I$ des Schalls natürlich durch eine materialabhängige Dämpfung mit der zurückgelegten Strecke $x$ gemäß des Zusammenhanges
+Ultraschall bezeichnet kurzwelligen Schall im Frequenzbereich von ca. $\SI{20}{\kilo \hertz}$ bis etwa $\SI{1}{\giga \hertz}$, also gerade oberhalb des von Menschen hörbaren Frequenzspektrums.
+Die Ausbreitung des Ultraschalls ist durch die Schallgeschwindigkeit des beschallten Mediums bedingt. Zudem nimmt die Intensität $I$ des Schalls durch eine materialabhängige Dämpfung mit der zurückgelegten Strecke $x$ gemäß des Zusammenhanges
 \begin{equation}
-  I(x) = I_0 \exp{-\alpha x}
+  I(x) = I_0 \exp{\left(-\alpha x \right)}
   \label{eqn:I}
 \end{equation}
 ab. Da $\alpha$ in Luft sehr groß ist und die Schallgeschwindigkeit relativ klein, wird ein \textit{Kontaktmittel} verwendet, welches zwischen der Ultraschallsonde und dem zu untersuchenden Material eingesetzt.
@@ -28,3 +28,10 @@ Nutzt man die Reflektion des Schalls an Grenzflächen aus, so genügt eine einzi
 Da nun alle reflektierten Impulse gemessen werden, lassen sich auf diese Weise auch die Lagen von Fehlstellen im Material feststellen.
 
 In diesem Versuch wird ausschlieslich der \textit{A-Scan} verwendet, also die Messung der Impuls-Zeiten und -Amplituden.
+Dabei wird die Sonde die den Ultraschall aussendet auch gleichzeitig als Empfänger benutzt. Trifft das Ultraschallsignal
+auf eine Grenzfläche so wird es reflektiert.
+Anhand der Laufzeit
+des Echso kann dann z.B. auf Fehlstellen oder i.A. auf die Länge des "duchschallten" Weges geschlossen werden. \\
+Eine Möglichkeit Ultraschall zu erzeugen ist die Nutzung des \textit{reziproken piezo-eletrischen Effekts} \cite{Anleitung}. Dabei wird ein
+piezo-eletrischer Kristall in einem elekrtischen Feld zum Schwingen angeregt. Über Resonanz können dann verschiedene Amplituden erreicht werden.
+Auf selbe Weise können die Kristalle auch als Empfänger genutzt werden.
