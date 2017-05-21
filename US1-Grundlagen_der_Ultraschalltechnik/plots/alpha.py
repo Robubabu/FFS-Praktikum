@@ -13,13 +13,20 @@ z1 , a1 ,a2, g = np.genfromtxt('IE2_Data.txt', unpack = True)
 z2,h,t = np.genfromtxt('IE_Data.txt', unpack = True)
 h*=10**-6
 def gain(a,g):
-    return a*10**(-(g/20)) #gain von der amplitude abrechnen
+    return a/10**((g/20)) #gain von der amplitude abrechnen
 def fit(x,b):
     return b*x # Y =  bx  -> y = exp(b*x)
 def relf(l,m):
     return (np.absolute(l-m)/l) *100
-
-ar = gain(a2,g)
+#gain abrechnen
+ar = gain(a2,g) #TGC
+print(ar)
+ar = gain(ar,15)    #gain1
+a1 = gain(a1,15)
+ar = gain(ar,10)    #output
+a1 = gain(a1,10)
+print(ar)
+print(a1)
 x = 2*h[0:5] # x ist 2h wegen Impuls Echo
 qI = ar/a1 # ist gleich von I(x)/I0
 lqI = np.log(qI)
@@ -28,7 +35,7 @@ lqI = np.log(qI)
 params , cov = curve_fit(fit , x ,lqI )
 params = correlated_values(params, cov)
 print(params)
-g =(20*params[0]) / np.log(10)
+g =(-20*params[0]) / np.log(10)
 print(g)
 c = np.linspace(0,0.00025 , 1000)
 print(relf(270,g))
