@@ -14,26 +14,34 @@ z2,h,t = np.genfromtxt('IE_Data.txt', unpack = True)
 h*=10**-6
 def gain(a,g):
     return a/10**((g/20)) #gain von der amplitude abrechnen
-def fit(x,b):
-    return b*x # Y =  bx  -> y = exp(b*x)
+def fit(x,b,a):
+    return b*x +a # Y =  bx  -> y = exp(b*x)
 def relf(l,m):
     return (np.absolute(l-m)/l) *100
+def fit2(x,y,z):
+    return z*np.exp(x*y)
 #gain abrechnen
 ar = gain(a2,g) #TGC
 print(ar)
-ar = gain(ar,15)    #gain1
+ar = gain(ar,15)    #gain1 15
 a1 = gain(a1,15)
-ar = gain(ar,10)    #output
+ar = gain(ar,10)    #output 10
 a1 = gain(a1,10)
 print(ar)
 print(a1)
 x = 2*h[0:5] # x ist 2h wegen Impuls Echo
 qI = ar/a1 # ist gleich von I(x)/I0
-lqI = np.log(qI)
+lqI = 20*np.log10(qI)
 
 # Fit
 params , cov = curve_fit(fit , x ,lqI )
 params = correlated_values(params, cov)
+#Fit 2
+params2 , cov2 = curve_fit(fit2 , x ,noms(ar) )
+params2 = correlated_values(params2, cov)
+for p in params2:
+    print(p)
+print((-20*np.log(noms(-params2[0]))) / np.log(10))
 print(params)
 g =(-20*params[0]) / np.log(10)
 print(g)
@@ -45,12 +53,12 @@ print(relf(570,g))
 
 # #Plot
 # plt.subplot(1, 2, 1)
-plt.plot(x, lqI,'rx', label='Messwerte')
-plt.plot(c,fit(c,noms(params)), label= 'Ausgleichsgerade')
+plt.plot(x, ar,'rx', label='Messwerte')
+plt.plot(c,fit2(c,noms(params2[0]),noms(params2[1])), label= 'Ausgleichsgerade')
 plt.ylabel(r'$ln\left(\frac{I(x)}{I_0}\right)$')
 plt.xlabel(r'$x /m$')
 plt.legend(loc='best')
-# plt.show()
+plt.show()
 # plt.clf()
 #
 # plt.subplot(1, 2, 2)

@@ -1,0 +1,4 @@
+#Prärperat | Counts /60s # 3 = beide 
+1	40048
+3	43118
+2	4039
