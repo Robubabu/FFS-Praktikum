@@ -153,6 +153,9 @@ error2 = 1/np.sqrt(len(ImpArea2))*np.std(ImpArea2)
 print('Messung 1: ', mean1, ' +/- ', error1)
 print('Messung 2: ', mean2, ' +/- ', error2)
 
+m1 = ufloat(mean1, error1)
+m2 = ufloat(mean2, error2)
+
 plt.plot([pArea1[9],pArea1[9]],[500,600], 'k-.', label = 'Grenze des Plateaus')
 plt.plot([pArea2[7],pArea2[7]],[300,400], 'k-.')
 
@@ -190,6 +193,15 @@ print('Dritte Gerade Messung 1: ', parImps1, ' +/- ', Error1)
 
 plt.plot(pArea1, f(pArea1,*parImps1), 'k-')
 #plt.plot(pArea2, f(pArea2,*parImps2), 'k--')
+
+errorpar1 = unp.uarray(parImps1,Error1)
+errorpar2 = unp.uarray(parImps2,Error2)
+
+R_1 = 0.023/errorpar1[0]*(m1/2-errorpar1[1])
+R_2 = 0.029/errorpar2[0]*(m2/2-errorpar2[1])
+print('ParImp1', parImps1)
+print('R_1', R_1)
+print('R_2', R_2)
 
 plt.xlim(-0.02,1)
 plt.ylim(-10, 610)
