@@ -1,2 +1,29 @@
 \section{Theorie}
 \label{sec:Theorie}
+\subsection{Zielsetzung}
+Ziel des Versuches ist es, die Chrarakteristik des \textit{Geiger-Müller-Zählrohrs} zu untersuchen und diese durch seine Funktionsweise zu erklären.
+
+\subsection{Theorie}
+\begin{figure}
+  \centering
+  \includegraphics[height=5cm]{./logos/GM.PNG}
+  \caption{Schematischer Querschnitt eines Geiger-Müller-Zählrohres \cite{Anleitung}}
+  \label{fig:GM}
+\end{figure}
+
+Ein Geiger-Müller-Zählrohr besteht im Wesentlichen aus einem metallenen Zylinder mit einem Draht in der Mitte. Zwischen diesen beiden Komponenten wird eine Spannung $U$ angelegt, wobei der Draht aus später beschriebenen Gründen die \textit{Anode} bildet, also positiv geladen wird. Der Hohlraum des Zylinders wird aus mit einem Gasgemisch gefüllt und gasdicht geschlossen, wobei jedoch darauf geachtet wird, dass die Abdeckung auf einer Seite Strahlungsdurchlässig ist. Dieser Aufbau ist in Abb. \ref{fig:GM} zu sehen. Tritt Strahlung hinreichender Energie in das Zählrohr ein, so kommt es durch Stöße mit dem Füllgas zur Ionisierung. Im anliegenden Feld werden die Elektronen zur Anode beschleunigt, die Ionen zur Kathode (Mantel des Rohres), wobei die Ionen durch die höhere Masse langsamer beschleunigen. Die Elektronen können, wenn sie stark genug beschleunigt werden, weitere Atome ionisieren, wodurch eine \textit{Ladungslawine} entsteht, die das Signal verstärkt. Dies ist der Grund für die Ausrichtung des Feldes. Durch seine Inhomogenität ist das Feld nah am Draht deutlich stärker und auch nah am Draht freigesetzte Elektronen werden noch stark beschleunigt. Durch den Ladungsfluss fließt ein Stromimpuls, der von einem Zählwerk detektiert wird.
+Dieser Impuls besitzt allerdings eine gewisse Zeitliche Breite, die \textit{Totzeit} $T$ genannt wird, da während dieser Zeit keine weiteren Impacts detektiert werden können. Da sich durch die Massenträgheit um den Draht positive Ionen stauen, wird das E-Feld teilweise abgeschirmt. Dies sorgt dafür, dass die nachfolgenden Impulse geschwächt werden. Nach einer gewissen Zeit (\textit{Erholungszeit} $T_E$) ist dieser Effekt beendet. Der Verlauf der Impulse lässt sich in Abb. \ref{fig:GM-Zeit} betrachten. Die positiven Ionen können durch ihre hohe Masse beim Aufschlag auf den Mantel die Metall-Atome ionisieren und so eine zweite Ladungslawine auslösen, die \textit{Nachentladung} genannt wird.
+
+\begin{figure}
+  \centering
+  \includegraphics[heigth=5cm]{./logos/GM-Zeit.PNG}
+  \caption{Schematische Darstellung der Ladungsimpulse aufgetragen gegen die Zeit $t$, mit Totzeit und Erholungszeit. \cite{Anleitung}}
+  \label{fig:GM-Zeit}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \includegraphics[height = 6cm]{./logos/GM-Kurve.PNG}
+  \caption{Anzahl der Elektronen-Ionenpaare aufgetragen gegen die Anliegende Spannung \cite{Anleitung}}
+  \label{fig:GM-Kurve}
+\end{figure}
