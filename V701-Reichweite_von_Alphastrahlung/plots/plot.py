@@ -53,23 +53,41 @@ print('halo i bims, 1 echter balken: ',bims)
 
 paramsG, covG = curve_fit(g, bims, n)
 errorsG = np.sqrt(np.diag(covG))
-print('halo i bims, 1 gauß: ', paramsG, '+/-', errorsG)
-
+print('halo i bims, 1 gauß: ', *paramsG, '+/-', *errorsG)
 
 y = np.linspace(480,600)
 plt.plot(y,g(y,*paramsG),'k--', label='Gauß seine Glocke')
 
-
-#paramsP, covP = curve_fit(p,bims,n)
-#plt.plot(y,p(y,*paramsP),'r--', label='Poisson seine Fairteilung')
-#errorsP = np.sqrt(np.diag(covP))
-#print('halo i bims, 1 poisson: ', paramsP, '+/-', errorsP)
 
 plt.xlabel('Impacts/s')
 plt.ylabel('Wahrscheinlichkeit')
 plt.legend()
 plt.savefig('Statistik.pdf')
 plt.clf()
+
+
+Imps = (Imps-490)
+plt.hist(Imps, normed = 1, bins = 20, color='orange')
+n, bins, patches = plt.hist(Imps,normed = 1, bins = 20)
+r = range(len(n))
+bims= np.array(r)
+for i in r:
+    bims[i] = 0.5*(bins[i]+bins[i+1])
+
+
+print('poissonBims: ', bims, n)
+paramsP,covP = curve_fit(p,bims, n)
+errorP = np.sqrt(np.diag(covP))
+print('halo i bims, i fisch: ', paramsP, '+/-', errorP)
+y = np.linspace(0,90)
+plt.plot(y,p(y,paramsP), 'k-', label = 'Poisson Verteilung')
+
+plt.xlabel('(Impacts-490)/s')
+plt.ylabel('Wahrscheinlichkeit')
+plt.legend()
+plt.savefig('Poisson.pdf')
+plt.clf()
+
 
 ########################################################################
 #####################################################################
