@@ -20,4 +20,4 @@ I*=10**-6
 Q = I*t/N
 Z = Q/const.e
 print(Z)
-np.savetxt('etab.txt',np.column_stack([I,N,Q,Z]), delimiter=' & ',newline= r'\\'+'\n' )
+np.savetxt('etab.txt',np.column_stack([I,N,Q,Z*10**(-10)]), delimiter=' & ',newline= r'\\'+'\n' )
