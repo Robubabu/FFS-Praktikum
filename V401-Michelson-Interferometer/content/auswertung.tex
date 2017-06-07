@@ -4,15 +4,7 @@ Die Auswertung aller Daten wurde mittels Python \cite{scipy} \cite{numpy} durchg
 
 \subsection{Messung der Wellenlänge}
 
-Alle gemessenen Werte lassen sich Tab. \ref{tab:Wavelength} entnehmen. Dieser Tabelle sind auch die daraus hervorgehenden Wellenlängen zu entnehmen, welche sich aus Formel
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newpage
-  WICHTIG!!! WICHTIG!!!! REFERENZ WELLENLÄNGE ERGÄNZEN!!!!!!!
-  \newpage
-  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-ergeben.
+Alle gemessenen Werte lassen sich Tab. \ref{tab:Wavelength} entnehmen. Dieser Tabelle sind auch die daraus hervorgehenden Wellenlängen zu entnehmen, welche sich aus Formel \eqref{eqn:dd} ergeben.
 Der Mittelwert der Wellenlänge beträgt somit
 \begin{equation*}
   \lambda = \SI{610 \pm 40}{\nano \meter}.
@@ -43,26 +35,21 @@ Der Mittelwert der Wellenlänge beträgt somit
 \subsection{Bestimmung des Brechungsindex}
 
 
-Der Brechungsindex von Luft ($n_{air,0}$) bzw. Kohlenstoffdioxid ($n_{CO_2,0}$) ergibt sich über
-\newpage
-      WICHTIG!!!!! REFERENZ EINFÜGEN!!!!!!
-\newpage
-
-mit den Werten aus Tab. \ref{tab:N_tab} zu
+Der Brechungsindex von Luft ($n_{air,0}$) bzw. Kohlenstoffdioxid ($n_{CO_2,0}$) ergibt sich über \eqref{eqn:n} mit den Werten aus Tab. \ref{tab:N_tab} zu
 
 \begin{align*}
-  n_{air,0}-1 &= (2.7 \pm 0.1\cdot 10^{-4} \\
-  n_{CO_2,0}-1 &= (4.3 \pm 0.1\cdot 10^{-4}.
+  n_{air,0}-1 &= (2.7 \pm 0.1)\cdot 10^{-4} \\
+  n_{CO_2,0}-1 &= (4.3 \pm 0.1)\cdot 10^{-4}.
 \end{align*}
 
 \begin{table}
   \centering
-  \caption{Messwerte zur Bestimmung der Brechungsindizes, sowie daraus ergebene $\Delta n \pm \delta \Delta n$.}
+  \caption{Messwerte zur Bestimmung der Brechungsindizes, sowie daraus ergebene $\Delta  n \pm \delta \Delta n$.}
   \label{tab:N_tab}
   \sisetup{round-mode=places}
   \begin{tabular}{S|S[round-precision = 1]|S[round-precision = 1]|S|S|S[round-precision = 1]|S[round-precision = 0]}
     \toprule
-    $Count_{Air}$ &  $\Delta n_{air} \cdot 10^{-4}$ &  $ \delta \Delta n_{air} \cdot 10^{-4}$ & $p/\si{\bar}$ & $Count_{CO_2}$ & $\Delta n_{CO_2} \cdot 10^{-4}$ & $\delta \Delta n_{CO_2} \cdot 10^{-4}$ \\
+    $Count_{air}$ & $\Delta n_{air}$ & $\delta n_{air}$ & $\Delta p/\si{\bar}$ & $\Delta n_{CO2}$ & $\delta  n_{CO2}$ \\
     \midrule
     32 & 1.93723583727720729804 & 0.1347768911995184540   & -0.88 & 56 & 3.39016271523511229704 & 0.235859559599157281805\\
     32 & 1.93723583727720729804 & 0.134776891199518454005 & -0.80 & 44 & 2.66369927625615993304 & 0.185318225399337876405\\
