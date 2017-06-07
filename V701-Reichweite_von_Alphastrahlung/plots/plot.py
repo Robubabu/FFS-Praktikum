@@ -15,8 +15,7 @@ from uncertainties.unumpy import (nominal_values as noms, std_devs as stds)
 
 Imps=np.genfromtxt('../Messwerte/Statistik.txt', unpack=True)
 Imps=Imps/10
-plt.hist(Imps, normed = 1, bins = 10, color='orange', alpha=0.5)
-n, bins, patches = plt.hist(Imps,normed= 1, bins = 10)
+n, bins, patches = plt.hist(Imps, normed = 1, bins = 10, color='yellow', alpha=0.5)
 
 #for i in I:
 #    if(i%4==0):
@@ -40,7 +39,7 @@ def g(k,s):
     return 1/(s*np.sqrt(2*np.pi))*np.exp(-0.5*(k-m)**2/s**2)
 
 def p(k,l):
-    return l**k/scipy.misc.factorial(k)*np.exp(-l)
+    return l**k/scipy.special.gamma(k+1)*np.exp(-l)
 
 
 r = range(len(n))
@@ -65,24 +64,24 @@ plt.legend()
 plt.savefig('Statistik.pdf')
 plt.clf()
 
-
-Imps = (Imps-490)
-plt.hist(Imps, normed = 1, bins = 20, color='orange')
-n, bins, patches = plt.hist(Imps,normed = 1, bins = 20)
+Imps = (Imps-490)/10
+a = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
+n, bins, patches = plt.hist(Imps,normed = 1, bins = 10, color = 'yellow', alpha = 0.5)
 r = range(len(n))
+print('r: ', r)
 bims= np.array(r)
 for i in r:
-    bims[i] = 0.5*(bins[i]+bins[i+1])
+    bims[i] = (bins[i]+bins[i+1])/2
 
+#plt.hist(Imps, normed = 1, bins = a, color = 'yellow', alpha = 0.5)
 
-print('poissonBims: ', bims, n)
 paramsP,covP = curve_fit(p,bims, n)
 errorP = np.sqrt(np.diag(covP))
-print('halo i bims, i fisch: ', paramsP, '+/-', errorP)
-y = np.linspace(0,90)
-plt.plot(y,p(y,paramsP), 'k-', label = 'Poisson Verteilung')
+print('halo i bims, 1 fisch: ', paramsP, '+/-', errorP)
+y = np.linspace(-0.9,10)
+plt.plot(y,p(y,*paramsP), 'k-', label = 'Poisson Verteilung')
 
-plt.xlabel('(Impacts-490)/s')
+plt.xlabel('Impacts/5-100/s')
 plt.ylabel('Wahrscheinlichkeit')
 plt.legend()
 plt.savefig('Poisson.pdf')

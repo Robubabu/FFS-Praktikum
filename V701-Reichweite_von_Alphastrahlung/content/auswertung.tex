@@ -61,6 +61,22 @@ dar. Hierbei ist  $\sigma=\SI{19.81 \pm 1.07}{\becquerel}$ die Standardabweichun
  \begin{figure}
    \centering
    \includegraphics[height=7cm]{plots/Statistik.pdf}
-   \caption{Histogram zur Zählrate}
+   \caption{Histogram zur Zählrate mit Gauß-Verteilung}
    \label{fig:hist}
  \end{figure}
+
+Der Poisson-Fit ist in Abb. \ref{fig:fisch} dargestellt und liefert den Parameter
+\begin{equation*}
+  \lambda = 6.8 \pm 0.3
+\end{equation*}
+Die Poisson-Verteilung ist gegeben durch
+\begin{equation*}
+  P(k) = \frac{\lambda^k}{k!}e^{-\lambda}.
+\end{equation*}
+Rechnet man dies in den tatsächlichen Erwartungswert $\lambda_{real} = 5 \cdot(\lambda +100)$, so ergibt sich $lambda_{real} = \SI{534.0 \pm 1.5}{\becquerel}$.
+\begin{figure}
+  \centering
+  \includegraphics[height=7cm]{./plots/Poisson.pdf}
+  \caption{Histogram zur Zählrate mit Poisson-Verteilung.}
+  \label{fig:fisch}
+\end{figure}
