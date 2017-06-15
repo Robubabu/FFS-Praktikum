@@ -1,0 +1,6 @@
+#x Gegenstand | xLinse | xSchirm | B (Bildgröße) | Gegenstandsgröße ist 3 cm alle anderen größen in [cm]
+115	101	66.3	7.2
+115	90	73.7	1.9
+120	90	75.4	1.4
+120	80	67	1
+120	107	62.2	10

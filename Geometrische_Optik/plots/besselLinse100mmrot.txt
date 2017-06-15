@@ -1,0 +1,6 @@
+# x gegenstand| x1 Linse | x2 linse | x Schirm | alles Positionen alles in [cm]
+125	102.1	107.7	85
+125	88.6	111.2	75
+125	77.5	112.1	65	
+125	72.4	112.5	60
+125	67.1	112.6	55
