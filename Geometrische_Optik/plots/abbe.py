@@ -36,18 +36,19 @@ bs*=10**-2
 xg = (1+ (1/V))
 gparams , gcov = curve_fit(fit , xg,gs )
 gparams = correlated_values(gparams, gcov)
-for p in gparams:
-    print(p)
 gf,gh = gparams
+print('Brennweite von g` :',gf)
+print('h von g´ :', gh)
 #Fit für b strich
 #y = bs
 #x = (1+V)
 xb = 1 + V
 bparams , bcov = curve_fit(fit , xb ,bs )
 bparams = correlated_values(bparams, bcov)
-for p in bparams:
-    print(p)
 bf,bh = bparams
+print('Brennweite von b` :',bf)
+print('h von b´ :', bh)
+
 #Relative Fehler
 print('Abweichung von der Brennweiten :', (gf - bf) )
 print('Abweichung der y-Abschnt. :', (gh-bh))
@@ -56,23 +57,23 @@ print('Abweichung der y-Abschnt. :', (gh-bh))
 
 
 #Tabelle
-# np.savetxt('tab.txt',np.column_stack([x,y]), delimiter=' & ',newline= r'\\'+'\n' )
+np.savetxt('abbetab.txt',np.column_stack([xG,mLS,xS,gs,bs]), delimiter=' & ',newline= r'\\'+'\n' )
 
 #plt.subplot(1, 2, 1)
-plt.plot(gs, xg,'rx', label='Messwerte g´ gegen (1+(1/V))')
-plt.plot(noms(fit(x,gf,gh)),x,label='Ausgleichgerade')
-plt.xlabel(r'$(1+ \frac{1}{V})$')
-plt.ylabel(r'$g\' / m$')
-plt.legend(loc='best')
-# plt.show()
-plt.savefig('gsplot.pdf')
-plt.clf()
-# #plt.subplot(1, 2, 2)
-y = np.linspace(1, 2)
-plt.plot(bs, xb,'rx', label='Messwerte b´ gegen (1+V)')
-plt.plot(noms(fit(y,bf,bh)),y,label='Ausgleichgerade')
-plt.xlabel(r'$(1+ V)$')
-plt.ylabel(r'$b\' / m$')
-plt.legend(loc='best')
-# plt.show()
-plt.savefig('bsplot.pdf')
+# plt.plot(gs, xg,'rx', label='Messwerte g´ gegen (1+(1/V))')
+# plt.plot(noms(fit(x,gf,gh)),x,label='Ausgleichgerade')
+# plt.xlabel(r'$(1+ \frac{1}{V})$')
+# plt.ylabel(r'$g\' / m$')
+# plt.legend(loc='best')
+# # plt.show()
+# plt.savefig('gsplot.pdf')
+# plt.clf()
+# # #plt.subplot(1, 2, 2)
+# y = np.linspace(1, 2)
+# plt.plot(bs, xb,'rx', label='Messwerte b´ gegen (1+V)')
+# plt.plot(noms(fit(y,bf,bh)),y,label='Ausgleichgerade')
+# plt.xlabel(r'$(1+ V)$')
+# plt.ylabel(r'$b\' / m$')
+# plt.legend(loc='best')
+# # plt.show()
+# plt.savefig('bsplot.pdf')

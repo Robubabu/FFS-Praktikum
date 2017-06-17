@@ -99,7 +99,7 @@ und für den mittleren Abbildungsmaßstab bestimmt über die Gegenstands- und Bi
     \bottomrule
   \end{tabular}
   }
-  \caption{Werte der zur Bestimmung der Gegenstadsweiten (g), der Bildweite (b)
+  \caption{Werte zur Bestimmung der Gegenstadsweiten (g), der Bildweite (b)
   und der Brennweite (f), xG ist die Postion des Gegenstands, xL die Position der Linse
   und xS die Postion des Schirms für die Wasserlinse.}
   \label{tab:Wgb}
@@ -122,7 +122,7 @@ und für den mittleren Abbildungsmaßstab bestimmt über die Gegenstands- und Bi
     \bottomrule
   \end{tabular}
   }
-  \caption{Werte der zur Bestimmung der Gegenstadsweiten (g) und der Bildweite (b),
+  \caption{Werte zur Bestimmung der Gegenstadsweiten (g) und der Bildweite (b),
   xG ist die Postion des Gegenstands, xL die Position der Linse,
   xS die Postion des Schirms und B ist die Bildgröße für die Linse mit Brennweite
   100mm.}
@@ -169,7 +169,7 @@ mit einer Brennweite von \SI{100}{\milli\meter} gearbeitet.
     \bottomrule
   \end{tabular}
   }
-  \caption{Werte der zur Bestimmung der Brennweite \texorpdfstring{$f_n$}{math},
+  \caption{Werte zur Bestimmung der Brennweite \texorpdfstring{$f_n$}{math},
   xG ist die Postion des Gegenstands, \texorpdfstring{$\text{xL}_1$}{math}
   die erste Position der Linse, \texorpdfstring{$\text{xL}_2$}{math} die zweite
   Position der Linse und xS die Postion des Schirms für normales Licht.}
@@ -194,7 +194,7 @@ mit einer Brennweite von \SI{100}{\milli\meter} gearbeitet.
     \bottomrule
   \end{tabular}
   }
-  \caption{Werte der zur Bestimmung der Brennweite \texorpdfstring{$f_b$}{math},
+  \caption{Werte zur Bestimmung der Brennweite \texorpdfstring{$f_b$}{math},
   xG ist die Postion des Gegenstands, \texorpdfstring{$\text{xL}_1$}{math}
   die erste Position der Linse, \texorpdfstring{$\text{xL}_2$}{math} die zweite
   Position der Linse und xS die Postion des Schirms für blaues Licht.}
@@ -219,7 +219,7 @@ mit einer Brennweite von \SI{100}{\milli\meter} gearbeitet.
     \bottomrule
   \end{tabular}
   }
-  \caption{Werte der zur Bestimmung der Brennweite \texorpdfstring{$f_r$}{math},
+  \caption{Werte zur Bestimmung der Brennweite \texorpdfstring{$f_r$}{math},
   xG ist die Postion des Gegenstands, \texorpdfstring{$\text{xL}_1$}{math}
   die erste Position der Linse, \texorpdfstring{$\text{xL}_2$}{math} die zweite
   Position der Linse und xS die Postion des Schirms für rotes Licht.}
@@ -231,7 +231,24 @@ mit einer Brennweite von \SI{100}{\milli\meter} gearbeitet.
 
 \FloatBarrier
 \subsection{Bestimmung der Brennweite eines Linsensystems nach der Methode von Abbe.}
-
+In den Diagrammen \ref{fig:gabbe} und \ref{fig:babbe} sind jeweils
+$g'$ gegen $\left(1 + \frac{1}{V}\right)$ und $b'$ gegen $ \left(1 + V\; \right)$
+aufgetragen. Wird nun durch Ausgleichsrechnung eine Gerade
+\begin{equation*}
+  f(x) = a \cdot x + b
+\end{equation*}
+durch die Messpunkte gelegt ergibt sich mit dem Zusammenhang \eqref{eqn:abbe}
+\begin{equation*}
+  a = f \qquad \text{und} \qquad b = h \qquad \text{bzw.} \qquad b = h' \; .
+\end{equation*}
+Daraus folgt für $g'$ :
+\begin{equation*}
+  f_{g'} = \SI{0.17(1)}{\meter} \qquad h = \SI{-0.04(5)}{\meter} \;.
+\end{equation*}
+Für $b'$ folgt:
+\begin{equation*}
+  f_{b'} = \SI{0.09(2)}{\meter} \qquad h = \SI{-0.24(2)}{\meter} \;.
+\end{equation*}
 \begin{figure}
   \centering
     \begin{subfigure}{0.48\textwidth}
@@ -239,13 +256,57 @@ mit einer Brennweite von \SI{100}{\milli\meter} gearbeitet.
       \caption{In diesem Diagramm ist g' gegen
       \texorpdfstring{$\left(1 + \frac{1}{V}\right)$}{math} aufgetragen und
       eine Ausgleichgerade eingezeichnet. }
-      \label{fig:Lgb}
+      \label{fig:gabbe}
     \end{subfigure}
     \begin{subfigure}{0.48\textwidth}
       \includegraphics[height = 6cm]{plots/bsplot.pdf}
       \caption{In diesem Diagramm ist b' gegen (1 + V) aufgetragen und
       eine Ausgleichsgerade eingezeichnet. }
-      \label{fig:Wgb}
+      \label{fig:babbe}
     \end{subfigure}
     \caption{Diagramme zur Bestimmung der Brennweite eines Linsensystems nach Abbe.}
+    \label{fig:abbe}
 \end{figure}
+Alle Daten dazu sind in der Tabelle \ref{tab:abbe} dargestellt.
+\begin{table}
+  \centering
+  \sisetup{round-mode = places , round-precision = 2}
+  \resizebox{\textwidth}{!}{
+  \begin{tabular}{S S S S S }
+    \toprule
+    $\text{xG}/\si{\centi\meter}$ & $\text{xL} /\si{\centi\meter} $ &
+    $\text{xS} / \si{\centi\meter}$ & $\text{g'}/ \si{\meter}$ &
+    $\text{b'} /\si{\meter}$\\
+    \midrule
+    1.250000000000000000e+02 & 9.300000000000000000e+01 & 5.139999999999999858e+01 & 3.200000000000000067e-01 & 4.160000000000000364e-01\\
+    1.250000000000000000e+02 & 8.800000000000000000e+01 & 4.850000000000000000e+01 & 3.699999999999999956e-01 & 3.950000000000000178e-01\\
+    1.250000000000000000e+02 & 8.300000000000000000e+01 & 4.460000000000000142e+01 & 4.199999999999999845e-01 & 3.840000000000000080e-01\\
+    1.250000000000000000e+02 & 7.800000000000000000e+01 & 4.039999999999999858e+01 & 4.700000000000000289e-01 & 3.760000000000000009e-01\\
+    1.250000000000000000e+02 & 7.300000000000000000e+01 & 3.589999999999999858e+01 & 5.200000000000000178e-01 & 3.709999999999999964e-01\\
+    1.250000000000000000e+02 & 6.800000000000000000e+01 & 3.150000000000000000e+01 & 5.700000000000000622e-01 & 3.649999999999999911e-01\\
+    1.250000000000000000e+02 & 6.300000000000000000e+01 & 2.710000000000000142e+01 & 6.199999999999999956e-01 & 3.589999999999999858e-01\\
+    1.250000000000000000e+02 & 5.800000000000000000e+01 & 2.250000000000000000e+01 & 6.700000000000000400e-01 & 3.549999999999999822e-01\\
+    1.250000000000000000e+02 & 5.300000000000000000e+01 & 1.739999999999999858e+01 & 7.199999999999999734e-01 & 3.560000000000000386e-01\\
+    1.250000000000000000e+02 & 4.800000000000000000e+01 & 1.380000000000000071e+01 & 7.700000000000000178e-01 & 3.420000000000000262e-01\\
+    \bottomrule
+  \end{tabular}
+  }
+  \caption{Werte zur Bestimmung der Brennweiten \texorpdfstring{$f_{g'}$}{math}
+  und \texorpdfstring{$f_{b'}$}{math},
+  xG ist die Postion des Gegenstands,xL die Position des Mittelpunkts des
+  Linsensystems xS die Postion des Schirms, g' ist der Abstand zwischen Gegenstand
+  und Linsensystem und b' der Abstand zwischen Linsensystem und Schirm.}
+  \label{tab:abbe}
+\end{table}
+\FloatBarrier
+
+
+
+
+
+
+
+
+
+
+%
