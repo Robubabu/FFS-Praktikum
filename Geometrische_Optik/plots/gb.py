@@ -47,27 +47,31 @@ g2 = xG2 - xL2
 b2 = xL2 - xS2
 g3 = xG3 - xL3
 b3 = xL3 - xS3
-# #Berechnung der Brennweite
-# f1 = ULGL(g1,b1)
-# f2 = ULGL(g2,b2)
-# f3 = ULGL(g3,b3)
-# #Mittel der Brennweiten
-# mf1 = mittel(f1)
-# mf2 = mittel(f2)
-# mf3 = mittel(f3)
-# print('Mittlere Brennweite der 100mm Linse:', mf1)
-# print('Mittlere Brennweite der Wasserlinse:', mf3)
-# #Berechnung des Abbildungsmaßstabes mit b und g (und G und B)
-# V = B/G
-# V2 = b2 / g2
-# #Mittel des Abbildungsmaßstabes über g&b und über B&G
-# mV = mittel(V)
-# mV2 = mittel(V2)
-# print('Mittelwert des Abbildungsmaßstabes über G und B:', mV)
-# print('Mittelwert des Abbildungsmaßstabes über g und b:',mV2)
-# #Relativer Fehler des mittleren Abbildungsmaßstabes und mittlerer Brennweiten
-# print('Relativer Fehler des mittleren Abbildungsmaßstabes:', relf(mV,mV2))
-# print('Relativer Fehler der mittleren Brennweite f1:', relf(f,f1))
+#Berechnung der Brennweite
+f1 = ULGL(g1,b1)
+f2 = ULGL(g2,b2)
+f3 = ULGL(g3,b3)
+#Mittel der Brennweiten
+mf1 = mittel(f1)
+mf2 = mittel(f2)
+mf3 = mittel(f3)
+print('Mittlere Brennweite der 100mm Linse:', mf1)
+print('Mittlere Brennweite der Wasserlinse:', mf3)
+#Berechnung des Abbildungsmaßstabes mit b und g (und G und B)
+V = B/G
+V2 = b2 / g2
+#Mittel des Abbildungsmaßstabes über g&b und über B&G
+mV = mittel(V)
+mV2 = mittel(V2)
+print('Mittelwert des Abbildungsmaßstabes über G und B:', mV)
+print('Mittelwert des Abbildungsmaßstabes über g und b:',mV2)
+#Relativer Fehler des mittleren Abbildungsmaßstabes und mittlerer Brennweiten
+print('Relativer Fehler des mittleren Abbildungsmaßstabes:', relf(mV,mV2))
+print('Relativer Fehler der mittleren Brennweite f1:', relf(f,mf1))
+#Tabelle
+np.savetxt('Lgbtab.txt',np.column_stack([xG1,xL1,xS1,g1,b1,f1]), delimiter=' & ',newline= r'\\'+'\n' )
+np.savetxt('Wgbtab.txt',np.column_stack([xG3,xL3,xS3,g3,b3,f3]), delimiter=' & ',newline= r'\\'+'\n' )
+np.savetxt('BLgbtab.txt',np.column_stack([xG2,xL2,xS2,g2,b2,B]), delimiter=' & ',newline= r'\\'+'\n' )
 
 #Plotarrays
 #Jedes Array sollte wie folgt aufgebaut sein: [(g1,0) ; (0,b1)]
@@ -90,23 +94,19 @@ for g,b in list(zip(g3,b3)): #Nochmal für die Wasserlinse
 
 
 # Plots
-N = np.arange(0,19,1)
-#Plot für die100mm Linse
-for n in N:
-    plt.plot(X[n:n+3], Y[n:n+3] ,'g--')
-plt.xlabel(r'$g \quad Gegenstandsweiten / [m]$')
-plt.ylabel(r'$ b \quad Bildweiten / [m]$')
-# plt.show()
-plt.savefig('100mmLinsegbplot.pdf')
-plt.clf()
-#Plot für die Wasserlinse
-for n in N:
-    plt.plot(X3[n:n+3], Y3[n:n+3] ,'b--')
-plt.xlabel(r'$g \quad Gegenstandsweiten / [m]$')
-plt.ylabel(r'$ b \quad Bildweiten/ [m]$')
-# plt.show()
-plt.savefig('Wasserlinsegbplot.pdf')
-
-
-#Tabelle
-# np.savetxt('tab.txt',np.column_stack([x,y]), delimiter=' & ',newline= r'\\'+'\n' )
+# N = np.arange(0,19,1)
+# #Plot für die100mm Linse
+# for n in N:
+#     plt.plot(X[n:n+3], Y[n:n+3] ,'g--')
+# plt.xlabel(r'$g \quad Gegenstandsweiten / [m]$')
+# plt.ylabel(r'$ b \quad Bildweiten / [m]$')
+# # plt.show()
+# plt.savefig('100mmLinsegbplot.pdf')
+# plt.clf()
+# #Plot für die Wasserlinse
+# for n in N:
+#     plt.plot(X3[n:n+3], Y3[n:n+3] ,'b--')
+# plt.xlabel(r'$g \quad Gegenstandsweiten / [m]$')
+# plt.ylabel(r'$ b \quad Bildweiten/ [m]$')
+# # plt.show()
+# plt.savefig('Wasserlinsegbplot.pdf')

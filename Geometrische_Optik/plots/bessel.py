@@ -12,7 +12,7 @@ def mittel(x):              #the real mean()-ing of life
 def f(d,o): #Bessel Brennweite Fkt.
     return ((o**2) - d**2)/4*o
 
-def relf(l,m): #relativer Fehler in Prozent 
+def relf(l,m): #relativer Fehler in Prozent
     return (np.absolute(l-m)/np.absolute(l))
 #Bessel normales Licht
 xG1,aL1,bL1,xS1 = np.genfromtxt('besselLinse100mmnormal.txt',unpack = True)
@@ -42,41 +42,23 @@ print(10e-4)
 fn = f(dn,en)
 fb = f(db,eb)
 fr = f(dr,er)
-print(fn)
-print(fb)
-print(fr)
+# print(fn)
+# print(fb)
+# print(fr)
 
 #Mittelwert der berechneten Brennweiten
 mfn = mittel(fn)
 mfb = mittel(fb)
 mfr = mittel(fr)
+print('Mittlere Brennweite für normales Licht:',mfn )
+print('Mittlere Brennweite für blaues Licht:', mfb)
+print('Mittlere Brennweite für rotes Licht:',mfr)
 # Relative Fehler des Mittelwerts der Berechneten Brennweiten
 print('Relativer Fehler vom Mittelwert von f für normales Licht:', relf(fl,mfn))
 print('Relativer Fehler vom Mittelwert von f für blaues Licht:',relf(fl,mfb))
 print('Relativer Fehler vom Mittelwert von f für rotes Licht:', relf(fl,mfr))
 
-# #Fit
-# params , cov = curve_fit(f , x ,y )
-# params = correlated_values(params, cov)
-# for p in params:
-#     print(p)
-#
 #Tabelle
-# np.savetxt('tab.txt',np.column_stack([x,y]), delimiter=' & ',newline= r'\\'+'\n' )
-
-# #plt.subplot(1, 2, 1)
-# plt.plot(x, y, label='Kurve')
-# plt.xlabel(r'$\alpha \:/\: \si{\ohm}$')
-# plt.ylabel(r'$y \:/\: \si{\micro\joule}$')
-# plt.legend(loc='best')
-# plt.savefig('build/plot.pdf')
-# plt.clf()
-# #plt.subplot(1, 2, 2)
-# plt.plot(x, y, label='Kurve')
-# plt.xlabel(r'$\alpha \:/\: \si{\ohm}$')
-# plt.ylabel(r'$y \:/\: \si{\micro\joule}$')
-# plt.legend(loc='best')
-#
-# # in matplotlibrc leider (noch) nicht möglich
-# #plt.tight_layout(pad=0, h_pad=1.08, w_pad=1.08)
-# plt.savefig('build/plot2.pdf')
+np.savetxt('besselnormaltab.txt',np.column_stack([xG1,aL1,bL1,xS1,en,dn,fn]), delimiter=' & ',newline= r'\\'+'\n' )
+np.savetxt('besselblautab.txt',np.column_stack([xG2,aL2,bL2,xS2,eb,db,fb]), delimiter=' & ',newline= r'\\'+'\n' )
+np.savetxt('besselrottab.txt',np.column_stack([xG3,aL3,bL3,xS3,er,dr,fr]), delimiter=' & ',newline= r'\\'+'\n' )
