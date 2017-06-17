@@ -101,7 +101,7 @@ plt.savefig('100mmLinsegbplot.pdf')
 plt.clf()
 #Plot für die Wasserlinse
 for n in N:
-    plt.plot(X3[n:n+3], Y3[n:n+3] ,'c--')
+    plt.plot(X3[n:n+3], Y3[n:n+3] ,'b--')
 plt.xlabel(r'$g \quad Gegenstandsweiten / [m]$')
 plt.ylabel(r'$ b \quad Bildweiten/ [m]$')
 # plt.show()
