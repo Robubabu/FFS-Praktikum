@@ -68,10 +68,10 @@ print('Mittelwert des Abbildungsmaßstabes über g und b:',mV2)
 #Relativer Fehler des mittleren Abbildungsmaßstabes und mittlerer Brennweiten
 print('Relativer Fehler des mittleren Abbildungsmaßstabes:', relf(mV,mV2))
 print('Relativer Fehler der mittleren Brennweite f1:', relf(f,mf1))
-#Tabelle
-np.savetxt('Lgbtab.txt',np.column_stack([xG1,xL1,xS1,g1,b1,f1]), delimiter=' & ',newline= r'\\'+'\n' )
-np.savetxt('Wgbtab.txt',np.column_stack([xG3,xL3,xS3,g3,b3,f3]), delimiter=' & ',newline= r'\\'+'\n' )
-np.savetxt('BLgbtab.txt',np.column_stack([xG2,xL2,xS2,g2,b2,B]), delimiter=' & ',newline= r'\\'+'\n' )
+# #Tabelle
+# np.savetxt('Lgbtab.txt',np.column_stack([xG1,xL1,xS1,g1,b1,f1]), delimiter=' & ',newline= r'\\'+'\n' )
+# np.savetxt('Wgbtab.txt',np.column_stack([xG3,xL3,xS3,g3,b3,f3]), delimiter=' & ',newline= r'\\'+'\n' )
+# np.savetxt('BLgbtab.txt',np.column_stack([xG2,xL2,xS2,g2,b2,B]), delimiter=' & ',newline= r'\\'+'\n' )
 
 #Plotarrays
 #Jedes Array sollte wie folgt aufgebaut sein: [(g1,0) ; (0,b1)]

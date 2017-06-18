@@ -13,7 +13,7 @@ def f(d,o): #Bessel Brennweite Fkt.
     return ((o**2) - d**2)/4*o
 
 def relf(l,m): #relativer Fehler in Prozent
-    return (np.absolute(l-m)/np.absolute(l))
+    return (np.absolute(l-m)/np.absolute(l))*100
 #Bessel normales Licht
 xG1,aL1,bL1,xS1 = np.genfromtxt('besselLinse100mmnormal.txt',unpack = True)
 #Bessel blaues Licht
@@ -59,6 +59,6 @@ print('Relativer Fehler vom Mittelwert von f für blaues Licht:',relf(fl,mfb))
 print('Relativer Fehler vom Mittelwert von f für rotes Licht:', relf(fl,mfr))
 
 #Tabelle
-np.savetxt('besselnormaltab.txt',np.column_stack([xG1,aL1,bL1,xS1,en,dn,fn]), delimiter=' & ',newline= r'\\'+'\n' )
-np.savetxt('besselblautab.txt',np.column_stack([xG2,aL2,bL2,xS2,eb,db,fb]), delimiter=' & ',newline= r'\\'+'\n' )
-np.savetxt('besselrottab.txt',np.column_stack([xG3,aL3,bL3,xS3,er,dr,fr]), delimiter=' & ',newline= r'\\'+'\n' )
+# np.savetxt('besselnormaltab.txt',np.column_stack([xG1,aL1,bL1,xS1,en,dn,fn]), delimiter=' & ',newline= r'\\'+'\n' )
+# np.savetxt('besselblautab.txt',np.column_stack([xG2,aL2,bL2,xS2,eb,db,fb]), delimiter=' & ',newline= r'\\'+'\n' )
+# np.savetxt('besselrottab.txt',np.column_stack([xG3,aL3,bL3,xS3,er,dr,fr]), delimiter=' & ',newline= r'\\'+'\n' )

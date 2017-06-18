@@ -57,7 +57,7 @@ print('Abweichung der y-Abschnt. :', (gh-bh))
 
 
 #Tabelle
-np.savetxt('abbetab.txt',np.column_stack([xG,mLS,xS,gs,bs]), delimiter=' & ',newline= r'\\'+'\n' )
+# np.savetxt('abbetab.txt',np.column_stack([xG,mLS,xS,B,gs,bs,xg,xb]), delimiter=' & ',newline= r'\\'+'\n' )
 
 #plt.subplot(1, 2, 1)
 # plt.plot(gs, xg,'rx', label='Messwerte g´ gegen (1+(1/V))')
