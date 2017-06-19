@@ -17,9 +17,79 @@ Aus dem in Abb.\ref{fig:Energie} mittels \eqref{eqn:gerade} gefitteten Ausgleich
 \begin{figure}
   \centering
   \includegraphics[height=7cm]{plots/Energie.pdf}
-  \caption{Energie der gemessenen $\alpha$-Teilchen aufgetragen gegen den relativen Druck $p/p_0$}
+  \caption{Energie der gemessenen $\alpha$-Teilchen aufgetragen gegen den relativen Druck $p/p_0$, berechnet aus Tab. \ref{tab:Energie1} und Tab. \ref{tab:Energie2}}
   \label{fig:Energie}
 \end{figure}
+
+\begin{table}
+  \centering
+  \caption{Counts und Kanal maximaler Zählrate zur Bestimmung der druckabhängigen Energie (erste Messreihe).}
+  \label{tab:Energie1}
+  \begin{tabular}{c c c}
+    \toprule
+      Druck/mBar & Kanal & Counts \\
+      \midrule
+      0     & 280 & 70953 \\
+      50    & 271 & 71868 \\
+      100   & 271 & 72000 \\
+      150   & 262 & 70471 \\
+      200   & 259 & 70251 \\
+      250   & 248 & 69569 \\
+      300   & 244 & 68955 \\
+      350   & 240 & 68347 \\
+      400   & 235 & 67562 \\
+      450   & 227 & 66551 \\
+      500   & 216 & 63846 \\
+      550   & 199 & 56465 \\
+      580   & 199 & 59698 \\
+      600   & 149 & 59018 \\
+      640   & 192 & 56469 \\
+      660   & 192 & 57369 \\
+      700   & 184 & 56540 \\
+      750   & 175 & 52610 \\
+      800   & 172 & 47025 \\
+      820   & 171 & 45539 \\
+      840   & 169 & 21202 \\
+      860   & 169 & 16485 \\
+      880   & 169 & 13842 \\
+      900   & 169 & 18275 \\
+      950   & 169 & 2564  \\
+      1000  & 164 & 288 \\
+      \bottomrule
+  \end{tabular}
+\end{table}
+
+\begin{table}
+  \centering
+  \caption{Counts und Kanal maximaler Zählrate zur Bestimmung der druckabhängigen Energie (Zweite Messreihe).}
+  \label{tab:Energie2}
+  \begin{tabular}{c c c}
+    \toprule
+      Druck/mBar & Kanal & Counts \\
+      \midrule
+      0   & 263 & 47993 \\
+      50  & 263 & 48432 \\
+      100 & 248 & 47334 \\
+      150 & 239 & 47048 \\
+      200 & 239 & 48851 \\
+      250 & 224 & 45413 \\
+      300 & 220 & 44444  \\
+      350 & 211 & 41207 \\
+      400 & 200 & 40080 \\
+      450 & 192 & 37177 \\
+      500 & 184 & 33282 \\
+      550 & 172 & 28074 \\
+      600 & 171 & 20380 \\
+      650 & 169 & 11543 \\
+      660 & 171 & 10012 \\
+      680 & 169 & 7151 \\
+      700 & 169 & 7151 \\
+      720 & 169 & 2494 \\
+      740 & 169 & 557 \\
+      760 & 169 & 446 \\
+      \bottomrule
+    \end{tabular}
+\end{table}
 
 Für die Plateau-Phase erhält man eine gemittelte Zählrate von $f_1 = \SI{580\pm5}{\becquerel}$, bzw. $f_2 = \SI{377\pm9}{\becquerel}$. Wie Abb. \ref{fig:Rate} zu entnehmen, wurde für den Berreich des stärksten Abfalls ein linearer Fit gemäß \eqref{eqn:gerade} durchgeführt. Die Parameter hierfür sind:
 \begin{align*}
@@ -73,7 +143,7 @@ Die Poisson-Verteilung ist gegeben durch
 \begin{equation*}
   P(k) = \frac{\lambda^k}{k!}e^{-\lambda}.
 \end{equation*}
-Rechnet man dies in den tatsächlichen Erwartungswert $\lambda_{real} = 5 \cdot(\lambda +100)$, so ergibt sich $lambda_{real} = \SI{534.0 \pm 1.5}{\becquerel}$.
+Rechnet man dies in den tatsächlichen Erwartungswert $\lambda_{real} = 5 \cdot(\lambda +100)$, so ergibt sich $\lambda_{real} = \SI{534.0 \pm 1.5}{\becquerel}$.
 \begin{figure}
   \centering
   \includegraphics[height=7cm]{./plots/Poisson.pdf}

@@ -14,6 +14,19 @@ from uncertainties.unumpy import (nominal_values as noms, std_devs as stds)
 
 
 Imps=np.genfromtxt('../Messwerte/Statistik.txt', unpack=True)
+
+n, bins, patches = plt.hist(Imps, bins = 5898)
+r = range(len(n))
+bims= np.array(r)    #halo i bims, 1 echter balken
+m = 0
+M = 0
+for i in r:
+    if n[i] > m:
+        m=n[i]
+        M = i
+        print(m, M)
+plt.show()
+plt.clf()
 Imps=Imps/10
 n, bins, patches = plt.hist(Imps, normed = 1, bins = 10, color='yellow', alpha=0.5)
 
