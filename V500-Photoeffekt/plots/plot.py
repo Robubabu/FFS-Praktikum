@@ -24,30 +24,32 @@ u =-u
 #Tabelle
 np.savetxt('fine_tab.txt',np.column_stack([u,i]), delimiter=' & ',newline= r'\\'+'\n' )
 
-plt.plot(u, i, 'kx', label='Oranges Licht')
+plt.plot(u, i, 'kx', label='578nm')
 
 plt.xlabel(r'$U / V$')
 plt.ylabel(r'$\sqrt{I / nA}$')
 plt.legend(loc='best')
-plt.savefig('Orange.pdf')
+plt.savefig('fine.pdf')
 plt.clf()
 
 u, i= np.genfromtxt('./orange.txt', unpack = True)
-u =-u
-#Tabelle
-np.savetxt('orange_tab.txt',np.column_stack([u,i]), delimiter=' & ',newline= r'\\'+'\n' )
+u = -u
 
-params, cov = curve_fit(f,u[19:29], np.sqrt(i[19:29]))
+params, cov = curve_fit(f,u[22:32], np.sqrt(i[22:32]))
 error = np.sqrt(np.diag(cov))
 
-x = np.linspace(-0.4,0)
-print('Orange: ', params, error)
-plt.subplot(2,2, 1)
-plt.plot(u, np.sqrt(i), 'kx', label='Oranges Licht')
+x = np.linspace(-0.5,0)
+print('orange: ', params, error)
+
+plt.clf()
+plt.plot(u, np.sqrt(i), 'k.', label='578nm')
 plt.plot(x, f(x,*params), 'k--', label = 'fit')
 plt.xlabel(r'$U / V$')
 plt.ylabel(r'$\sqrt{I / nA}$')
 plt.legend(loc='best')
+plt.savefig('orange.pdf')
+
+
 
 u, i= np.genfromtxt('./gruen.txt', unpack = True)
 u = -u
@@ -60,12 +62,14 @@ error = np.sqrt(np.diag(cov))
 x = np.linspace(-0.5,0)
 print('Gruen: ', params, error)
 
-plt.subplot(2, 2, 2)
-plt.plot(u, np.sqrt(i), 'kx', label='Grünes Licht')
+plt.clf()
+plt.plot(u, np.sqrt(i), 'kx', label='546nm')
 plt.plot(x, f(x,*params), 'k--', label = 'fit')
 plt.xlabel(r'$U / V$')
 plt.ylabel(r'$\sqrt{I / nA}$')
 plt.legend(loc='best')
+plt.savefig('gruen.pdf')
+
 
 u, i= np.genfromtxt('./blau1.txt', unpack = True)
 u = -u
@@ -78,12 +82,13 @@ error = np.sqrt(np.diag(cov))
 x = np.linspace(-1.0,0)
 print('Blau1: ', params, error)
 
-plt.subplot(2,2, 3)
-plt.plot(u, np.sqrt(i), 'kx', label='Blaues Licht')
+plt.clf()
+plt.plot(u, np.sqrt(i), 'kx', label='492nm')
 plt.plot(x, f(x,*params), 'k--', label = 'fit')
 plt.xlabel(r'$U / V$')
 plt.ylabel(r'$\sqrt{I / nA}$')
 plt.legend(loc='best')
+plt.savefig('blau.pdf')
 
 u, i= np.genfromtxt('./blau2.txt', unpack = True)
 u = -u
@@ -96,8 +101,8 @@ error = np.sqrt(np.diag(cov))
 x = np.linspace(-1.2,0)
 print('Blau2: ', params, error)
 
-plt.subplot(2,2, 4)
-plt.plot(u, np.sqrt(i), 'kx', label='Blaueres Licht')
+plt.clf()
+plt.plot(u, np.sqrt(i), 'kx', label='436nm')
 plt.plot(x, f(x,*params), 'k--', label = 'fit')
 plt.xlabel(r'$U / V$')
 plt.ylabel(r'$\sqrt{I / nA}$')
@@ -105,7 +110,7 @@ plt.legend(loc='best')
 
 
 
-plt.savefig('Strom.pdf')
+plt.savefig('blau2.pdf')
 plt.clf()
 
 c = 3*10**8

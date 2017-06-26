@@ -4,7 +4,7 @@
 Zur Auswertung und zum plotten aller Daten wird Python \cite{python} inklusive der Packages Matplotlib \cite{matplotlib}, Uncertainties \cite{uncertainties}, Scipy \cite{scipy} und Numpy \cite{numpy} verwendet.
 
 \paragraph{Quantitative Auswertung}
-Wird die Wurzel des Photostroms gegen die angelegte Bremsspannung aufgetragen (siehe Abb. \ref{fig:plot}), so sollte im Bereich $U < 0$ ein linearer Verlauf gemäß
+Wird die Wurzel des Photostroms gegen die angelegte Bremsspannung aufgetragen (siehe Abbildungen \ref{fig:blau}, \ref{fig:blau2}, \ref{fig:orange}, \ref{fig:gruen}), so sollte im Bereich $U < 0$ ein linearer Verlauf gemäß
 \begin{equation}
   f(x) = ax+b
   \label{eqn:lin}
@@ -26,9 +26,27 @@ und
 
 \begin{figure}
   \centering
-  \includegraphics[width = \textwidth]{./plots/Plot.pdf}
-  \caption{Gemessene Spannungen und Ströme nach Farbe des Lichtes sortiert und gefittet.}
-  \label{fig:plot}
+  \includegraphics[height = 8cm]{./plots/blau.pdf}
+  \caption{Gemessene Spannungen und Ströme der 492nm Spektrallinie.}
+  \label{fig:blau}
+\end{figure}
+\begin{figure}
+  \centering
+  \includegraphics[height = 8cm]{./plots/Orange.pdf}
+  \caption{Gemessene Spannungen und Ströme der 578nm Spektrallinie.}
+  \label{fig:orange}
+\end{figure}
+\begin{figure}
+  \centering
+  \includegraphics[height = 8cm]{./plots/blau2.pdf}
+  \caption{Gemessene Spannungen und Ströme der 436nm Spektrallinie.}
+  \label{fig:blau2}
+\end{figure}
+\begin{figure}
+  \centering
+  \includegraphics[height = 8cm]{./plots/gruen.pdf}
+  \caption{Gemessene Spannungen und Ströme der 546nm Spektrallinie.}
+  \label{fig:gruen}
 \end{figure}
 
 Berechnung der Nullstellen dieser Ausgleichsgeraden liefert
@@ -41,7 +59,7 @@ Berechnung der Nullstellen dieser Ausgleichsgeraden liefert
 
 \begin{figure}
   \centering
-  \includegraphics[height = 6cm]{./plots/h.pdf}
+  \includegraphics[height = 8cm]{./plots/h.pdf}
   \caption{Grenzspannungen $U_g$ aufgetragen gegen die Frequenz}
   \label{fig:h}
 \end{figure}
@@ -52,28 +70,28 @@ Diese Werte werden in Abb. \ref{fig:h} aufgetragen und erneut gefittet, um das P
   b_{h} &= \SI{-1.9 \pm 0.5}{\volt}
 \end{align*}
 ergeben.
-Nach Formel \eqref{eqn:Z} entspricht somit $h = a_{h} \cdot e = \SI{4.6 \pm 0.9}{\femto \electronvolt \second} $.
+Nach Formel \eqref{eqn:Z} entspricht somit $h/e = a_{h} = \SI{4.6 \pm 0.9}{\femto \volt \second} $.
 
 Man erhält zusätzlich die Austrittsarbeit $A_K$ mit
 \begin{equation}
-  A_K = b_{h}\cdot e = \SI{-1.9 \pm 0.5}{\electronvolt}
+  A_K = b_{h}\cdot e = \SI{1.9 \pm 0.5}{\electronvolt}
 \end{equation}
 
 
 \paragraph{Qualitativer Verlauf des Photostroms}
-Der Photostrom der orangenen Kennlinie des Quecksilber ist detaillierter gemessen ind Abb. \ref{fig:orange} dargestellt. Im Bereich der bremsenden Spannung ist der lineare Charakter relativ gut zu erkennen, allerdings lässt sich kein Sättigungsstrom beobachten, welcher sich normalerweise dadurch ergibt, dass alle ausgelösten Elektronen die Anode erreichen.
+Der Photostrom der orangenen Kennlinie des Quecksilber ist detaillierter gemessen ind Abb. \ref{fig:fine} dargestellt. Im Bereich der bremsenden Spannung ist der lineare Charakter relativ gut zu erkennen, allerdings lässt sich kein Sättigungsstrom beobachten, welcher sich normalerweise dadurch ergibt, dass alle ausgelösten Elektronen die Anode erreichen.
 \begin{figure}
   \centering
-  \includegraphics[height = 6cm]{plots/Orange.pdf}
-  \caption{Gemessener Strom aufgetragen gegen die Bremsspannung bei orangenem Licht.}
-  \label{fig:orange}
+  \includegraphics[height = 8cm]{plots/fine.pdf}
+  \caption{Gemessener Strom aufgetragen gegen die Bremsspannung bei betrachtung der 578 nm Spektrallinie.}
+  \label{fig:fine}
 \end{figure}
 
 \paragraph{Tabellen}
 
 \begin{table}
   \centering
-  \caption{Messwerte der Orangenen Linie}
+  \caption{Messwerte der 578 nm Linie}
   \label{tab:orange}
   \sisetup{round-mode=places}
   \begin{tabular}{S[round-precision = 1]|S[round-precision = 1]}
@@ -114,7 +132,7 @@ Der Photostrom der orangenen Kennlinie des Quecksilber ist detaillierter gemesse
 
   \begin{table}
     \centering
-    \caption{Messwerte der grünen Linie}
+    \caption{Messwerte der 546 nm Linie}
     \label{tab:gruen}
     \sisetup{round-mode=places}
     \begin{tabular}{S[round-precision = 1]|S[round-precision = 1]}
@@ -158,12 +176,13 @@ Der Photostrom der orangenen Kennlinie des Quecksilber ist detaillierter gemesse
 
 \begin{table}
   \centering
-  \caption{Messwerte der ersten blauen Linie}
+  \caption{Messwerte der 492nm Linie}
   \label{tab:blau1}
   \sisetup{round-mode=places}
   \begin{tabular}{S[round-precision = 1]|S[round-precision = 1]}
     \toprule
     $U$/V & $I$/nA \\
+    \midrule
     2.000000000000000000e+00 & 2.399999999999999911e+00\\
     1.899999999999999911e+00 & 3.000000000000000000e+00\\
     1.800000000000000044e+00 & 2.100000000000000089e+00\\
@@ -195,19 +214,19 @@ Der Photostrom der orangenen Kennlinie des Quecksilber ist detaillierter gemesse
     -8.000000000000000444e-01 & 5.999999999999999778e-02\\
     -9.000000000000000222e-01 & 1.000000000000000021e-02\\
     -9.200000000000000400e-01 & 0.000000000000000000e+00\\
-    \midrule
     \bottomrule
   \end{tabular}
 \end{table}
 
 \begin{table}
   \centering
-  \caption{Messwerte der zweiten blauen Linie}
+  \caption{Messwerte der 436nm Linie}
   \label{tab:blau2}
   \sisetup{round-mode=places}
   \begin{tabular}{S[round-precision = 1]|S[round-precision = 1]}
     \toprule
     $U$/V & $I$/nA \\
+    \midrule
     2.000000000000000000e+00 & 1.050000000000000044e+00\\
     1.899999999999999911e+00 & 1.050000000000000044e+00\\
     1.800000000000000044e+00 & 1.100000000000000089e+00\\
