@@ -85,28 +85,28 @@ for g,b in list(zip(g1,b1)): #Möchte zwei arrays haben 1: [b1[0] , 0 , b1[1],0,
 X3 = np.array([])
 Y3 = np.array([])
 for g,b in list(zip(g3,b3)): #Nochmal für die Wasserlinse
-    X3 = np.append(X,0)
-    Y3 = np.append(Y,b)
-    X3 = np.append(X,g)
-    Y3 = np.append(Y,0)
+    X3 = np.append(X3,0)
+    Y3 = np.append(Y3,b)
+    X3 = np.append(X3,g)
+    Y3 = np.append(Y3,0)
 # print(X)
 # print(Y)
 
 
 # Plots
-# N = np.arange(0,19,1)
-# #Plot für die100mm Linse
-# for n in N:
-#     plt.plot(X[n:n+3], Y[n:n+3] ,'g--')
-# plt.xlabel(r'$g \quad Gegenstandsweiten / [m]$')
-# plt.ylabel(r'$ b \quad Bildweiten / [m]$')
-# # plt.show()
-# plt.savefig('100mmLinsegbplot.pdf')
-# plt.clf()
-# #Plot für die Wasserlinse
-# for n in N:
-#     plt.plot(X3[n:n+3], Y3[n:n+3] ,'b--')
-# plt.xlabel(r'$g \quad Gegenstandsweiten / [m]$')
-# plt.ylabel(r'$ b \quad Bildweiten/ [m]$')
-# # plt.show()
-# plt.savefig('Wasserlinsegbplot.pdf')
+N = np.arange(0,19,1)
+#Plot für die100mm Linse
+for n in N:
+    plt.plot(X[n:n+3], Y[n:n+3] ,'g--')
+plt.xlabel(r'$g \quad Gegenstandsweiten / [m]$')
+plt.ylabel(r'$ b \quad Bildweiten / [m]$')
+# plt.show()
+plt.savefig('100mmLinsegbplot.pdf')
+plt.clf()
+#Plot für die Wasserlinse
+for n in N:
+    plt.plot(X3[n:n+3], Y3[n:n+3] ,'b--')
+plt.xlabel(r'$g \quad Gegenstandsweiten / [m]$')
+plt.ylabel(r'$ b \quad Bildweiten/ [m]$')
+# plt.show()
+plt.savefig('Wasserlinsegbplot.pdf')
