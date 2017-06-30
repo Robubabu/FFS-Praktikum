@@ -50,14 +50,16 @@ print('Brennweite von b` :',bf)
 print('h von b´ :', bh)
 
 #Relative Fehler
-print('Abweichung von der Brennweiten :', (gf - bf) )
-print('Abweichung der y-Abschnt. :', (gh-bh))
-
-
+print('Mittelwert von f_g und f_b :', np.mean([gf,bf]) )
+print('Mittelwert von hg und hb:', np.mean([gh,bh]))
+fs = (0.01/0.06)
+print(fs)
+print('Abweichung vom Mittelwert von f_g und f_b zu f_sys:', relf(fs,np.mean([gf,bf])))
+print('Abweichung vom Mittelwelt von gh und bh und hsys:', relf(0.03,np.mean([gh,bh])))
 
 
 #Tabelle
-# np.savetxt('abbetab.txt',np.column_stack([xG,mLS,xS,B,gs,bs,xg,xb]), delimiter=' & ',newline= r'\\'+'\n' )
+# np.savetxt('abbetab.txt',np.column_stack([gs*1000,bs*1000,xg,xb]), delimiter=' & ',newline= r'\\'+'\n' )
 
 #plt.subplot(1, 2, 1)
 # plt.plot(gs, xg,'rx', label='Messwerte g´ gegen (1+(1/V))')

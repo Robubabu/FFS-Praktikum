@@ -10,29 +10,50 @@ sowie die Linsengleichung
   \frac{1}{f} = \frac{1}{b} + \frac{1}{g}.
   \label{eqn:LG}
 \end{equation}
-Diese Gleichungen Verbinden die Brennweite $f$, die Gegenstandsgröße $G$, die Gegenstandsweite $g$, die Bildgröße $B$, die Bildweite $b$ sowie den Abbildungsmaßstab $V$. Die Brennweite ist hierbei der Abstand zwischen Linse und dem Punkt, in dem die Linse alle Parallel einfallenden Strahlen bündelt (\textit{Brennpunkt}).
-Optiker verwenden statt der Brennweite einer Linse als charakteristisches Maß oft die \textit{Brechkraft} $D$ (Einheit: Dioptrie $=1/\si{\meter}$)
-Sie stellt das Inverse der Brennweite f dar ($D = 1/f$) und erlaubt einfachere Addition von Linsen durch
+Diese Gleichungen verbinden die Brennweite $f$, die Gegenstandsgröße $G$, die
+Gegenstandsweite $g$, die Bildgröße $B$, die Bildweite $b$ sowie den
+Abbildungsmaßstab $V$. Die Brennweite ist hierbei der Abstand zwischen Linse
+und dem Punkt, in dem die Linse alle parallel einfallenden Strahlen bündelt
+(\textit{Brennpunkt}).
+Optiker verwenden statt der Brennweite einer Linse als charakteristisches
+Maß oft die \textit{Brechkraft} $D$ (Einheit: Dioptrie $=1/\si{\meter}$)
+Sie stellt das Inverse der Brennweite f dar ($D = 1/f$) und erlaubt einfachere
+Addition von Linsen durch
 \begin{equation}
    D =  \sum_i ^N D_i.
   \label{eqn:D}
 \end{equation}
-
-Es lässt sich also die Brennweite einer Linse bestimmen, indem ein scharfes Bild erzeugt wird und Gegenstands- sowie Bildweite gemessen werden.
-Eine Folgerung der beiden Gleichungen ist, dass es zwei Punkte gibt, an denen eine Linse zwischen Gegenstand und Bild gebracht werden kann, sodass das Bild scharf erkennbar ist, da nur das Verhältnis von $b$ und $g$ von Bedeutung ist.
-Hierraus ergibt sich die \textit{Besselmethode} zur Brennweitenbestimmung. Es wird ein konstanter Abstand $e$ zwischen Bild und Gegenstand eingestellt und die beiden Linsenpositionen bestimmt, an denen das Bild scharf ist. Hierraus berechnet sich $d = g_1 -b_1 = b_2 - g_2$ und über
+Es lässt sich also die Brennweite einer Linse bestimmen, indem ein scharfes
+Bild erzeugt wird und Gegenstands- sowie Bildweite gemessen werden.
+Eine Folgerung der Gleichungen \eqref{eqn:AG} und \eqref{eqn:LG} ist, dass es
+zwei Punkte gibt, an denen
+eine Linse zwischen Gegenstand und Bild gebracht werden kann, sodass das Bild
+scharf erkennbar ist, da nur das Verhältnis von $b$ und $g$ von Bedeutung ist.
+Hierraus ergibt sich die \textit{Besselmethode} zur Brennweitenbestimmung. Es
+wird ein konstanter Abstand $e$ zwischen Bild und Gegenstand eingestellt und
+die beiden Linsenpositionen bestimmt, an denen das Bild scharf ist. Hierraus
+berechnet sich $d = g_1 -b_1 = b_2 - g_2$ und über
 \begin{equation}
   f = \frac{e^2 - d^2}{4e}
   \label{eqn:bessel}
 \end{equation}
 die Brennweite.
-
-Alle bisher verwendeten Methoden gehen von dünnen Linsen aus, d.h. dass alle Abstände von der Linsenebene gemessen werden können. Insbesondere bei Linsensystemen ist dies jedoch nicht möglich, da besagte Ebene nicht unbedingt bekannt ist. Zur Bestimmung der Brennweite solcher Systeme bietet sich daher die Methode von Abbe an, welche die Größen $g'$ und $b'$, welche von einem beliebigen Fixpunkt am Linsensystem aus gemessen werden, verwendet. Die zugehörige Gleichung lautet:
+Alle bisher verwendeten Methoden gehen von dünnen Linsen aus, d.h. dass alle
+Abstände von der Linsenebene gemessen werden können. Insbesondere bei
+Linsensystemen ist dies jedoch nicht möglich, da \textit{Hauptebene} nicht
+bekannt ist. \textit{Hauptebenen} sind die Teile einem Linsensystem in dem die Berechnung
+vereinfacht durchgeführt werden kann.
+Zur Bestimmung der Brennweite solcher Systeme
+bietet sich daher die Methode von Abbe an, welche die Größen $g'$ und $b'$,
+welche von einem beliebigen Fixpunkt am Linsensystem aus gemessen werden,
+verwendet. Die zugehörige Gleichung lautet:
 \begin{equation}
   g' = g + h = f \cdot \left( 1 + \frac{1}{V}\right) + h
   \qquad
   h' = b + h' = f \cdot \left( 1+ V \;\right) + h'.
   \label{eqn:abbe}
 \end{equation}
-
-Da Linsen das Licht brechen und der Brechungsindex wellenlängenabhängig ist, entstehen um das Bild farbige Ringe, wie bei einem Regenbogen. Dies wird \textit{sphärische Abberation} genannt.
+Da Linsen das Licht brechen und der Brechungsindex wellenlängenabhängig ist,
+entstehen um das Bild farbige Ringe, wie bei einem Regenbogen. Zudem können manche
+achsenparalle Strahlen sich nicht genau im Brennpunkt schneiden, dies wird als
+\textit{sphärische Abberation} bezeichnet.

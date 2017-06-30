@@ -26,20 +26,27 @@ der mittleren Brennweite zur Herstellerangabe von \SI{0.1}{\meter} bestimmt.
 Für normales Licht wurde eine Brennweite von \SI{0.040(6)}{\meter} bestimmt,
 der relative Fehler beträgt also \SI{60(6)}{\percent}.
 Für rotes und blaues Licht wurde eine Brennweite von \SI{0.034(6)}{\meter}
-bestimmt, der relative Fehler beträgt \SI{66(6)}{\percent}. Die Abweichung
-können damit erklärt werden, dass es sehr schwer ist zusagen wann das
-Bild wirklich scharf ist aufgrund der sphärischen Abberation.
+bestimmt, der relative Fehler beträgt \SI{66(6)}{\percent}. Da die Abweichungen
+so groß sind können die Abweichungen nur dadurch erklärt werden, dass eine
+Linse mit einer anderen Brennweite verwendet wurde.
 
 \subsection{Zur Methode nach Abbe.}
-Zur quantitativen Diskussion wurde die Abweichung
+Um die Werte mit der Theorie vergleichen zu können, wird der Mittelwert
+von $f_{b'}$ und $f_{g'}$ bestimmt und mit dem Ergebnis der Gleichung
 \begin{equation*}
-  \lvert \bar{f_{g'}} - \bar{f_{b'}} \rvert
-  \qquad \text{und} \qquad
-  \lvert h - h' \rvert
+  \frac{1}{f_{System}} = \frac{1}{f_{1}} + \frac{1}{f_{2}} + \frac{d}{f_{1} f_{2}}
 \end{equation*}
-berechnet. Die Abweichung der Brennweiten beträgt \SI{0.09(2)}{\meter}
-und die der y-Achsenabschnitte beträgt \SI{0.29(5)}{\meter}. Da die Brennweiten
-sich addieren sollte eigentlich keine Brennweite gemessen werden.
-Weshalb das Ergebnis daruf zurück zu führen ist, dass in diesem Fall nicht
-mehr eindeutig bestimmt worden konnte ob es sich um ein scharfes Bild
-handelte.
+verglichen. Dabei bezeichnen $f_1$ und $f_2$ die vom Hersteller gegebenen
+Brennweiten und $d$ den Abstand der Mittelpunkte der Linsen. Eigentlich
+sollten sich die Brechkräfte addieren (s. Gleichung \eqref{eqn:D}) aber
+da dieser Zusammenhang nur für dünne Linsen gilt muss noch ein Korrekturterm
+angefügt werden.
+Für $f_1 = \SI{100}{\milli\meter}$, $f_2 = \SI{-100}{\milli\meter}$ und
+$d = \SI{6}{\centi\meter}$ ergibt sich für die Brennweite des
+Systems $f_{System} =\SI{167}{\milli\meter}$. Nun wird der relative
+Fehler von dem Mittelwert der Brennweiten $f_{b'}$ und $f_{g'}$ zu der
+neue berechneten Brennweite des System bestimmt, der relative Fehler beträgt
+\SI{23(6)}{\percent}. Der Mittelwert der Brennweiten $f_{b'}$ und $f_{g'}$
+beträgt \SI{129(10)}{\milli\meter}. Die Abweichung kann durch die sphärische
+Abberation und das erschwärte Bestimmen eines scharfen Bildes durch Lichtbrechung
+erklärt werden.

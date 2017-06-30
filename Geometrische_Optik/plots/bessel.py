@@ -37,7 +37,6 @@ db*= 10e-3
 er*= 10e-3
 dr*= 10e-3
 fl*= 10e-4
-print(10e-4)
 # Brennweiten Brechnen
 fn = f(dn,en)
 fb = f(db,eb)
@@ -59,6 +58,6 @@ print('Relativer Fehler vom Mittelwert von f für blaues Licht:',relf(fl,mfb))
 print('Relativer Fehler vom Mittelwert von f für rotes Licht:', relf(fl,mfr))
 
 #Tabelle
-# np.savetxt('besselnormaltab.txt',np.column_stack([xG1,aL1,bL1,xS1,en,dn,fn]), delimiter=' & ',newline= r'\\'+'\n' )
-# np.savetxt('besselblautab.txt',np.column_stack([xG2,aL2,bL2,xS2,eb,db,fb]), delimiter=' & ',newline= r'\\'+'\n' )
-# np.savetxt('besselrottab.txt',np.column_stack([xG3,aL3,bL3,xS3,er,dr,fr]), delimiter=' & ',newline= r'\\'+'\n' )
+np.savetxt('besselnormaltab.txt',np.column_stack([en*1000,dn*1000,fn*1000]), delimiter=' & ',newline= r'\\'+'\n' )
+np.savetxt('besselblautab.txt',np.column_stack([eb*1000,db*1000,fb*1000]), delimiter=' & ',newline= r'\\'+'\n' )
+np.savetxt('besselrottab.txt',np.column_stack([er*1000,dr*1000,fr*1000]), delimiter=' & ',newline= r'\\'+'\n' )

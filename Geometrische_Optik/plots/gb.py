@@ -69,9 +69,9 @@ print('Mittelwert des Abbildungsmaßstabes über g und b:',mV2)
 print('Relativer Fehler des mittleren Abbildungsmaßstabes:', relf(mV,mV2))
 print('Relativer Fehler der mittleren Brennweite f1:', relf(f,mf1))
 # #Tabelle
-# np.savetxt('Lgbtab.txt',np.column_stack([xG1,xL1,xS1,g1,b1,f1]), delimiter=' & ',newline= r'\\'+'\n' )
-# np.savetxt('Wgbtab.txt',np.column_stack([xG3,xL3,xS3,g3,b3,f3]), delimiter=' & ',newline= r'\\'+'\n' )
-# np.savetxt('BLgbtab.txt',np.column_stack([xG2,xL2,xS2,g2,b2,B]), delimiter=' & ',newline= r'\\'+'\n' )
+np.savetxt('Lgbtab.txt',np.column_stack([g1*1000,b1*1000,f1*1000]), delimiter=' & ',newline= r'\\'+'\n' )
+np.savetxt('Wgbtab.txt',np.column_stack([g3*1000,b3*1000,f3*1000]), delimiter=' & ',newline= r'\\'+'\n' )
+np.savetxt('BLgbtab.txt',np.column_stack([g2*1000,b2*1000,B*1000]), delimiter=' & ',newline= r'\\'+'\n' )
 
 #Plotarrays
 #Jedes Array sollte wie folgt aufgebaut sein: [(g1,0) ; (0,b1)]
@@ -94,19 +94,19 @@ for g,b in list(zip(g3,b3)): #Nochmal für die Wasserlinse
 
 
 # Plots
-N = np.arange(0,19,1)
-#Plot für die100mm Linse
-for n in N:
-    plt.plot(X[n:n+3], Y[n:n+3] ,'g--')
-plt.xlabel(r'$g \quad Gegenstandsweiten / [m]$')
-plt.ylabel(r'$ b \quad Bildweiten / [m]$')
-# plt.show()
-plt.savefig('100mmLinsegbplot.pdf')
-plt.clf()
-#Plot für die Wasserlinse
-for n in N:
-    plt.plot(X3[n:n+3], Y3[n:n+3] ,'b--')
-plt.xlabel(r'$g \quad Gegenstandsweiten / [m]$')
-plt.ylabel(r'$ b \quad Bildweiten/ [m]$')
-# plt.show()
-plt.savefig('Wasserlinsegbplot.pdf')
+# N = np.arange(0,19,1)
+# #Plot für die100mm Linse
+# for n in N:
+#     plt.plot(X[n:n+3], Y[n:n+3] ,'g--')
+# plt.xlabel(r'$g \quad Gegenstandsweiten / [m]$')
+# plt.ylabel(r'$ b \quad Bildweiten / [m]$')
+# # plt.show()
+# plt.savefig('100mmLinsegbplot.pdf')
+# plt.clf()
+# #Plot für die Wasserlinse
+# for n in N:
+#     plt.plot(X3[n:n+3], Y3[n:n+3] ,'b--')
+# plt.xlabel(r'$g \quad Gegenstandsweiten / [m]$')
+# plt.ylabel(r'$ b \quad Bildweiten/ [m]$')
+# # plt.show()
+# plt.savefig('Wasserlinsegbplot.pdf')
