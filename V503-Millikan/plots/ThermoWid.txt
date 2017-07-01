@@ -1,0 +1,7 @@
+#temperatur in C° | Thermo Widerstand in MOhm
+28	1.857
+29	1.815
+30	1.774
+31	1.736
+33	1.666
+34	1.634
