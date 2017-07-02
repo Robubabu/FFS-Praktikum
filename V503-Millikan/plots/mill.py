@@ -20,6 +20,8 @@ def rkorr(n,v):
     return unp.sqrt(((B/(2*p))**2)+((9*n*v)/(2*const.g*rho)))-(B/(2*p))
 def q(r,E):
     return ((4*np.pi/3)*rho*const.g*(r**3))/E
+def relf(l,m):
+    return (np.absolute(l-m)/l)*100
 
 R, t, U = np.genfromtxt('millikan.txt', unpack = True)
 # R thermo wiederstand in Mega Ohm
@@ -67,6 +69,14 @@ q2 = np.mean(q2)
 print('mittelwert von q1:',q1)
 print('Mittelwert von q2:',q2)
 print('Berechnete Elementarladung:',(q1 + (1/2)*q2)/2)
+q = (q1 + (1/2)*q2)/2
+F = const.value('Faraday constant')
+N = F/q
+print('Berechnete Avogardro Konstante:',N)
+print('Elementarladung:',const.e)
+print('Avogadro:',const.Avogadro)
+print('Relativer Fehler der Elementarladung:', relf(const.e,q))
+print('Relativer Fehler der Avogardro Konstante:', relf(const.Avogadro , N))
 #Tabelle
 # np.savetxt('millitab.txt',np.column_stack([(noms(v)),noms(T),noms(n)*10**5,noms(rkorr(n,v)),stds(rkorr(n,v)),noms(E)]), delimiter=' & ',newline= r'\\'+'\n' )
 # #plt.subplot(1, 2, 1)

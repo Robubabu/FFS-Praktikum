@@ -1,7 +1,21 @@
 \section{Auswertung}
 \label{sec:Auswertung}
-
-
+\paragraph{Bestimmung der Elementarladung}
+Zur Bestimmung der Elementarladung wird zu erst die Gleichgewichtsgeschwindigkeit
+$v_0$ berechnet, die Temperaturen im Kondensator und die daraus resultierende
+Viskosität der Luft bestimmt. Danach wird die elektrische Feldstärke $E$ über
+den Zusammenhang
+\begin{equation*}
+  E = \frac{U}{d}
+\end{equation*}
+bestimmt. Dabei bezeichnet $U$ die Spannung, die angelegt werden muss, dass der
+beobachtete Öltropfen schwebt, $d$ bezeichnet den Abstand der Kondensatorplatten,
+bei diesem Versuchsaufbau betrug der Abstand $d = \SI{7.6250(51)}{\milli\meter}$.
+Aus den zuvor bestimmten Größen kann nun mit der Gleichung \eqref{eqn:rkorr}
+der Radius des Öltropfen bestimmt werden, die Erdbeschleunigung
+$g$ wird dabei aus \textit{Scipy-Physical Constants} \cite{scipy} entnommen, $\rho_{Oel}$ ist gegeben durch
+\SI{886}{\kilo\gram\per\cubic\meter}. Alle Werte dazu sind in der Tabelle
+\ref{tab:mill} dargestellt.
 \begin{table}
   \centering
   \sisetup{round-mode = places , round-precision = 2}
@@ -51,7 +65,23 @@
   Feldstärke im Kondensator.}
   \label{tab:mill}
 \end{table}
-
+\FloatBarrier
+Da nun alle Größen bestimmt wurden die in der Gleichung \eqref{eqn:q} benötigt
+werden, kann die Ladung die auf den Öltropfen bestimmt werden, die Erdbeschleunigung
+$g$ wird dabei aus \textit{Scipy-Physical Constants} \cite{scipy} entnommen, $\rho_{Oel}$ ist gegeben durch
+\SI{886}{\kilo\gram\per\cubic\meter}. Die Werte
+der Ladung und des Radius der Öltropfen werden nach der größe sortiert und dann
+wird die Ladung gegen den Radius aufgetragen. Das ist in Abbildung \ref{fig:eQ}
+dargestellt. In besagter Abbildung können dann Niveaus beobachtet werden, die
+Vielfache der Elementarladung darstellen. Die Ladungsmengen auf diesen Niveaus
+werden dann gemittelt. In der Abbildung \ref{fig:eQ} sind zwei Niveaus zu
+beobachten. Daraus lässt sich dann wie folgt die Elementarladung bestimmen:
+\begin{equation*}
+  q = \frac{\bar{q}_{Niveau 1} + \frac{1}{2}\cdot \bar{q}_{Niveau2}}{2} \; .
+\end{equation*}
+Mit den Mittelwerten $q_{Niveau1} = \SI{1.822(7)e-19}{\coulomb}$ und
+$ q_{Niveau2} = \SI{2.053(8)e-19}{\coulomb}$, ergibt sich für die
+Elemntarladung $q = \SI{1.424(5)e-19}{\coulomb}$.
 \begin{figure}
   \centering
   \includegraphics[height=7cm]{plots/milliplot.pdf}
@@ -59,6 +89,17 @@
   auf den Öltropfen, gegen den Radius, des Öltropfen, aufgezeichnet.}
   \label{fig:eQ}
 \end{figure}
+\FloatBarrier
+\paragraph{Bestimmung der Avogadro-Konstante}
+Die Avogadro-Konstante ergibt sich mit der \textit{Faraday-Konstante} \cite{scipy}
+durch den Zusammenhang
+\begin{equation*}
+  N_{A} = \frac{\symup{F}}{e_0} = \frac{\symup{F}}{q} \; .
+\end{equation*}
+Für die zuvor bestimmte Elementarladung ergibt sich die Avogadro-Konstante
+$N_A = \SI{6.78(2)e23}{\per\mol}$.
+
+
 
 
 

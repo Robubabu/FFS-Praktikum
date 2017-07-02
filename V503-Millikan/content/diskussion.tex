@@ -1,2 +1,18 @@
 \section{Diskussion}
 \label{sec:Diskussion}
+\subsection{Relativer Fehler}
+Alle relativen Fehler wurden nach der Formel
+\begin{equation*}
+  \tilde{x} = \frac{ \lvert x_{lit} - x_{mess} \rvert}{\lvert x_{lit} \rvert}
+  \cdot 100 \%
+\end{equation*}
+berechnet, dabei bezeichnet $x_{lit}$ den Literaturwert der Messgröße $x_{mess}$.
+\subsection{Zur Bestimmung der Elementarladung und Avogadro-Konstante}
+Um ein quantitativen Vergleich durchzuführen zu können wird der relative
+Fehler der bestimmten Größen zu ihren Literaturwerten \cite{scipy} bestimmt.
+Für die bestimmte Elementarladung $q = \SI{1.424(5)e-19}{\coulomb}$ ergibt sich
+mit Literaturwert $e_0 = \SI{1.6021766208e-19}{\coulomb}$, der relative Fehler
+von \SI{11.1(3)}{\percent}. Für den bestimmten Wert für die Avogadro-Konstante
+$N_A = \SI{6.78(2)e23}{\per\mol}$ und den Literaturwert \cite{scipy}
+$ \symup{N}_A = \SI{6.022140857e+23}{\per\mol}$, ergibt sich ein relativer
+Fehler von \SI{12.5(4)}{\percent}.
