@@ -1,7 +1,7 @@
 \section{Auswertung}
 \label{sec:Auswertung}
 \paragraph{Verwendete Hilfsmittel}
-Zur Auswertung und zum plotten aller Daten wird Python \cite{python} inklusive der Packages Matplotlib \cite{matplotlib}, Uncertainties \cite{uncertainties}, Scipy \cite{scipy} und Numpy \cite{numpy} verwendet.
+Zur Auswertung aller Daten inklusive aller Ausgleichsrechnungen werden Matplotlib \cite{matplotlib}, Uncertainties \cite{uncertainties}, Scipy \cite{scipy} und Numpy \cite{numpy} verwendet.
 
 \paragraph{Quantitative Auswertung}
 Wird die Wurzel des Photostroms gegen die angelegte Bremsspannung aufgetragen (siehe Abbildungen \ref{fig:blau}, \ref{fig:blau2}, \ref{fig:orange}, \ref{fig:gruen}), so sollte im Bereich $U < 0$ ein linearer Verlauf gemäß
@@ -9,77 +9,79 @@ Wird die Wurzel des Photostroms gegen die angelegte Bremsspannung aufgetragen (s
   f(x) = ax+b
   \label{eqn:lin}
 \end{equation}
-erkennbar sein. Ein Fit dieser Funktion mit den Werten aus Tab. \ref{tab:orange}, \ref{tab:gruen}, \ref{tab:blau1}, \ref{tab:blau2}, ergibt die Parameter
+erkennbar sein, da die theoretische Physik eine Porportionalität von $I_\symup{ph}$ zu $U^2$ vorhersagt. Ein linearer Ausgleich dieser Funktion mit den Werten aus Tabelle \ref{tab:orange}, \ref{tab:gruen}, \ref{tab:blau1}, \ref{tab:blau2}, ergibt die Parameter
 \begin{align*}
-  a_O &= 0.99 \pm 0.12\\
-  a_G &= 1.41 \pm 0.12 \\
-  a_{B,1} &= 1.00 \pm 0.08 \\
-  a_{B,2} &= 0.67 \pm 0.07
+  a_\symup{O} &= (0.99 \pm 0.12)\, \sqrt{\si{\nano \ampere \per \volt}}\\
+  a_\symup{G} &= (1.41 \pm 0.12)\, \sqrt{\si{\nano \ampere \per \volt}} \\
+  a_{\symup{B},1} &= (1.00 \pm 0.08) \, \sqrt{\si{\nano \ampere \per \volt}} \\
+  a_{\symup{B},2} &= (0.67 \pm 0.07) \, \sqrt{\si{\nano \ampere \per \volt}}
 \end{align*}
 und
 \begin{align*}
-  b_O &= (0.45 \pm 0.03) \, \sqrt{\si{\nano \ampere}} \\
-  b_G &= (0.75 \pm 0.04) \, \sqrt{\si{\nano \ampere}} \\
-  b_{B,1} &= (1.01 \pm 0.05) \, \sqrt{\si{\nano \ampere}} \\
-  b_{B,2} &= (0.79 \pm 0.06) \, \sqrt{\si{\nano \ampere}}.
+  b_\symup{O} &= (0.45 \pm 0.03) \, \sqrt{\si{\nano \ampere}} \\
+  b_\symup{G} &= (0.75 \pm 0.04) \, \sqrt{\si{\nano \ampere}} \\
+  b_{\symup{B},1} &= (1.01 \pm 0.05) \, \sqrt{\si{\nano \ampere}} \\
+  b_{\symup{B},2} &= (0.79 \pm 0.06) \, \sqrt{\si{\nano \ampere}}.
 \end{align*}
 
 \begin{figure}
   \centering
   \includegraphics[height = 8cm]{./plots/blau.pdf}
-  \caption{Gemessene Spannungen und Ströme der 492nm Spektrallinie.}
+  \caption{Gemessene Spannungen und Ströme der $\lambda = \SI{492}{\nano\meter}$ Spektrallinie.}
   \label{fig:blau}
 \end{figure}
 \begin{figure}
   \centering
   \includegraphics[height = 8cm]{./plots/Orange.pdf}
-  \caption{Gemessene Spannungen und Ströme der 578nm Spektrallinie.}
+  \caption{Gemessene Spannungen und Ströme der $\lambda = \SI{578}{\nano\meter}$ Spektrallinie.}
   \label{fig:orange}
 \end{figure}
 \begin{figure}
   \centering
   \includegraphics[height = 8cm]{./plots/blau2.pdf}
-  \caption{Gemessene Spannungen und Ströme der 436nm Spektrallinie.}
+  \caption{Gemessene Spannungen und Ströme der $\lambda = \SI{436}{\nano\meter}$ Spektrallinie.}
   \label{fig:blau2}
 \end{figure}
 \begin{figure}
   \centering
   \includegraphics[height = 8cm]{./plots/gruen.pdf}
-  \caption{Gemessene Spannungen und Ströme der 546nm Spektrallinie.}
+  \caption{Gemessene Spannungen und Ströme der $\lambda = \SI{546}{\nano\meter}$ Spektrallinie.}
   \label{fig:gruen}
 \end{figure}
+\FloatBarrier
 
 Berechnung der Nullstellen dieser Ausgleichsgeraden liefert
 \begin{align*}
-  U_{g,O} &= \SI{-0.45 \pm 0.02}{\volt} \\
-  U_{g,G} &= \SI{-0.53 \pm 0.02}{\volt} \\
-  U_{g,B,1} &= \SI{-1.01 \pm 0.03}{\volt} \\
-  U_{g,B,2} &= \SI{-1.18 \pm 0.05}{\volt}.
+  U_\symup{g,O} &= \SI{-0.45 \pm 0.02}{\volt} \\
+  U_\symup{g,G} &= \SI{-0.53 \pm 0.02}{\volt} \\
+  U_\symup{g,B,1} &= \SI{-1.01 \pm 0.03}{\volt} \\
+  U_\symup{g,B,2} &= \SI{-1.18 \pm 0.05}{\volt}.
 \end{align*}
+Diese Spannungen werden in Abbildung \ref{fig:h} aufgetragen und erneut einer linearen Regression unterzogen, um den Quotienten des Planckschen Wirkungsquantums h und der Elementarladung e zu bestimmen, wodurch sich die Parameter
+
+\begin{align*}
+  a_\symup{h} &= \SI{0.46 \pm 0.09}{\volt \per \kilo \hertz} \\
+  b_\symup{h} &= \SI{-1.9 \pm 0.5}{\volt}
+\end{align*}
+ergeben.
 
 \begin{figure}
   \centering
   \includegraphics[height = 8cm]{./plots/h.pdf}
-  \caption{Grenzspannungen $U_g$ aufgetragen gegen die Frequenz}
+  \caption{Grenzspannungen $U_\symup{g}$ aufgetragen gegen die Frequenz}
   \label{fig:h}
 \end{figure}
-Diese Werte werden in Abb. \ref{fig:h} aufgetragen und erneut gefittet, um das Plancksche Wirkungsquantum zu bestimmen, wodurch sich die Parameter
 
-\begin{align*}
-  a_{h} &= \SI{0.46 \pm 0.09}{\volt \per \kilo \hertz} \\
-  b_{h} &= \SI{-1.9 \pm 0.5}{\volt}
-\end{align*}
-ergeben.
-Nach Formel \eqref{eqn:Z} entspricht somit $h/e = a_{h} = \SI{4.6 \pm 0.9}{\femto \volt \second} $.
+Nach Formel \eqref{eqn:Z} entspricht somit h/e$= a_\symup{h} = \SI{4.6 \pm 0.9}{\femto \volt \second} $.
 
-Man erhält zusätzlich die Austrittsarbeit $A_K$ mit
+Man erhält zusätzlich die Austrittsarbeit $A_\symup{K}$ mit
 \begin{equation}
-  A_K = b_{h}\cdot e = \SI{1.9 \pm 0.5}{\electronvolt}
+  A_\symup{K} = b_\symup{h}\cdot \symup{e} = \SI{1.9 \pm 0.5}{\electronvolt}
 \end{equation}
-
+durch den y-Achsenabschnitt. Die Austrittsarbeit entspricht dem negativen dieses Parameters, da sie positiv definiert ist.
 
 \paragraph{Qualitativer Verlauf des Photostroms}
-Der Photostrom der orangenen Kennlinie des Quecksilber ist detaillierter gemessen ind Abb. \ref{fig:fine} dargestellt. Im Bereich der bremsenden Spannung ist der lineare Charakter relativ gut zu erkennen, allerdings lässt sich kein Sättigungsstrom beobachten, welcher sich normalerweise dadurch ergibt, dass alle ausgelösten Elektronen die Anode erreichen.
+Der Photostrom der $\lambda = $ 436nm-Kennlinie des Quecksilber ist detaillierter gemessen in Abbildung \ref{fig:fine} dargestellt. Im Bereich der bremsenden Spannung ist der lineare Charakter relativ gut zu erkennen, allerdings lässt sich kein Sättigungsstrom beobachten, welcher sich normalerweise dadurch ergibt, dass alle ausgelösten Elektronen die Anode erreichen.
 \begin{figure}
   \centering
   \includegraphics[height = 8cm]{plots/fine.pdf}
@@ -91,7 +93,7 @@ Der Photostrom der orangenen Kennlinie des Quecksilber ist detaillierter gemesse
 
 \begin{table}
   \centering
-  \caption{Messwerte der 578 nm Linie}
+  \caption{Messwerte der $\lambda = $578 nm Linie}
   \label{tab:orange}
   \sisetup{round-mode=places}
   \begin{tabular}{S[round-precision = 1]|S[round-precision = 1]}
@@ -132,7 +134,7 @@ Der Photostrom der orangenen Kennlinie des Quecksilber ist detaillierter gemesse
 
   \begin{table}
     \centering
-    \caption{Messwerte der 546 nm Linie}
+    \caption{Messwerte der $\lambda = $546 nm Linie}
     \label{tab:gruen}
     \sisetup{round-mode=places}
     \begin{tabular}{S[round-precision = 1]|S[round-precision = 1]}
@@ -176,7 +178,7 @@ Der Photostrom der orangenen Kennlinie des Quecksilber ist detaillierter gemesse
 
 \begin{table}
   \centering
-  \caption{Messwerte der 492nm Linie}
+  \caption{Messwerte der $\lambda = $492nm Linie}
   \label{tab:blau1}
   \sisetup{round-mode=places}
   \begin{tabular}{S[round-precision = 1]|S[round-precision = 1]}
@@ -220,7 +222,7 @@ Der Photostrom der orangenen Kennlinie des Quecksilber ist detaillierter gemesse
 
 \begin{table}
   \centering
-  \caption{Messwerte der 436nm Linie}
+  \caption{Messwerte der $\lambda = $436nm Linie}
   \label{tab:blau2}
   \sisetup{round-mode=places}
   \begin{tabular}{S[round-precision = 1]|S[round-precision = 1]}
