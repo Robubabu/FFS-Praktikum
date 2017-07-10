@@ -116,6 +116,6 @@ m = 9.1e-31
 print('N: ', N)
 T = ((I*U-N)/(f*n*s))**0.25
 print('T: ', T)
-P = k*T*np.log(I*h**3/(4*np.pi*e*m*k**2*T**2))
+P = k*T*np.log(I*h**3/(4*np.pi*m*k**2*T**2))
 print('Phi: ', P)
 print('mittel: ', mittel(P))
