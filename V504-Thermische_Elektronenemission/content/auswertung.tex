@@ -1,14 +1,23 @@
 \section{Auswertung}
 \label{sec:Auswertung}
 \subsection{Kennlinien der Diode}
-Die aufgenommenen Werte lassen sich Tab. \ref{tab:Reihe1}, \ref{tab:Reihe2}, \ref{tab:Reihe3}, \ref{tab:Reihe4}, \ref{tab:Reihe4}, sowie Abb. \ref{fig:Plot1}, \ref{fig:Plot2}, \ref{fig:Plot3}, \ref{fig:Plot4} \ref{fig:Plot5}, entnehmen. Die Sättigungsströme ergeben sich so zu
-\begin{align*}
-  I_{S,1} &= \SI{0.012}{\ampere} \\
-  I_{S,2} &= \SI{0.024}{\ampere} \\
-  I_{S,3} &= \SI{0.081}{\ampere} \\
-  I_{S,4} &= \SI{0.146}{\ampere} \\
-  I_{S,5} &= \SI{0.342}{\ampere}
-\end{align*}
+Die aufgenommenen Werte lassen sich Tab. \ref{tab:Reihe1}, \ref{tab:Reihe2}, \ref{tab:Reihe3}, \ref{tab:Reihe4}, \ref{tab:Reihe4}, sowie Abb. \ref{fig:Plot1}, \ref{fig:Plot2}, \ref{fig:Plot3}, \ref{fig:Plot4} \ref{fig:Plot5}, entnehmen. Die Sättigungsströme ergeben sich so zu den in Tab. \ref{tab:Sett} dargestellten Werten.
+\begin{table}
+  \centering
+  \caption{Sättigungsströme und zugehörige Heizleistungen}
+  \label{tab:Sett}
+  \begin{tabular}{|c|c|}
+    \toprule
+    $I/\si{\ampere}$ & $P_\symup{heiz}/\si{\watt}$ \\
+    \midrule
+    0.012 & 6.30 \\
+    0.024 & 7.60 \\
+    0.081 & 9.00 \\
+    0.146 & 9.45 \\
+    0.342 & 11.00 \\
+    \bottomrule
+\end{tabular}
+\end{table}
 \begin{figure}
   \centering
   \includegraphics[height=7cm]{./plots/Plot1.pdf}
@@ -46,52 +55,52 @@ Die aufgenommenen Werte lassen sich Tab. \ref{tab:Reihe1}, \ref{tab:Reihe2}, \re
 
 \begin{table}
   \centering
-  \sisetup{round-mode = places , round-precision = 2}
+  \sisetup{round-mode = places, round-precision = 0, scientific-notation = fixed, fixed-exponent = 0}
   \caption{Messwerte der ersten Messreihe}
   \label{tab:Reihe1}
-  \begin{tabular}{|S|S|}
+  \begin{tabular}{|S[round-precision = 0]|S[round-precision = 3]|}
     \toprule
-    $U/\si{\volt}$ & $I/\si{\ampere}$ \\
+    $U/\si{\volt}$ & $I/\si{\milli \ampere}$ \\
     \midrule
     0.000000000000000000e+00 & 0.000000000000000000e+00\\
-    5.000000000000000000e+00 & 1.000000000000000021e-03\\
-    1.000000000000000000e+01 & 6.000000000000000125e-03\\
-    1.500000000000000000e+01 & 8.000000000000000167e-03\\
-    2.000000000000000000e+01 & 1.000000000000000021e-02\\
-    2.500000000000000000e+01 & 1.000000000000000021e-02\\
-    3.000000000000000000e+01 & 1.099999999999999936e-02\\
-    3.500000000000000000e+01 & 1.099999999999999936e-02\\
-    4.000000000000000000e+01 & 1.099999999999999936e-02\\
-    4.500000000000000000e+01 & 1.099999999999999936e-02\\
-    5.000000000000000000e+01 & 1.099999999999999936e-02\\
-    5.500000000000000000e+01 & 1.099999999999999936e-02\\
-    6.000000000000000000e+01 & 1.099999999999999936e-02\\
-    6.500000000000000000e+01 & 1.099999999999999936e-02\\
-    7.000000000000000000e+01 & 1.099999999999999936e-02\\
-    7.500000000000000000e+01 & 1.200000000000000025e-02\\
-    8.000000000000000000e+01 & 1.200000000000000025e-02\\
-    8.500000000000000000e+01 & 1.200000000000000025e-02\\
-    9.000000000000000000e+01 & 1.099999999999999936e-02\\
-    9.500000000000000000e+01 & 1.200000000000000025e-02\\
-    1.000000000000000000e+02 & 1.200000000000000025e-02\\
-    1.050000000000000000e+02 & 1.200000000000000025e-02\\
-    1.100000000000000000e+02 & 1.200000000000000025e-02\\
-    1.150000000000000000e+02 & 1.200000000000000025e-02\\
-    1.200000000000000000e+02 & 1.200000000000000025e-02\\
-    1.300000000000000000e+02 & 1.200000000000000025e-02\\
-    1.400000000000000000e+02 & 1.200000000000000025e-02\\
-    1.500000000000000000e+02 & 1.200000000000000025e-02\\
-    1.600000000000000000e+02 & 1.200000000000000025e-02\\
-    1.700000000000000000e+02 & 1.200000000000000025e-02\\
-    1.800000000000000000e+02 & 1.200000000000000025e-02\\
-    1.900000000000000000e+02 & 1.200000000000000025e-02\\
+    5.000000000000000000e+00 & 1.000000000000000021e-0\\
+    10.00000000000000000e+0 & 6.000000000000000125e-0\\
+    15.00000000000000000e+0 & 8.000000000000000167e-0\\
+    20.00000000000000000e+0 & 10.00000000000000021e-0\\
+    25.00000000000000000e+0 & 10.00000000000000021e-0\\
+    30.00000000000000000e+0 & 10.99999999999999936e-0\\
+    35.00000000000000000e+0 & 10.99999999999999936e-0\\
+    40.00000000000000000e+0 & 10.99999999999999936e-0\\
+    45.00000000000000000e+0 & 10.99999999999999936e-0\\
+    50.00000000000000000e+0 & 10.99999999999999936e-0\\
+    55.00000000000000000e+0 & 10.99999999999999936e-0\\
+    60.00000000000000000e+0 & 10.99999999999999936e-0\\
+    65.00000000000000000e+0 & 10.99999999999999936e-0\\
+    70.00000000000000000e+0 & 10.99999999999999936e-0\\
+    75.00000000000000000e+0 & 12.00000000000000025e-0\\
+    80.00000000000000000e+0 & 12.00000000000000025e-0\\
+    85.00000000000000000e+0 & 12.00000000000000025e-0\\
+    90.00000000000000000e+0 & 10.99999999999999936e-0\\
+    95.00000000000000000e+0 & 12.00000000000000025e-0\\
+    100.0000000000000000e+0 & 12.00000000000000025e-0\\
+    105.0000000000000000e+0 & 12.00000000000000025e-0\\
+    110.0000000000000000e+0 & 12.00000000000000025e-0\\
+    115.0000000000000000e+0 & 12.00000000000000025e-0\\
+    120.0000000000000000e+0 & 12.00000000000000025e-0\\
+    130.0000000000000000e+0 & 12.00000000000000025e-0\\
+    140.0000000000000000e+0 & 12.00000000000000025e-0\\
+    150.0000000000000000e+0 & 12.00000000000000025e-0\\
+    160.0000000000000000e+0 & 12.00000000000000025e-0\\
+    170.0000000000000000e+0 & 12.00000000000000025e-0\\
+    180.0000000000000000e+0 & 12.00000000000000025e-0\\
+    190.0000000000000000e+0 & 12.00000000000000025e-0\\
     \bottomrule
   \end{tabular}
 \end{table}
 
 \begin{table}
   \centering
-  \sisetup{round-mode = places , round-precision = 2}
+  \sisetup{round-mode = places , scientific-notation = fixed, round-precision = 3, fixed-exponent = 0}
   \caption{Messwerte der zweiten Messreihe}
   \label{tab:Reihe2}
   \begin{tabular}{|S|S|}
@@ -125,7 +134,7 @@ Die aufgenommenen Werte lassen sich Tab. \ref{tab:Reihe1}, \ref{tab:Reihe2}, \re
 
 \begin{table}
   \centering
-  \sisetup{round-mode = places , round-precision = 2}
+  \sisetup{round-mode = places , scientific-notation = fixed, round-precision = 3, fixed-exponent = 0}
   \caption{Messwerte der dritten Messreihe}
   \label{tab:Reihe3}
   \begin{tabular}{|S|S|}
@@ -175,7 +184,7 @@ Die aufgenommenen Werte lassen sich Tab. \ref{tab:Reihe1}, \ref{tab:Reihe2}, \re
 
 \begin{table}
   \centering
-  \sisetup{round-mode = places , round-precision = 2}
+  \sisetup{round-mode = places, scientific-notation = fixed, round-precision = 3, fixed-exponent = 0}
   \caption{Messwerte der vierten Messreihe}
   \label{tab:Reihe4}
   \begin{tabular}{|S|S|}
@@ -208,7 +217,7 @@ Die aufgenommenen Werte lassen sich Tab. \ref{tab:Reihe1}, \ref{tab:Reihe2}, \re
 
 \begin{table}
   \centering
-  \sisetup{round-mode = places , round-precision = 2}
+  \sisetup{round-mode = places , scientific-notation = fixed, round-precision = 3, fixed-exponent = 0}
   \caption{Messwerte der fünften Messreihe}
   \label{tab:Reihe5}
   \begin{tabular}{|S|S|}
@@ -259,12 +268,12 @@ Die aufgenommenen Werte lassen sich Tab. \ref{tab:Reihe1}, \ref{tab:Reihe2}, \re
   \label{fig:langmuir}
 \end{figure}
 
-Die Grenze des Raumladungsgebietes wurde auf $\SI{25}{\volt}$ geschätzt, wodurch sich über die in Abb. \ref{fig:langmuir} dargestellte lineare Ausgleichsrechnung
+Die Grenze des Raumladungsgebietes wurde auf $\SI{25}{\volt}$ geschätzt, da in Abb. \ref{fig:langmuir} erkennbar ist, dass dies den Berreich darstellt, in dem der Strom in doppelt logarithmischer Darstellung linear verläuft. Über diese doppelt logarithmierten Werte wird eine lineare Ausgleichsrechnung gemäß
 \begin{align*}
   a &= 1.9 \pm  0.1 \\
-  b &= -7.6 \pm 0.3]
+  b &= -7.6 \pm 0.3
 \end{align*}
-mit $a$ als Steigung und $b$  als y-Achsenabschnitt.
+mit $a$ als Steigung und $b$  als y-Achsenabschnitt durchgeführt.
 
 \subsection{Anlaufstrom und Kathodentemperatur}
  \begin{figure}
@@ -277,29 +286,35 @@ mit $a$ als Steigung und $b$  als y-Achsenabschnitt.
 Linearer Ausgleich des Anlaufstromes (Abb. \ref{fig:Plot6}) liefert die Werte
 \begin{align*}
   a &= 2.8 \pm 0.3 \\
-  b &= 1.4 \pm 0.1 \;.
+  b &= 15.2 \pm 0.1 \;.
 \end{align*}
-Aus $a = - \frac{e_0 V}{kT}$ folgt mit $k = \SI{8.7e-5}{\electronvolt \kelvin}$:
+Aus $a = \frac{e_0}{kT}$ folgt mit $k = \SI{8.7e-5}{\electronvolt \kelvin}$:
 \begin{equation*}
-  T = \frac{e_0}{k \; a} = \SI{6120 \pm 320}{\kelvin}.
+  T = \frac{e_0}{k \; a} = \SI{2050 \pm 200}{\kelvin}.
 \end{equation*}
 Die verwendete Heizleistung beträgt $p = U I = \SI{24.2}{\watt}$.
-Die Leistungsbilanz und diese Referenztemperatur liefern
+Die Leistungsbilanz der Apparatur lautet
+\begin{equation*}
+  I_\text{f} U_\text{f} = f \eta \sigma T^4 + N_\text{WL}
+\end{equation*}
+mit $N_\text{WL} \approx 1$ als Wärmeableitung der Apparatur, $f = \SI{0.35}{\centi \meter \squared}$ als Kathodenfläche der verwendeten Diode (Diode 2) und $\eta = 0.28$ als Wärmeemissionsgrad der Fläche. Diese Bilanz liefert
 \begin{align*}
-  T_1 &= \SI{1830}{\kelvin} \\
-  T_2 &= \SI{1920}{\kelvin} \\
-  T_3 &= \SI{2000}{\kelvin} \\
-  T_4 &= \SI{2030}{\kelvin}.
+  T_1 &= \SI{1755}{\kelvin} \\
+  T_2 &= \SI{1854}{\kelvin} \\
+  T_3 &= \SI{1945}{\kelvin} \\
+  T_4 &= \SI{1972}{\kelvin} \\
+  T_5 &= \SI{2057}{\kelvin}.
 \end{align*}
 Die Standardabweichungen sind hierbei vernachlässigbar klein.
 
 \subsection{Austrittsarbeit der Kathode}
 
- Über die Richardson Gleichung ergeben sich mit den Temperaturen der Kathode in den ersten 4 Messreihen die äußeren Potentiale
+ Über die Richardson Gleichung ergeben sich mit den Temperaturen der Kathode die äußeren Potentiale
  \begin{align*}
    \phi_1 &= \SI{2.25}{\electronvolt} \\
    \phi_2 &= \SI{2.37}{\electronvolt} \\
    \phi_3 &= \SI{2.48}{\electronvolt} \\
-   \phi_4 &= \SI{2.52}{\electronvolt}
+   \phi_4 &= \SI{2.52}{\electronvolt} \\
+   \phi_5 &= \SI{2.62}{\electronvolt}.
  \end{align*}
-Mittelung ergibt $\phi =  \SI{2.41 \pm 0.06}{\electronvolt}$.
+Mittelung ergibt $\phi =  \SI{2.45 \pm 0.06}{\electronvolt}$.

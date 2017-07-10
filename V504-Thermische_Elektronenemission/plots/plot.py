@@ -83,14 +83,17 @@ plt.clf()
 
 
 U, I = np.genfromtxt('Reihe6.txt', unpack = True)
+U = U
+I = I*1e6
 np.savetxt('Reihe6_tab.txt', np.column_stack([U,I]), delimiter = ' & ',newline= r'\\'+'\n' )
 params, cov = curve_fit(g,U[0:9], np.log(I[0:9]))
 error = np.sqrt(np.diag(cov))
-a = ufloat(1.9,0.1)
+a = ufloat(params[0],error[0])
 k = 8.6e-5
 e = 1.6e-19
 T = 1/(k*a)
-print(U, T)
+print('P-Anlauf: ', params, error)
+print('T5: ',U, T)
 
 print('Anlauf: ', params, '+/-', error)
 plt.plot(U, np.log(I), 'k.', label = 'Messwerte')
@@ -101,12 +104,12 @@ plt.legend(loc = 'best')
 plt.grid()
 plt.savefig('Plot6.pdf')
 plt.clf()
-T = ufloat(6120, 320)
-f = 0.35
+
+f = (0.35)
 n = 0.28
 s = 5.7e-12
-I = np.array([1.8,1.9,2.0,2.1])
-U = np.array([3.5,4,4.5,4.5])
+I = np.array([1.8,1.9,2.0,2.1, 2.2])
+U = np.array([3.5,4,4.5,4.5, 5])
 N = 1
 h = 4.14e-15
 m = 9.1e-31
