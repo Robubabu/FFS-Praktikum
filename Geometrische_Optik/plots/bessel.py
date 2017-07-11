@@ -10,7 +10,7 @@ def mittel(x):              #the real mean()-ing of life
     return ufloat(np.mean(x),np.std(x,ddof=1)/np.sqrt(len(x)))
 
 def f(d,o): #Bessel Brennweite Fkt.
-    return ((o**2) - d**2)/4*o
+    return ((o**2) - d**2)/(4*o)
 
 def relf(l,m): #relativer Fehler in Prozent
     return (np.absolute(l-m)/np.absolute(l))*100
